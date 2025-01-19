@@ -1,14 +1,29 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Christophe Plantin</title>
-  </head>
-  <body>
-   <p>hello</p>
 
-   <script type="module" src="src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christophe Plantin</title>
+</head>
+
+<body>
+  <nav class="c-nav">
+    <picture>
+      <img class="c-nav__img" sizes="(max-width: 160px) 100vw, 160px" srcset="
+    /logo_200.webp 200w,
+    /logo_160.webp 160w" src="/logo_160.webp" alt="Logo museum Plantin-moretus">
+    </picture>
+
+    <button>buy tickets</button>
+  </nav>
+
+  <header></header>
+
+  <main></main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+
 </html>
