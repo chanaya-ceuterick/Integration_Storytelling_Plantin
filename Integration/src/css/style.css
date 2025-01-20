@@ -98,11 +98,29 @@ button {
 
 /* components 
 -------------------------*/
+.c-top{
+  margin-top: -1rem;
+  z-index: 0;
+}
+
+.c-top::before {
+  content: ''; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../public/Background_image_header.webp);
+  background-position: top center;
+  background-size: cover;
+  opacity: 0.2; 
+  z-index: -1; 
+}
 
 .c-nav {
   display: flex;
   justify-content: space-between;
-  margin-top: var(--d-20);
+  padding-top: var(--d-20);
 }
 
 .c-nav__img {
