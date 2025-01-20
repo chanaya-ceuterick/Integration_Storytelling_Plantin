@@ -28,9 +28,14 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   line-height: 1.15;
+  font-size: var(--txt-md);
 
   background-color: var(--c-black);
   color: var(--c-white);
+
+  @media only screen and (max-width: 767px) {
+    font-size: var(--txt-sm);
+   }
 }
 
 main,
@@ -56,28 +61,31 @@ h2 {
   color: var(--c-white);
 }
 
-h1{
+h1 {
   font-size: var(--title-lg);
   margin-bottom: 0;
-  
+
   @media only screen and (min-width: 1200px) {
     font-size: var(--title-lg);
     position: absolute;
     top: 15%;
     left: 5%;
   }
+
   @media only screen and (max-width: 1199px) {
     font-size: var(--title-lg);
     position: absolute;
     top: 15%;
     left: 5%;
   }
+
   @media only screen and (max-width: 1023px) {
     font-size: 5rem;
     position: absolute;
     top: 15%;
     left: 5%;
   }
+
   @media only screen and (max-width: 767px) {
     font-size: var(--title-md);
   }
@@ -85,6 +93,12 @@ h1{
 
 h2 {
   padding-bottom: var(--d-50);
+  font-size: var(--title-md);
+
+  @media only screen and (max-width: 767px) {
+    padding-bottom: var(--d-20);
+    font-size: var(--title-sm);
+   }
 }
 
 button {
@@ -96,16 +110,21 @@ button {
   text-transform: uppercase;
 }
 
+section {
+  margin-bottom: var(--d-160);
+}
+
 /* components 
 -------------------------*/
-.c-top{
+.c-top {
   margin-top: -1rem;
   z-index: 0;
+  margin-bottom: var(--d-160);
 }
 
 .c-top::before {
-  content: ''; 
-  position: absolute; 
+  content: '';
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -113,8 +132,8 @@ button {
   background-image: url(../../public/Background_image_header.webp);
   background-position: top center;
   background-size: cover;
-  opacity: 0.2; 
-  z-index: -1; 
+  opacity: 0.2;
+  z-index: -1;
 }
 
 .c-nav {
@@ -134,19 +153,18 @@ button {
   }
 }
 
-.c-header__underline
-{
+.c-header__underline {
   text-decoration: underline;
 }
 
 .c-header__img {
   display: flex;
-  justify-content: center; 
-  align-items: flex-end; 
+  justify-content: center;
+  align-items: flex-end;
   background-color: rgba(192, 47, 47, 0.35);
   border-radius: 8.75rem 8.75rem 0 0;
   width: 90%;
-  height: 70%; 
+  height: 70%;
 
   @media only screen and (min-width: 1200px) {
     margin-left: 45vw;
@@ -154,6 +172,7 @@ button {
     width: 50vw;
     border-radius: 18.75rem 18.75rem 0 0;
   }
+
   @media only screen and (max-width: 1199px) {
     margin-left: 35vw;
     margin-top: 15vh;
@@ -187,11 +206,68 @@ button {
   @media only screen and (max-width: 1199px) {
     width: 55vw;
   }
-  
+
   @media only screen and (max-width: 1023px) {
     width: 30rem;
   }
+
   @media only screen and (max-width: 767px) {
     width: 20rem;
   }
+}
+
+/* -------------------------------- */
+
+.c-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 426px) {
+    flex-direction: column;
+  }
+}
+
+.c-intro__img {
+  width: 34.25rem;
+  height: 27.625rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--borders-md);
+
+  @media only screen and (max-width: 1199px) {
+    width: 55vw;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    width: 20rem;
+    height: 100%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 19rem;
+    height: 21rem
+   }
+
+  @media only screen and (max-width: 426px) {
+    width: 100%;
+    height: 15rem
+  }
+}
+
+.c-intro__txt {
+  margin-left: var(--d-50);
+
+  @media only screen and (max-width: 426px) {
+   margin-left: auto;
+  }
+}
+
+
+
+/* utilities 
+---------------------------*/
+.u-highlight {
+  color: var(--c-red);
+  text-decoration: underline;
 }
