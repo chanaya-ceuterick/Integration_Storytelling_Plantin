@@ -117,7 +117,7 @@ button {
 }
 
 section {
-  margin-bottom: var(--d-160);
+  margin-bottom: var(--d-160) !important;
   width: 85vw;
   margin: auto;
 
@@ -143,7 +143,7 @@ a {
   color: var(--c-white);
 }
 
-/* components 
+/* TOP  
 -------------------------*/
 .c-top {
   margin-top: -1rem;
@@ -375,7 +375,8 @@ a {
   }
 }
 
-/* -------------------------------- */
+/* INTRO
+-------------------------------- */
 
 .c-intro {
   display: flex;
@@ -476,10 +477,60 @@ a {
   position: relative;
 }
 
+/* CIVIL RIGHTS
+---------------------------*/
+.c-civilrights {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-civilrights picture {
+  width: 70%;
+  height: auto;
+  margin-left: var(--d-50);
+}
+
+.c-civilrights__img {
+  border-radius: var(--borders-md);
+  width: 100%;
+  height: auto;
+}
+
+.c-civilrights__txt {
+  width: 40vw;
+}
+
+.c-civilrights__interaction {
+  position: relative;
+}
+
+#boy {
+  position: absolute;
+  z-index: 2;
+  bottom: 20vh;
+  left: 8vw;
+}
+
+#girl {
+  position: absolute;
+  z-index: 2;
+  bottom: 25vh;
+  right: 2vw;
+}
+
+
+/* GLOBAL COMPONENTS
+---------------------------*/
 .c-indicator {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.c-indicator--left {
+  align-items: flex-start;
 }
 
 .c-btnsec {
@@ -530,14 +581,12 @@ a {
   height: auto;
   transform: rotate(-30deg);
   position: absolute;
-    bottom: -5rem;
-    right: -80px;
+  bottom: -5rem;
+  right: -80px;
 }
 
 
-
-
-/* utilities 
+/* UTILITIES 
 ---------------------------*/
 .u-highlight {
   color: var(--c-red);
