@@ -473,7 +473,7 @@ a {
 }
 
 .c-intro__link {
-position: relative;
+  position: relative;
 }
 
 .c-indicator {
@@ -495,7 +495,11 @@ position: relative;
   overflow: hidden;
   z-index: 0;
   transition: color 0.4s ease;
- 
+
+  @media only screen and (max-width: 425px) {
+    width: 8rem;
+    height: 8rem;
+  }
 }
 
 .c-btnsec::before {
@@ -524,9 +528,10 @@ position: relative;
   stroke-linecap: round;
   width: 3rem;
   height: auto;
+  transform: rotate(-30deg);
   position: absolute;
-  bottom: -10rem;
-  right: -30px;
+    bottom: -5rem;
+    right: -80px;
 }
 
 
