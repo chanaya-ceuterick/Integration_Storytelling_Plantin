@@ -9,35 +9,90 @@
 </head>
 
 <body>
-  <section class="c-top">
-      <nav class="c-nav">
-    <picture>
-      <img class="c-nav__img" sizes="(max-width: 160px) 100vw, 160px" srcset="
-    /logo_200.webp 200w,
-    /logo_160.webp 160w" src="/logo_160.webp" alt="Logo museum Plantin-moretus">
-    </picture>
+  <div class="c-top">
+    <nav class="c-nav">
+      <img class="c-nav__logo" src="/logo.webp" alt="Logo Plantin-Moretus museum">
+      <button>buy tickets</button>
+    </nav>
 
-    <button>buy tickets</button>
-  </nav>
+    <header class="c-header">
+      <div class="c-header__title">
+        <h1>Christophe <br>Pl<span class="c-header__underline">a</span>ntin</h1>
+        <div class="c-header__subtitle">
+          <div class="c-header__line"></div>
+          <p>A Visionary Binding Humanity in Ink</p>
+        </div>
+      </div>
 
-  <header class="c-header">
-    <h1>Christophe <br>Pl<span class="c-header__underline">a</span>ntin</h1>
-    <div class="c-header__img">
-      <picture>
-        <img sizes="(max-width: 1000px) 100vw, 1000px" srcset="
+
+      <div class="c-header__img">
+        <picture>
+          <img sizes="(max-width: 1000px) 100vw, 1000px" srcset="
     /drawing-plantin/plantin_420.avif 420w,
     /drawing-plantin/plantin_578.avif 578w,
     /drawing-plantin/plantin_979.avif 979w
-    "
-    src="drawing-plantin/plantin_979.avif" alt="Logo museum Plantin-moretus">
+    " src="drawing-plantin/plantin_979.avif" alt="Logo museum Plantin-moretus">
+        </picture>
+      </div>
+
+    </header>
+  </div>
+
+  <main>
+    <section class="c-intro">
+      <picture class="c-intro__pic">
+        <img class="c-intro__img" sizes="(max-width: 1043px) 100vw, 1043px" srcset="
+    /intro-religious/intro-r-w_180.webp 180w,
+    /intro-religious/intro-r-w_514.webp 514w,
+    /intro-religious/intro-r-w_737.webp 737w,
+    /intro-religious/intro-r-w_1043.webp 1043w
+    " src="/intro-religious/intro-r-w_1043.webp" alt="Christophe Plantin religious">
       </picture>
-    </div>
 
-  </header>
-  </section>
+      <div class="c-intro__txt">
+        <div class="c-indicator">
+          <div id="line" class="u-active-line"></div>
+          <div id="line"></div>
+          <div id="line"></div>
+          <div id="line"></div>
+        </div>
+        <h2>Who is plantin?</h2>
+        <p>Christophe Plantin (c. 1520-1589) was a French-born printer who founded the influential Plantin Press in
+          Antwerp in 1555. <span class="u-highlight">Known for his high-quality books</span>, he produced religious,
+          scientific, and humanist works,including the famous Polyglot Bible.
+          <br><br>
+          His dedication to excellence helped spread Renaissance knowledge, and his workshop is now
+          the Plantin-Moretus Museum, <span class="u-highlight">a UNESCO World Heritage Site</span>.
+        </p>
 
+        <a class="c-intro__link" href="#">
+          <button class="c-btnsec">
+            dive into the story
+          </button>
+          <svg class="c-btnsec__svg" width="444" height="901" viewBox="0 0 444 901" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M176.5 3.5C270.333 121.667 393.1 378.9 133.5 462.5C15.4997 486.5 -51.0003 277 69.4997 247.5C190 218 458.5 342 437 610C418 709 348.5 833 241 867.5"
+              stroke="#CB4F4F" stroke-width="20" />
+            <path
+              d="M226.809 867.626L252.676 810.585C256.393 802.388 268.199 802.89 271.208 811.372L296.546 882.806C299.257 890.449 292.222 897.97 284.416 895.776L233.211 881.383C227.314 879.725 224.28 873.204 226.809 867.626Z"
+              fill="#CB4F4F" />
+          </svg>
+        </a>
 
-  <main></main>
+      </div>
+
+      <picture class="c-intro__pic c-intro__pic--rotate">
+        <img class="c-intro__img" sizes="(max-width: 1043px) 100vw, 1043px" srcset="
+    /intro-scholar/intro-s-w_180.webp 180w,
+    /intro-scholar/intro-s-w_524.webp 524w,
+    /intro-scholar/intro-s-w_761.webp 761w,
+    /intro-scholar/intro-s-w_967.webp 967w,
+    /intro-scholar/intro-s-w_1043.webp 1043w
+    " src="/intro-scholar/intro-s-w_1043.webp" alt="Christophe Plantin scholar">
+      </picture>
+    </section>
+  </main>
 
   <script type="module" src="src/main.js"></script>
 </body>
