@@ -117,18 +117,20 @@ button {
 }
 
 section {
-  margin-bottom: var(--d-160);
+  margin-bottom: var(--d-160) !important;
   width: 85vw;
   margin: auto;
 
 
-  @media only screen and (max-width: 767px) {
-    width: 95vw;
-  }
-
   @media only screen and (max-width: 1200px) {
     width: 90vw;
   }
+
+  @media only screen and (max-width: 767px) {
+    width: 80vw;
+    margin-bottom: var(--d-50) !important;
+  }
+
 }
 
 #line {
@@ -143,7 +145,7 @@ a {
   color: var(--c-white);
 }
 
-/* components 
+/* TOP  
 -------------------------*/
 .c-top {
   margin-top: -1rem;
@@ -375,7 +377,8 @@ a {
   }
 }
 
-/* -------------------------------- */
+/* INTRO
+-------------------------------- */
 
 .c-intro {
   display: flex;
@@ -476,10 +479,139 @@ a {
   position: relative;
 }
 
+/* CIVIL RIGHTS
+---------------------------*/
+.c-civilrights {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+
+  @media only screen and (max-width: 954px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.c-civilrights picture {
+  width: fit-content;
+  height: auto;
+  margin-left: var(--d-50);
+
+  @media only screen and (max-width: 1024px) {
+    margin-left: var(--d-30);
+  }
+
+  @media only screen and (max-width: 954px) {
+    margin-left: 0;
+  }
+}
+
+.c-civilrights__img {
+  border-radius: var(--borders-md);
+  width: 100%;
+  height: auto;
+
+  @media only screen and (max-width: 1200px) {
+    width: 40vw;
+  }
+
+  @media only screen and (max-width: 954px) {
+    margin-top: var(--d-20);
+  }
+
+}
+
+.c-civilrights__txt {
+  width: 40vw;
+
+  @media only screen and (max-width: 954px) {
+    width: 100%;
+  }
+}
+
+.c-civilrights__interaction {
+  position: relative;
+}
+
+#boy {
+  position: absolute;
+  z-index: 2;
+  bottom: 20vh;
+  left: 8vw;
+
+  @media only screen and (max-width: 1200px) {
+    bottom: 10vh;
+    left: 7vw;
+  }
+
+  @media only screen and (max-width: 954px) {
+    bottom: 30vh;
+    left: 8vw;
+  }
+
+  @media only screen and (max-width: 768px) {
+    bottom: 18vh;
+    left: 8vw;
+  }
+
+  @media only screen and (max-width: 593px) {
+    bottom: 12vh;
+    left: 8vw;
+  }
+
+  @media only screen and (max-width: 425px) {
+    bottom: 6vh;
+    left: 8vw;
+  }
+}
+
+#girl {
+  position: absolute;
+  z-index: 2;
+  bottom: 25vh;
+  right: 2vw;
+
+  @media only screen and (max-width: 1200px) {
+    bottom: 15vh;
+    right: 4vw;
+  }
+
+  @media only screen and (max-width: 954px) {
+    bottom: 35vh;
+    right: 9vw;
+  }
+
+  @media only screen and (max-width: 768px) {
+    bottom: 20vh;
+    right: 8vw;
+  }
+
+  @media only screen and (max-width: 593px) {
+    bottom: 15vh;
+    right: 8vw;
+  }
+
+  @media only screen and (max-width: 425px) {
+    bottom: 8vh;
+    right: 8vw;
+  }
+}
+
+
+/* GLOBAL COMPONENTS
+---------------------------*/
 .c-indicator {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.c-indicator--left {
+  align-items: flex-start;
 }
 
 .c-btnsec {
@@ -530,14 +662,12 @@ a {
   height: auto;
   transform: rotate(-30deg);
   position: absolute;
-    bottom: -5rem;
-    right: -80px;
+  bottom: -5rem;
+  right: -80px;
 }
 
 
-
-
-/* utilities 
+/* UTILITIES 
 ---------------------------*/
 .u-highlight {
   color: var(--c-red);
