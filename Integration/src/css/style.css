@@ -15,7 +15,7 @@
 
   --c-black: #010000;
   --c-white: #FCFCFC;
-  --c-red: #C02F2F;
+  --c-red: #CB4F4F;
   --c-gradient: linear-gradient(var(--c-black), var(--c-red));
 
   --borders-sm: .625rem;
@@ -67,23 +67,23 @@ h1 {
 
   @media only screen and (min-width: 1200px) {
     font-size: var(--title-lg);
-    position: absolute;
+    /* position: absolute;
     top: 15%;
-    left: 5%;
+    left: 5%; */
   }
 
   @media only screen and (max-width: 1199px) {
     font-size: var(--title-lg);
-    position: absolute;
+    /* position: absolute;
     top: 15%;
-    left: 5%;
+    left: 5%; */
   }
 
   @media only screen and (max-width: 1023px) {
     font-size: 5rem;
-    position: absolute;
+    /* position: absolute;
     top: 15%;
-    left: 5%;
+    left: 5%; */
   }
 
   @media only screen and (max-width: 767px) {
@@ -110,6 +110,10 @@ button {
   text-transform: uppercase;
   font-size: var(--txt-md);
   margin-top: var(--d-30);
+
+  @media only screen and (max-width: 767px) {
+    font-size: var(--txt-sm);
+  }
 }
 
 section {
@@ -131,7 +135,7 @@ section {
   width: 2rem;
   height: 2px;
   margin-bottom: .5rem;
-  background-color: #B15050;
+  background-color: var(--c-red);
 }
 
 /* components 
@@ -159,6 +163,7 @@ section {
 .c-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: var(--d-20);
 }
 
@@ -166,10 +171,118 @@ section {
   width: 7rem;
   height: auto;
   border-radius: var(--borders-md);
+
+  @media only screen and (min-width: 1200px) {
+    top: 15%;
+    left: 5%;
+  }
+
+  @media only screen and (max-width: 1199px) {
+    top: 15%;
+    left: 5%;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    top: 15%;
+    left: 5%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: var(--borders-sm);
+  }
 }
 
 .c-header__underline {
   text-decoration: underline;
+}
+
+.c-header__title {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+
+  @media only screen and (min-width: 1200px) {
+    top: 15%;
+    left: 5%;
+  }
+
+  @media only screen and (max-width: 1199px) {
+    top: 15%;
+    left: 5%;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    top: 15%;
+    left: 5%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    top: 15%;
+    left: 5%;
+  }
+}
+
+.c-header__subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-red);
+
+  @media only screen and (max-width: 1023px) {
+    flex-direction: column;
+    margin-top: 5vh;
+    width: 55%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: colomn;
+    align-items: flex-start;
+    margin-top: 3vh;
+    width: 80%;
+  }
+
+  @media only screen and (max-width: 424px) {
+    margin-top: 40vh;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+.c-header__subtitle p {
+  text-transform: uppercase;
+  width: 100%;
+
+  @media only screen and (max-width: 1023px) {
+    width: 80%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.c-header__line {
+  background-color: var(--c-red);
+  width: 4rem;
+  height: 2px;
+  margin-right: var(--d-20);
+
+  @media only screen and (max-width: 1023px) {
+    width: 35vw;
+    margin-right: 0;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 70%;
+    margin-right: 0;
+  }
+
+  @media only screen and (max-width: 424px) {
+    width: 4rem;
+    margin-right: var(--d-20);
+  }
 }
 
 .c-header__img {
@@ -203,7 +316,13 @@ section {
   }
 
   @media only screen and (max-width: 767px) {
-    width: 80%;
+    width: 50vw;
+    margin-left: 40vw;
+    margin-top: 10vh;
+  }
+
+  @media only screen and (max-width: 424px) {
+    width: 80vw;
     margin-left: 10vw;
     margin-top: 20vh;
   }
@@ -227,6 +346,10 @@ section {
   }
 
   @media only screen and (max-width: 767px) {
+    width: 25rem;
+  }
+
+  @media only screen and (max-width: 424px) {
     width: 20rem;
   }
 }
@@ -245,13 +368,13 @@ section {
   }
 }
 
-.c-intro__pic{
+.c-intro__pic {
   transform: rotate(-10deg);
   margin-left: -6vw;
   margin-right: var(--d-20);
 }
 
-.c-intro__pic--rotate{
+.c-intro__pic--rotate {
   transform: rotate(10deg);
   margin-left: var(--d-30);
   margin-right: -6vw;
