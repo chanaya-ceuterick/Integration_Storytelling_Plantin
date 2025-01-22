@@ -273,6 +273,7 @@ img {
   width: 7rem;
   height: auto;
   border-radius: var(--borders-md);
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .5);
 
   @media only screen and (min-width: 1200px) {
     top: 15%;
@@ -436,7 +437,7 @@ img {
 
 .c-header__img picture {
   display: block;
-  margin-bottom: -.15rem;
+  margin-bottom: -.4rem;
 }
 
 .c-header__img picture img {
@@ -453,6 +454,7 @@ img {
 
   @media only screen and (max-width: 767px) {
     width: 25rem;
+    margin-bottom: 0.1rem;
   }
 
   @media only screen and (max-width: 424px) {
@@ -879,12 +881,252 @@ img {
   }
 }
 
+/* WOMEN'S ROLE
+---------------------------*/
+.c-women {
+  background-image: url(../../public/lace_bg.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  width: 100%;
+  position: relative;
+
+  @media only screen and (max-width: 400px) {
+    background-image: none;
+  }
+}
+
+.c-women__top {
+  display: flex;
+  flex-direction: row;
+  align-items: self-end;
+  width: 85vw;
+  margin: auto;
+
+  @media only screen and (max-width: 1200px) {
+    width: 90vw;
+  }
+
+  @media only screen and (max-width: 954px) {
+    flex-direction: column;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 80vw;
+    margin-bottom: var(--d-50) !important;
+  }
+}
+
+.c-women__img {
+  width: 35vw;
+  height: auto;
+  margin-left: var(--d-90);
+
+  @media only screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.c-women__split {
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 1200px) {
+    flex-direction: row-reverse;
+  }
+
+  @media only screen and (max-width: 593px) {
+    flex-direction: column;
+  }
+}
+
+.c-women__img--small {
+  display: none;
+
+  @media only screen and (max-width: 1200px) {
+    display: inline-block;
+    width: 30vw;
+    margin-left: 20%;
+    margin-top: var(--d-30);
+    margin-bottom: var(--d-30);
+    transform: rotate(10deg);
+  }
+
+  @media only screen and (max-width: 593px) {
+    display: inline-block;
+    transform: rotate(0);
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.c-women__middle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media only screen and (max-width: 423px) {
+    flex-direction: column;
+  }
+}
+
+.c-women__worker {
+  width: 80%;
+  height: auto;
+
+
+  @media only screen and (max-width: 768px) {
+    width: 45vw;
+  }
+
+  @media only screen and (max-width: 593px) {
+    width: 70vw;
+  }
+
+  @media only screen and (max-width: 423px) {
+    width: 100vw;
+  }
+}
+
+.c-women__interaction {
+  margin-left: -5vw;
+  margin-right: var(--d-160);
+  position: relative;
+
+
+  @media only screen and (max-width: 593px) {
+    margin-left: -10vw;
+  }
+
+  @media only screen and (max-width: 423px) {
+    margin-left: 15vw;
+  }
+}
+
+.c-women__speaking {
+  position: absolute;
+  top: 4vw;
+  left: 25vw;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    top: 0;
+  }
+
+  @media only screen and (max-width: 593px) {
+    top: 4vw;
+    left: 35vw;
+  }
+
+  @media only screen and (max-width: 423px) {
+    top: 4vw;
+    left: 55vw;
+  }
+}
+
+.c-women__speaking p {
+  transform: rotate(-10deg);
+}
+
+.c-women__options {
+  display: block;
+
+  @media only screen and (min-width: 769px) {
+    margin-right: 5vw;
+  }
+
+  @media only screen and (max-width: 768px) {
+    margin-right: 5vw;
+  }
+
+  @media only screen and (max-width: 593px) {
+    margin-left: -35vw;
+  }
+
+  @media only screen and (max-width: 423px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+}
+
+.c-women__option {
+  padding: var(--d-30) var(--d-50);
+  text-align: center;
+  border: 2px solid var(--c-red);
+  border-radius: var(--borders-md);
+  cursor: pointer;
+
+  @media only screen and (max-width: 1200px) {
+    padding: var(--d-20) var(--d-50);
+  }
+
+  @media only screen and (max-width: 1023px) {
+    padding: 10px var(--d-20);
+  }
+}
+
+.c-women__option:nth-of-type(even) {
+  margin-left: var(--d-90);
+
+  @media only screen and (max-width: 423px) {
+    margin-left: 0;
+    margin-right: var(--d-20);
+  }
+
+  @media only screen and (max-width: 399px) {
+    margin-left: 0;
+  }
+}
+
+.c-women__option:nth-of-type(odd) {
+  margin-right: var(--d-90);
+
+  @media only screen and (max-width: 423px) {
+    margin-right: var(--d-20);
+  }
+
+  @media only screen and (max-width: 399px) {
+    margin-right: var(--d-20);
+  }
+}
+
+.c-women__bottom {
+  width: 85vw;
+  margin: auto;
+
+  @media only screen and (max-width: 1200px) {
+    width: 90vw;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 80vw;
+  }
+}
+
+.c-woman__paragraph {
+  margin-left: 15vw;
+
+  @media only screen and (max-width: 593px) {
+    margin-left: 0;
+  }
+}
+
+
+
 /* UTILITIES 
 ---------------------------*/
 
 .u-highlight {
   color: var(--c-red);
   text-decoration: underline;
+}
+
+.u-title-highlight {
+  color: var(--c-red);
 }
 
 .u-active-line {
