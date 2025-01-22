@@ -690,7 +690,8 @@ img {
   display: flex;
   flex-direction: row;
 
-  @media only screen and (max-width: 425px) {
+
+  @media only screen and (max-width: 768px) {
     flex-direction: column;
   }
 }
@@ -700,7 +701,16 @@ img {
   top: -5vh;
   left: 30vw;
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 1023px) {
+    top: -20vh;
+  }
+
+  @media only screen and (max-width: 768px) {
+    top: 10vh;
+    left: 55vw;
+  }
+
+  @media only screen and (max-width: 423px) {
     top: -4vh;
     left: 62vw;
   }
@@ -716,7 +726,7 @@ img {
   transition: color 0.4s ease;
   cursor: pointer;
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 954px) {
     padding: .625rem;
   }
 }
@@ -725,7 +735,7 @@ img {
   width: 50px;
   height: 50px;
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 954px) {
     width: 30px;
     height: 30px;
   }
@@ -761,7 +771,19 @@ img {
   position: absolute;
   top: 10vh;
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 954px) {
+    width: 25px;
+    transform: scaleY(-1) rotate(15deg);
+    top: 7vh;
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 20px;
+    top: 12vh;
+    transform: scaleY(-1) rotate(-10deg);
+  }
+
+  @media only screen and (max-width: 423px) {
     display: none;
   }
 }
@@ -770,14 +792,36 @@ img {
   padding: 0 17.5rem 0 0;
   position: relative;
 
-  @media only screen and (max-width: 425px) {
-    padding: 0;
+  @media only screen and (max-width: 1023px) {
+    padding-right: 10rem;
+    margin-top: 160px;
   }
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.c-language__images--small {
+  padding: 0 17.5rem 0 0;
+  position: relative;
+  display: none;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+    display: block;
+    margin-top: 0;
+  }
+
+  @media only screen and (max-width: 423px) {
+    display: block;
+  }
+
 }
 
 .c-language__images p {
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 423px) {
     display: none;
   }
 }
@@ -788,10 +832,25 @@ img {
   transform: rotate(10deg);
   z-index: 1;
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 1023px) {
+    width: 30vw;
+    height: auto;
+    transform: rotate(10deg);
+    margin: var(--d-50) 0 var(--d-50) var(--d-50);
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 60vw;
+    height: auto;
+    transform: rotate(10deg);
+    margin: var(--d-50) 0 var(--d-50) var(--d-50);
+  }
+
+  @media only screen and (max-width: 423px) {
     width: 100%;
     height: auto;
     transform: rotate(0);
+    margin: 0;
   }
 }
 
@@ -803,6 +862,21 @@ img {
   position: absolute;
   top: 25vh;
   left: 15vw;
+
+  @media only screen and (max-width: 1023px) {
+    width: 25vw;
+    height: auto;
+    transform: rotate(-10deg);
+    margin: var(--d-50) 0 var(--d-50) var(--d-50);
+  }
+
+  @media only screen and (max-width: 768px) {
+    transform: rotate(10deg);
+    width: 50vw;
+    opacity: 0.2;
+    top: -80vh;
+    left: -15vw;
+  }
 }
 
 /* UTILITIES 
