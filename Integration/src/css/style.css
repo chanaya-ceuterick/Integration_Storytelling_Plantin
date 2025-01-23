@@ -54,7 +54,8 @@ nav {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Aboreto", serif;
   font-weight: 400;
   font-style: normal;
@@ -101,6 +102,33 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 9.375rem;
+  letter-spacing: var(--d-20);
+  margin: 0;
+  position: relative;
+
+  @media only screen and (max-width: 954px) {
+    font-size: 7.5rem;
+    letter-spacing: var(--d-20);
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 9.375rem;
+    letter-spacing: var(--d-20);
+  }
+
+  @media only screen and (max-width: 593px) {
+    font-size: 6.25rem;
+    letter-spacing: 0;
+  }
+
+  @media only screen and (max-width: 374px) {
+    font-size: 90px;
+    letter-spacing: 0;
+  }
+}
+
 button {
   background-color: var(--c-red);
   color: var(--c-white);
@@ -133,7 +161,7 @@ section {
 
 }
 
-#line {
+.line {
   width: 2rem;
   height: 2px;
   margin-bottom: .5rem;
@@ -180,11 +208,18 @@ img {
   overflow: hidden;
   z-index: 0;
   transition: color 0.4s ease;
+  text-transform: uppercase;
+  font-size: var(--txt-md);
+
 
   @media only screen and (max-width: 425px) {
     width: 8rem;
     height: 8rem;
   }
+}
+
+.c-btnsec p {
+  padding: 1rem;
 }
 
 .c-btnsec::before {
@@ -880,6 +915,215 @@ img {
     left: -15vw;
   }
 }
+
+/* QUOTE
+---------------------------*/
+.c-quote {
+  width: 100%;
+  position: relative;
+}
+
+.c-quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../public/Background_image_header.webp);
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
+
+  @media only screen and (min-width: 768px) {
+    height: 100%;
+  }
+}
+
+.c-quote__txt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--d-20) 0;
+  width: 85vw;
+  margin: auto;
+
+
+  @media only screen and (max-width: 1200px) {
+    width: 90vw;
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 80vw;
+    margin-bottom: var(--d-50) !important;
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width: 423px) {
+    justify-content: space-evenly;
+  }
+
+}
+
+.c-quote__star {
+  width: 4.375rem;
+
+  @media only screen and (max-width: 767px) {
+    width: 7.5rem;
+  }
+
+  @media only screen and (max-width: 593px) {
+    width: 6.25rem;
+  }
+
+  @media only screen and (max-width: 374px) {
+    width: 5.625rem;
+  }
+}
+
+.c-quote__img {
+  width: 30vw;
+  height: 7.75rem;
+  object-fit: cover;
+  object-position: 35% 25%;
+  border-radius: var(--d-160);
+
+  @media only screen and (max-width: 954px) {
+    width: 20vw;
+    height: 10vw;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 50vw;
+    height: 15vw;
+  }
+
+  @media only screen and (max-width: 526px) {
+    width: 25vw;
+    height: var(--d-90);
+  }
+
+  @media only screen and (max-width: 374px) {
+    width: 8.125rem;
+    height: var(--d-90);
+    border-radius: var(--d-30);
+  }
+}
+
+#quote-two {
+  @media only screen and (max-width: 954px) {
+    width: 25vw;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 50vw;
+    height: 15vw;
+    border-radius: var(--d-30);
+  }
+
+  @media only screen and (max-width: 593px) {
+    width: 55vw;
+  }
+
+  @media only screen and (max-width: 526px) {
+    width: 50vw;
+    height: var(--d-90);
+  }
+
+  @media only screen and (max-width: 374px) {
+    width: 70vw;
+    padding: 0.625rem 0;
+  }
+}
+
+
+#quote-three {
+  @media only screen and (max-width: 954px) {
+    width: 25vw;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 50vw;
+    height: 15vw;
+    border-radius: var(--d-30);
+  }
+
+  @media only screen and (max-width: 526px) {
+    width: 50vw;
+    height: var(--d-90);
+  }
+
+  @media only screen and (max-width: 374px) {
+    width: 8.125rem;
+    height: var(--d-90);
+    border-radius: var(--d-30);
+  }
+}
+
+#quote-margin {
+  margin-right: 0;
+
+  @media only screen and (max-width: 1178px) {
+    margin-right: 20vw;
+  }
+  @media only screen and (max-width: 954px) {
+    margin-right: 0;
+  }
+
+  @media only screen and (max-width: 526px) {
+    margin-right: 10vw;
+  }
+
+  @media only screen and (max-width: 423px) {
+    margin-right: 0;
+  }
+}
+
+.c-quote__constantia {
+  font-size: 9.8rem;
+  padding-bottom: .625rem;
+  text-align: center;
+
+  @media only screen and (max-width: 954px) {
+    font-size: 6.125rem;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 9.375rem;
+    letter-spacing: 0;
+  }
+
+  @media only screen and (max-width: 593px) {
+    font-size: 4.375rem;
+    letter-spacing: 0;
+  }
+
+  @media only screen and (max-width: 526px) {
+    font-size: 5.9375rem;
+    letter-spacing: 0;
+  }
+
+  @media only screen and (max-width: 374px) {
+    font-size: 5.625rem;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 526px) {
+  .c-quote__star {
+    order: 1;
+    width: 5rem;
+  }
+
+  .c-quote__txt>*:nth-child(7) {
+    order: 2;
+  }
+}
+
 
 /* WOMEN'S ROLE
 ---------------------------*/
