@@ -129,8 +129,8 @@ h3 {
   }
 }
 
-button {
-  background-color: var(--c-red);
+.c-btn {
+  background: var(--c-red);
   color: var(--c-white);
   padding: var(--txt-sm) 1.5625rem;
   border: none;
@@ -138,10 +138,43 @@ button {
   text-transform: uppercase;
   font-size: var(--txt-md);
   margin-top: var(--d-30);
+  max-width: fit-content;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.4s ease;
+  overflow: hidden;
 
   @media only screen and (max-width: 767px) {
     font-size: var(--txt-sm);
   }
+}
+
+.c-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--c-gradient);
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  border-radius: var(--borders-md);
+}
+
+.c-btn:hover::before {
+  transform: scaleY(1);
+}
+
+.c-btn:hover {
+  color: var(--c-white);
 }
 
 section {
