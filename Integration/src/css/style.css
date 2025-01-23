@@ -106,6 +106,12 @@ h3 {
   font-size: 150px;
   letter-spacing: var(--d-20);
   margin: 0;
+  position: relative;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 90px;
+    letter-spacing: 0;
+  }
 }
 
 button {
@@ -140,7 +146,7 @@ section {
 
 }
 
-#line {
+.line {
   width: 2rem;
   height: 2px;
   margin-bottom: .5rem;
@@ -187,11 +193,18 @@ img {
   overflow: hidden;
   z-index: 0;
   transition: color 0.4s ease;
+  text-transform: uppercase;
+  font-size: var(--txt-md);
+
 
   @media only screen and (max-width: 425px) {
     width: 8rem;
     height: 8rem;
   }
+}
+
+.c-btnsec p {
+  padding: 1rem;
 }
 
 .c-btnsec::before {
@@ -942,17 +955,49 @@ img {
   }
 }
 
+.c-quote__star {
+  @media only screen and (max-width: 767px) {
+    font-size: 200px;
+    position: absolute;
+    left: -6rem;
+    top: -2.5rem;
+  }
+}
+
 .c-quote__img {
-  width: 438px;
-  height: 124px;
+  width: 27.375rem;
+  height: 7.75rem;
   object-fit: cover;
   object-position: 35% 25%;
   border-radius: var(--d-160);
+
+  @media only screen and (max-width: 767px) {
+    width: var(--d-160);
+    height: var(--d-90);
+    border-radius: var(--d-30);
+  }
+}
+
+.c-quote__img:nth-child(1) {
+  width: 27.375rem;
+  height: 7.75rem;
+  object-fit: cover;
+  object-position: 35% 25%;
+  border-radius: var(--d-160);
+
+  @media only screen and (max-width: 767px) {
+    width: 30px;
+    height: var(--d-90);
+  }
 }
 
 .c-quote__constantia {
   font-size: 160px;
   padding-bottom: .625rem;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 90px;
+  }
 }
 
 /* WOMEN'S ROLE
