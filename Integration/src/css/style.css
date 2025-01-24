@@ -528,6 +528,7 @@ img {
   }
 }
 
+
 /* INTRO
 -------------------------------- */
 
@@ -623,6 +624,7 @@ img {
 .c-intro__link {
   position: relative;
 }
+
 
 /* CIVIL RIGHTS
 ---------------------------*/
@@ -736,6 +738,7 @@ img {
     bottom: 8vh;
   }
 }
+
 
 /* LANGUAGE AND EDUCATION
 ---------------------------*/
@@ -1317,6 +1320,7 @@ img {
   }
 }
 
+
 /* DAUGHTERS
 ---------------------------*/
 .c-daughters {
@@ -1517,6 +1521,8 @@ img {
   }
 }
 
+
+
 /* FAMILY BUSINESS 
 ---------------------------*/
 .c-business {
@@ -1569,6 +1575,7 @@ img {
     padding: var(--d-20) 0;
   }
 }
+
 
 /* NEWSLETTER 
 ---------------------------*/
