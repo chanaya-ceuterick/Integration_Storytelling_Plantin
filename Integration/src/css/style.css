@@ -914,6 +914,18 @@ img {
   position: relative;
 }
 
+.c-quote__spacing {
+  letter-spacing: 2.1875rem;
+
+  @media only screen and (max-width: 1399px) {
+    letter-spacing: var(--d-20);
+  }
+
+  @media only screen and (max-width: 954px) {
+    letter-spacing: 2.1875rem;
+  }
+}
+
 .c-quote::before {
   content: '';
   position: absolute;
@@ -926,6 +938,7 @@ img {
   background-size: cover;
   opacity: 0.1;
   z-index: -1;
+  border-radius: var(--borders-md);
 
   @media only screen and (min-width: 768px) {
     height: 100%;
@@ -942,35 +955,19 @@ img {
   width: 85vw;
   margin: auto;
 
-
-  @media only screen and (max-width: 1200px) {
-    width: 90vw;
+  @media only screen and (max-width: 954px) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
   }
-
-  @media only screen and (max-width: 767px) {
-    width: 80vw;
-    margin-bottom: var(--d-50);
-  }
-
-  @media only screen and (max-width: 423px) {
-    justify-content: space-evenly;
-  }
-
 }
 
 .c-quote__star {
   width: 4.375rem;
 
-  @media only screen and (max-width: 767px) {
-    width: 7.5rem;
-  }
-
-  @media only screen and (max-width: 593px) {
-    width: 6.25rem;
-  }
-
-  @media only screen and (max-width: 374px) {
-    width: 5.625rem;
+  @media only screen and (max-width: 954px) {
+    width: fit-content;
   }
 }
 
@@ -980,6 +977,16 @@ img {
   object-fit: cover;
   object-position: 35% 25%;
   border-radius: var(--d-160);
+
+  @media only screen and (max-width: 1399px) {
+    width: 25vw;
+    height: 10vw;
+  }
+
+  @media only screen and (max-width: 1023px) {
+    width: 20vw;
+    height: 10vw;
+  }
 
   @media only screen and (max-width: 954px) {
     width: 20vw;
@@ -991,83 +998,10 @@ img {
     height: 15vw;
   }
 
-  @media only screen and (max-width: 526px) {
-    width: 25vw;
-    height: var(--d-90);
-  }
-
   @media only screen and (max-width: 374px) {
     width: 8.125rem;
-    height: var(--d-90);
+    height: 12vh;
     border-radius: var(--d-30);
-  }
-}
-
-#quote-two {
-  @media only screen and (max-width: 954px) {
-    width: 25vw;
-  }
-
-  @media only screen and (max-width: 767px) {
-    width: 50vw;
-    height: 15vw;
-    border-radius: var(--d-30);
-  }
-
-  @media only screen and (max-width: 593px) {
-    width: 55vw;
-  }
-
-  @media only screen and (max-width: 526px) {
-    width: 50vw;
-    height: var(--d-90);
-  }
-
-  @media only screen and (max-width: 374px) {
-    width: 70vw;
-    padding: 0.625rem 0;
-  }
-}
-
-
-#quote-three {
-  @media only screen and (max-width: 954px) {
-    width: 25vw;
-  }
-
-  @media only screen and (max-width: 767px) {
-    width: 50vw;
-    height: 15vw;
-    border-radius: var(--d-30);
-  }
-
-  @media only screen and (max-width: 526px) {
-    height: var(--d-90);
-  }
-
-  @media only screen and (max-width: 374px) {
-    width: 8.125rem;
-    border-radius: var(--d-30);
-  }
-}
-
-#quote-margin {
-  margin-right: 0;
-
-  @media only screen and (max-width: 1178px) {
-    margin-right: 20vw;
-  }
-
-  @media only screen and (max-width: 954px) {
-    margin-right: 0;
-  }
-
-  @media only screen and (max-width: 526px) {
-    margin-right: 10vw;
-  }
-
-  @media only screen and (max-width: 423px) {
-    margin-right: 0;
   }
 }
 
@@ -1076,36 +1010,24 @@ img {
   padding-bottom: .625rem;
   text-align: center;
 
-  @media only screen and (max-width: 954px) {
-    font-size: 6.125rem;
+  @media only screen and (max-width: 1399px) {
+    font-size: 8rem;
   }
 
-  @media only screen and (max-width: 767px) {
-    font-size: 9.375rem;
-    letter-spacing: 0;
+  @media only screen and (max-width: 1023px) {
+    font-size: 6.5rem;
+  }
+
+  @media only screen and (max-width: 954px) {
+    font-size: 6.125rem;
   }
 
   @media only screen and (max-width: 593px) {
     font-size: 4.375rem;
   }
 
-  @media only screen and (max-width: 526px) {
-    font-size: 5.9375rem;
-  }
-
   @media only screen and (max-width: 374px) {
     font-size: 5.625rem;
-  }
-}
-
-@media only screen and (max-width: 526px) {
-  .c-quote__star {
-    order: 1;
-    width: 5rem;
-  }
-
-  .c-quote__txt>*:nth-child(7) {
-    order: 2;
   }
 }
 
