@@ -144,7 +144,7 @@ h4 {
 }
 
 section {
-  margin-bottom: var(--d-160);
+  margin-bottom: var(--d-160) !important;
   width: 85vw;
   margin: auto;
 
@@ -155,7 +155,7 @@ section {
 
   @media only screen and (max-width: 767px) {
     width: 80vw;
-    margin-bottom: var(--d-50);
+    margin-bottom: var(--d-50) !important;
   }
 
 }
@@ -1337,11 +1337,11 @@ img {
   background-position: center left;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 
   @media only screen and (max-width: 767px) {
     padding: 0;
-    margin: 0;
+    margin: 0 !important;
   }
 }
 
@@ -1399,10 +1399,12 @@ img {
 
   @media only screen and (max-width: 593px) {
     height: fit-content;
+    margin-bottom: 55vh;
   }
 
   @media only screen and (max-width: 425px) {
     height: 45vh;
+    margin-bottom: 85vh;
   }
 }
 
@@ -1509,12 +1511,11 @@ img {
   margin-left: 7.5vw;
   position: relative;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 593px) {
     flex-direction: column;
     width: 80vw;
     margin: 0 auto 60vw auto;
   }
-
 }
 
 .c-daughters__daughter--right {
@@ -1522,7 +1523,7 @@ img {
   margin-left: 0;
 
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 593px) {
     margin: 0 auto 60vw auto;
   }
 }
@@ -1530,7 +1531,7 @@ img {
 .c-daughters__txt {
   width: 50vw;
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
     width: 100%;
     z-index: 0;
   }
@@ -1544,11 +1545,15 @@ img {
   margin-right: -5vw;
   opacity: .6;
 
-  @media only screen and (max-width: 425px) {
-    width: 80vw;
+  @media only screen and (max-width: 767px) {
+    width: 50vw;
+  }
+
+  @media only screen and (max-width: 593px) {
     position: absolute;
-    top: -50vw;
     right: 0;
+    width: 80vw;
+    top: -50vw;
     z-index: -1;
   }
 }
@@ -1558,7 +1563,13 @@ img {
   margin-left: -5vw;
   margin-right: 5vw;
 
-  @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 767px) {
+    top: -50vw;
+    left: 0;
+    z-index: -1;
+  }
+
+  @media only screen and (max-width: 593px) {
     top: -50vw;
     left: 0;
     z-index: -1;
