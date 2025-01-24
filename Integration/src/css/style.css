@@ -203,7 +203,7 @@ img {
   text-transform: uppercase;
   font-size: var(--txt-md);
   margin-top: var(--d-30);
-  max-width: fit-content;
+  width: fit-content;
   cursor: pointer;
 
   position: relative;
@@ -216,6 +216,10 @@ img {
 
   @media only screen and (max-width: 767px) {
     font-size: var(--txt-sm);
+  }
+
+  @media only screen and (max-width: 425px) {
+    width: 80%;
   }
 }
 
@@ -1573,6 +1577,59 @@ img {
     top: -50vw;
     left: 0;
     z-index: -1;
+  }
+}
+
+/* FAMILY BUSINESS 
+---------------------------*/
+.c-business {
+  background-image: url(../../public/bg_business.webp);
+  width: 100%;
+  height: fit-content;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--borders-md);
+}
+
+.c-business__txt {
+  display: flex;
+  flex-direction: row;
+
+  @media only screen and (max-width: 766px) {
+    flex-direction: column;
+  }
+}
+
+.c-business__txt p {
+  width: 80%;
+
+  @media only screen and (max-width: 766px) {
+    width: 100%;
+  }
+}
+
+.c-business__txt p:first-child {
+  margin-right: 10%;
+
+  @media only screen and (max-width: 767px) {
+    margin-right: 0;
+  }
+}
+
+.c-business__content {
+  padding: var(--d-30) 0;
+  width: 85vw;
+  margin: auto;
+
+
+  @media only screen and (max-width: 1200px) {
+    width: 90vw;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 80vw;
+    margin-bottom: var(--d-50) !important;
+    padding: var(--d-20) 0;
   }
 }
 
