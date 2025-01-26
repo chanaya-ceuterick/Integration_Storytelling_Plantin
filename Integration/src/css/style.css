@@ -626,6 +626,13 @@ img {
   position: relative;
 }
 
+#imgone {
+  transform: translateX(-100%) rotate(40deg);
+}
+
+#imgtwo {
+  transform: translateX(110%) rotate(-40deg);
+}
 
 /* CIVIL RIGHTS
 ---------------------------*/
