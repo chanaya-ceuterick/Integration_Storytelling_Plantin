@@ -55,6 +55,6 @@ gsap.fromTo(words, {
         end: 'top 10%',
         scrub: true,
         toggleActions: "play none none reverse",
-        markers: true
+        // markers: true
     }
 });

@@ -3,3 +3,4 @@ import '../css/style.css'
 
 import './_intro.js';
 import './_civil.js';
+import './_language.js';
