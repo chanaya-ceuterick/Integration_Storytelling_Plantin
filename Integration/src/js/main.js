@@ -76,7 +76,7 @@ gsap.fromTo('#civil-img, #civil-txt', {
     duration: 1
 });
 
-gsap.to('#boy, #girl', {
+gsap.to('#boy, #girl, #star', {
     scale: 1.5,
     rotation: 60,
     repeat: -1,
@@ -86,6 +86,7 @@ gsap.to('#boy, #girl', {
 });
 
 // language
+
 gsap.fromTo('.c-language__imgone', {
     x: '-150%',
     rotation: 30
@@ -116,6 +117,28 @@ gsap.fromTo('.c-language__imgtwo', {
     duration: 1
 });
 
+// quote
+
+gsap.fromTo('#quote-title-one, #quote-title-two, #quote-title-three, #quote-title-four, #star, #quote-one, #quote-two, #quote-three', {
+    y: '120%',
+    opacity: 0,
+    rotation: 10
+}, {
+    scrollTrigger: {
+        trigger: '#quote-title-one',
+        start: 'top 60%',
+        end: 'top 30%',
+        scrub: true,
+    },
+    y: '0%',
+    rotation: 0,
+    opacity: 1,
+    duration: 5,
+    delay: 0.5,
+    stagger: .5
+});
+
+
 // word animation
 
 function wrapWords(selector) {
@@ -145,7 +168,7 @@ function textAnimationIntro() {
         scrollTrigger: {
             trigger: '#text-intro',
             start: 'top 60%',
-            end: 'top 10%',
+            end: 'top 30%',
             scrub: true,
             toggleActions: "play none none reverse"
         }
@@ -164,8 +187,8 @@ function textAnimationCivil() {
         stagger: 0.5,
         scrollTrigger: {
             trigger: '#text',
-            start: 'top 60%',
-            end: 'top 10%',
+            start: 'top 80%',
+            end: 'top 20%',
             scrub: true,
             toggleActions: "play none none reverse"
         }

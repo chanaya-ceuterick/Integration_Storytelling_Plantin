@@ -984,6 +984,7 @@ img {
 
 .c-quote__star {
   width: 4.375rem;
+  height: 4.375rem;
 
   @media only screen and (max-width: 954px) {
     width: fit-content;
