@@ -125,9 +125,9 @@ gsap.fromTo('#quote-title-one, #quote-title-two, #quote-title-three, #quote-titl
     rotation: 10
 }, {
     scrollTrigger: {
-        trigger: '#quote-title-one',
+        trigger: '.c-quote',
         start: 'top 60%',
-        end: 'top 30%',
+        end: 'top 10%',
         scrub: true,
     },
     y: '0%',
@@ -137,6 +137,65 @@ gsap.fromTo('#quote-title-one, #quote-title-two, #quote-title-three, #quote-titl
     delay: 0.5,
     stagger: .5
 });
+
+gsap.fromTo('.c-quote', {
+    opacity: 0,
+    y: 50
+}, {
+    scrollTrigger: {
+        trigger: '.c-quote',
+        start: 'top 80%',
+        end: 'top 30%',
+        scrub: true,
+    },
+    opacity: 2,
+    y: 0
+})
+
+// indicator
+
+gsap.utils.toArray('#right .line').forEach((line) => {
+    gsap.fromTo(
+        line,
+        { opacity: 0, x: 100 },
+        {
+            scrollTrigger: {
+                trigger: line,
+                start: 'top 80%',
+                end: 'top 30%',
+                scrub: true,
+            },
+            opacity: 1,
+            x: 0,
+            duration: 3,
+            ease: 'power1.out',
+            stagger: 0.2,
+        }
+    );
+});
+
+gsap.utils.toArray('#left .line').forEach((line) => {
+    gsap.fromTo(
+        line,
+        { opacity: 0, x: -200 },
+        {
+            scrollTrigger: {
+                trigger: line,
+                start: 'top 80%',
+                end: 'top 30%',
+                scrub: true,
+            },
+            opacity: 1,
+            x: 0,
+            duration: 3,
+            ease: 'power1.out',
+            stagger: 0.2,
+        }
+    );
+});
+
+//business women
+
 
 
 // word animation
