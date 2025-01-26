@@ -635,7 +635,8 @@ img {
 }
 
 .c-intro__txt h2,
-.c-intro__txt p {
+.c-intro__txt p,
+.u-highlight {
   color: transparent;
   transition: color 0.5s;
 }
