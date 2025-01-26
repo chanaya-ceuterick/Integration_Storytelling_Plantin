@@ -634,6 +634,12 @@ img {
   transform: translateX(110%) rotate(-40deg);
 }
 
+.c-intro__txt h2,
+.c-intro__txt p {
+  color: transparent;
+  transition: color 0.5s;
+}
+
 /* CIVIL RIGHTS
 ---------------------------*/
 
