@@ -122,6 +122,22 @@ gsap.fromTo('.u-highlight', {
     duration: 1
 });
 
+gsap.to('.c-btnsec', {
+    scale: 1.1,
+    repeat: -1,
+    yoyo: true,
+    duration: 1,
+    ease: 'power1.inOut',
+});
+
+gsap.to('.c-btnsec__svg', {
+    rotation: 0.1,
+    repeat: -1,
+    yoyo: true,
+    duration: 1,
+    ease: 'power1.inOut',
+});
+
 
 // civil rights
 
