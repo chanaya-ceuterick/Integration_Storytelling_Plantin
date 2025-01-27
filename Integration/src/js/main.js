@@ -1,6 +1,33 @@
 import '../css/style.css';
 gsap.registerPlugin(ScrollTrigger);
 
+//Nav
+
+// Get the button, dropdown, and list items
+const languageBtn = document.querySelector('.c-nav__btn');
+const languageDropdown = document.querySelector('.c-nav__dropdown');
+const languageItems = document.querySelectorAll('.c-nav__dropdown li');
+
+// Toggle the visibility of the dropdown when the button is clicked
+languageBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent immediate closing when clicking on the button
+    languageDropdown.classList.toggle('open');
+});
+
+// Close the dropdown when clicking outside of it
+document.addEventListener('click', () => {
+    languageDropdown.classList.remove('open');
+});
+
+// Change the button text to the selected language
+languageItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        const selectedLang = e.target.getAttribute('data-lang');
+        languageBtn.innerHTML = selectedLang.toUpperCase(); // Set the button text to the selected language (e.g., "EN", "ES")
+        languageDropdown.classList.remove('open'); // Close the dropdown after selection
+    });
+});
+
 // intro 
 
 gsap.fromTo('#imgone', {
@@ -381,19 +408,6 @@ gsap.fromTo('.c-business__content', {
 
 
 //Newsletter
-
-// gsap.fromTo('.c-newsletter', {
-//     opacity: 0,
-// }, {
-//     scrollTrigger: {
-//         trigger: '.c-newsletter',
-//         start: 'top 60%',
-//         end: 'bottom 50%',
-//         scrub: true,
-//     },
-//     opacity: 1,
-//     duration: 1
-// });
 
 gsap.fromTo('#newsletter-img', {
     x: "200%",
