@@ -1,32 +1,68 @@
-import '../css/style.css';
+// import '../css/style.css';
 gsap.registerPlugin(ScrollTrigger);
 
 //Nav
-
-// Get the button, dropdown, and list items
 const languageBtn = document.querySelector('.c-nav__btn');
 const languageDropdown = document.querySelector('.c-nav__dropdown');
 const languageItems = document.querySelectorAll('.c-nav__dropdown li');
 
-// Toggle the visibility of the dropdown when the button is clicked
 languageBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // Prevent immediate closing when clicking on the button
+    e.stopPropagation();
     languageDropdown.classList.toggle('open');
 });
 
-// Close the dropdown when clicking outside of it
 document.addEventListener('click', () => {
     languageDropdown.classList.remove('open');
 });
 
-// Change the button text to the selected language
 languageItems.forEach(item => {
     item.addEventListener('click', (e) => {
         const selectedLang = e.target.getAttribute('data-lang');
-        languageBtn.innerHTML = selectedLang.toUpperCase(); // Set the button text to the selected language (e.g., "EN", "ES")
-        languageDropdown.classList.remove('open'); // Close the dropdown after selection
+        languageBtn.innerHTML = selectedLang.toUpperCase();
+        languageDropdown.classList.remove('open');
     });
 });
+
+//Header
+gsap.fromTo('.c-header__title h1', {
+    scale: 1.1,
+    opacity: 0,
+},
+    {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        ease: 'power1.inOut',
+    });
+
+gsap.fromTo('.c-header__subtitle', {
+    x: -50,
+    opacity: 0,
+},
+    {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power1.inOut',
+    });
+
+gsap.fromTo('.c-header__img', {
+    opacity: 0,
+},
+    {
+        opacity: 1,
+        duration: 1,
+        ease: 'power1.inOut',
+    });
+
+gsap.fromTo('.c-header__img picture img', {
+    x: 50,
+},
+    {
+        x: 0,
+        duration: 1,
+        ease: 'power1.inOut',
+    });
 
 // intro 
 
