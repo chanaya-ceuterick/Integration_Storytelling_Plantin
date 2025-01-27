@@ -196,6 +196,21 @@ gsap.utils.toArray('#left .line').forEach((line) => {
 
 //business women
 
+gsap.fromTo('.c-women__worker, .c-women__speaking', {
+    x: '-200%',
+    rotation: -30
+}, {
+    scrollTrigger: {
+        trigger: '.c-women__middle',
+        start: 'top 60%',
+        end: 'top 30%',
+        scrub: true,
+    },
+    x: '0%',
+    rotation: 0,
+    duration: 1
+});
+
 gsap.fromTo('.c-women__img', {
     x: '200%',
     rotation: 30
@@ -225,6 +240,27 @@ gsap.fromTo('.c-women__top', {
     opacity: 1,
     duration: 1
 });
+
+gsap.utils.toArray('.c-women__option').forEach((option, index) => {
+    gsap.fromTo(
+        option,
+        { opacity: 0.3, x: 200 },
+        {
+            scrollTrigger: {
+                trigger: '.c-women__options',
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none restart reverse',
+            },
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            ease: 'power1.out',
+            delay: index * 0.5,
+        }
+    );
+});
+
 
 // word animation
 
@@ -302,7 +338,7 @@ function textAnimationLanguage() {
     });
 }
 
-function textAnimationWoman() {
+function textAnimationWomanTop() {
     wrapWords('#text-women-one, #text-women-two');
     const words = gsap.utils.toArray('.c-word');
 
@@ -322,8 +358,29 @@ function textAnimationWoman() {
     });
 }
 
+function textAnimationWomanBottom() {
+    wrapWords('.c-woman__paragraph');
+    const words = gsap.utils.toArray('.c-word');
+
+    gsap.fromTo(words, {
+        opacity: 0.3,
+    }, {
+        opacity: 1,
+        duration: 0.4,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: '.c-woman__txt h2',
+            start: 'top 40%',
+            end: 'top 20%',
+            scrub: true,
+            toggleActions: "play none none reverse"
+        }
+    });
+}
+
 // Initialisatie van animaties
 textAnimationIntro();
 textAnimationCivil();
 textAnimationLanguage();
-textAnimationWoman();
+textAnimationWomanTop();
+textAnimationWomanBottom();
