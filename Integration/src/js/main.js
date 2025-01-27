@@ -261,6 +261,32 @@ gsap.utils.toArray('.c-women__option').forEach((option, index) => {
     );
 });
 
+// Interest
+gsap.fromTo('.c-interest', {
+    opacity: 0,
+}, {
+    scrollTrigger: {
+        trigger: '.c-interest',
+        start: 'top 60%',
+        end: 'top 30%',
+        scrub: true,
+    },
+    opacity: 1,
+    duration: 1
+});
+
+gsap.fromTo('.c-interest__txt', {
+    y: '100%',
+}, {
+    scrollTrigger: {
+        trigger: '.c-interest',
+        start: 'top 60%',
+        end: 'top 30%',
+        scrub: true,
+    },
+    y: 0,
+    duration: 1
+});
 
 // word animation
 
