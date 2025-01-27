@@ -196,7 +196,35 @@ gsap.utils.toArray('#left .line').forEach((line) => {
 
 //business women
 
+gsap.fromTo('.c-women__img', {
+    x: '200%',
+    rotation: 30
+}, {
+    scrollTrigger: {
+        trigger: '.c-women__top',
+        start: 'top 60%',
+        end: 'top 30%',
+        scrub: true,
+    },
+    x: '0%',
+    rotation: 0,
+    duration: 1
+});
 
+gsap.fromTo('.c-women__top', {
+    y: '50%',
+    opacity: 0,
+}, {
+    scrollTrigger: {
+        trigger: '.c-women',
+        start: 'top 60%',
+        end: 'top 30%',
+        scrub: true,
+    },
+    y: '0%',
+    opacity: 1,
+    duration: 1
+});
 
 // word animation
 
@@ -274,7 +302,28 @@ function textAnimationLanguage() {
     });
 }
 
+function textAnimationWoman() {
+    wrapWords('#text-women-one, #text-women-two');
+    const words = gsap.utils.toArray('.c-word');
+
+    gsap.fromTo(words, {
+        opacity: 0.3,
+    }, {
+        opacity: 1,
+        duration: 0.4,
+        stagger: 0.5,
+        scrollTrigger: {
+            trigger: '.c-woman__txttop h2',
+            start: 'top 60%',
+            end: 'top 20%',
+            scrub: true,
+            toggleActions: "play none none reverse"
+        }
+    });
+}
+
 // Initialisatie van animaties
 textAnimationIntro();
 textAnimationCivil();
 textAnimationLanguage();
+textAnimationWoman();
