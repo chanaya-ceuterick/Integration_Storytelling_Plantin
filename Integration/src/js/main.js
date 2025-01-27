@@ -59,6 +59,7 @@ gsap.fromTo('.u-highlight', {
     duration: 1
 });
 
+
 // civil rights
 
 gsap.fromTo('#civil-img, #civil-txt', {
@@ -76,7 +77,7 @@ gsap.fromTo('#civil-img, #civil-txt', {
     duration: 1
 });
 
-gsap.to('#boy, #girl, #star', {
+gsap.to('#boy, #girl, #star, .c-newsletter__star', {
     scale: 1.5,
     rotation: 60,
     repeat: -1,
@@ -84,6 +85,7 @@ gsap.to('#boy, #girl, #star', {
     duration: 1,
     ease: 'power1.inOut',
 });
+
 
 // language
 
@@ -116,6 +118,7 @@ gsap.fromTo('.c-language__imgtwo', {
     rotation: -10,
     duration: 1
 });
+
 
 // quote
 
@@ -151,6 +154,7 @@ gsap.fromTo('.c-quote', {
     opacity: 2,
     y: 0
 })
+
 
 // indicator
 
@@ -193,6 +197,7 @@ gsap.utils.toArray('#left .line').forEach((line) => {
         }
     );
 });
+
 
 //business women
 
@@ -261,6 +266,7 @@ gsap.utils.toArray('.c-women__option').forEach((option, index) => {
     );
 });
 
+
 // Interest
 gsap.fromTo('.c-interest', {
     opacity: 0,
@@ -287,6 +293,148 @@ gsap.fromTo('.c-interest__txt', {
     y: 0,
     duration: 1
 });
+
+
+// Daughters
+gsap.fromTo('.c-daughters__book', {
+    opacity: 0,
+}, {
+    scrollTrigger: {
+        trigger: '.c-daughters__book',
+        start: 'top 60%',
+        end: 'bottom 50%',
+        scrub: true,
+    },
+    opacity: 1,
+    duration: 1
+});
+
+gsap.utils.toArray('#left-daughter').forEach((daughter) => {
+    gsap.fromTo(
+        daughter,
+        { opacity: 0, x: 200, rotation: 90 },
+        {
+            scrollTrigger: {
+                trigger: daughter,
+                start: 'top 60%',
+                end: 'bottom 40%',
+                scrub: true,
+            },
+            opacity: 1,
+            x: 0,
+            rotation: 10,
+            duration: 3,
+            ease: 'power1.out',
+            stagger: 0.2,
+        }
+    );
+});
+
+gsap.utils.toArray('#right-daughter').forEach((daughter) => {
+    gsap.fromTo(
+        daughter,
+        { opacity: 0, x: -200, rotation: -90 },
+        {
+            scrollTrigger: {
+                trigger: daughter,
+                start: 'top 60%',
+                end: 'bottom 40%',
+                scrub: true,
+            },
+            opacity: 1,
+            x: 0,
+            duration: 3,
+            rotation: -10,
+            ease: 'power1.out',
+            stagger: 0.2,
+        }
+    );
+});
+
+
+//Family business
+gsap.fromTo('.c-business', {
+    opacity: 0,
+}, {
+    scrollTrigger: {
+        trigger: '.c-business',
+        start: 'top 60%',
+        end: 'bottom 50%',
+        scrub: true,
+    },
+    opacity: 1,
+    duration: 1
+});
+
+gsap.fromTo('.c-business__content', {
+    y: 50,
+}, {
+    scrollTrigger: {
+        trigger: '.c-business__content',
+        start: 'top 60%',
+        end: 'bottom 50%',
+        scrub: true,
+    },
+    y: 0,
+    duration: 1
+});
+
+
+//Newsletter
+
+// gsap.fromTo('.c-newsletter', {
+//     opacity: 0,
+// }, {
+//     scrollTrigger: {
+//         trigger: '.c-newsletter',
+//         start: 'top 60%',
+//         end: 'bottom 50%',
+//         scrub: true,
+//     },
+//     opacity: 1,
+//     duration: 1
+// });
+
+gsap.fromTo('#newsletter-img', {
+    x: "200%",
+    rotation: 30
+
+}, {
+    scrollTrigger: {
+        trigger: '#newsletter-img',
+        start: 'top 60%',
+        end: 'top 20%',
+        scrub: true,
+    },
+    x: 0,
+    rotation: 0,
+    duration: 1
+});
+
+
+//Footer
+gsap.to('.c-footer__star', {
+    rotation: 60,
+    repeat: -1,
+    yoyo: true,
+    duration: 1,
+    ease: 'power1.inOut',
+});
+
+gsap.fromTo('.c-footer', {
+    opacity: 0,
+}, {
+    scrollTrigger: {
+        trigger: '.c-footer',
+        start: 'top 60%',
+        end: 'bottom 80%',
+        scrub: true,
+        ease: 'power1.inOut',
+    },
+    opacity: 1,
+    duration: 1
+});
+
 
 // word animation
 
@@ -404,9 +552,36 @@ function textAnimationWomanBottom() {
     });
 }
 
+function textAnimationDaughters() {
+    wrapWords('.c-daughters__txt p');
+
+    gsap.utils.toArray('.c-daughters__txt p').forEach((paragraph) => {
+        const words = paragraph.querySelectorAll('.c-word');
+
+        gsap.fromTo(
+            words,
+            { opacity: 0.3 },
+            {
+                opacity: 1,
+                duration: 0.6,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: paragraph,
+                    start: 'top 80%',
+                    end: 'top 20%',
+                    scrub: true,
+                    toggleActions: "play none none reverse",
+                },
+            }
+        );
+
+    });
+}
+
 // Initialisatie van animaties
 textAnimationIntro();
 textAnimationCivil();
 textAnimationLanguage();
 textAnimationWomanTop();
 textAnimationWomanBottom();
+textAnimationDaughters();
