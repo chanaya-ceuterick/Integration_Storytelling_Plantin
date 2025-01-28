@@ -14,9 +14,21 @@
       <a href="index.html">
         <img class="c-nav__logo" src="/logo.webp" alt="Logo Plantin-Moretus museum">
       </a>
-      <a href="https://museumplantinmoretus.be/en" target="_blank">
-        <div class="c-btn">buy tickets</div>
-      </a>
+      <div class="c-nav__language">
+        <button class="c-nav__btn">
+          <p>EN</p>
+        </button>
+        <ul class="c-nav__dropdown">
+          <li data-lang="en">English</li>
+          <li data-lang="es">Español</li>
+          <li data-lang="fr">Français</li>
+          <li data-lang="de">Deutsch</li>
+        </ul>
+        <a href="https://museumplantinmoretus.be/en" target="_blank">
+          <div class="c-btn">buy tickets</div>
+        </a>
+      </div>
+
     </nav>
 
     <header class="c-header">
@@ -45,7 +57,7 @@
   <main>
     <section class="c-intro">
       <picture class="c-intro__pic">
-        <img class="c-intro__img" sizes="(max-width: 1043px) 100vw, 1043px" srcset="
+        <img id="imgone" class="c-intro__img" sizes="(max-width: 1043px) 100vw, 1043px" srcset="
     /intro-religious/intro-r-w_180.webp 180w,
     /intro-religious/intro-r-w_514.webp 514w,
     /intro-religious/intro-r-w_737.webp 737w,
@@ -54,7 +66,7 @@
       </picture>
 
       <div class="c-intro__txt">
-        <div class="c-indicator">
+        <div id="right" class="c-indicator">
           <div class="line u-active-line"></div>
           <div class="line"></div>
           <div class="line"></div>
@@ -63,7 +75,8 @@
           <div class="line"></div>
         </div>
         <h2>Who is plantin?</h2>
-        <p>Christophe Plantin (c. 1520-1589) was a French-born printer who founded the influential Plantin Press in
+        <p id="text-intro">Christophe Plantin (c. 1520-1589) was a French-born printer who founded the influential
+          Plantin Press in
           Antwerp in 1555. <span class="u-highlight">Known for his high-quality books</span>, he produced religious,
           scientific, and humanist works,including the famous Polyglot Bible.
           <br><br>
@@ -89,7 +102,7 @@
       </div>
 
       <picture class="c-intro__pic c-intro__pic--rotate">
-        <img class="c-intro__img" sizes="(max-width: 1043px) 100vw, 1043px" srcset="
+        <img id="imgtwo" class="c-intro__img" sizes="(max-width: 1043px) 100vw, 1043px" srcset="
     /intro-scholar/intro-s-w_180.webp 180w,
     /intro-scholar/intro-s-w_524.webp 524w,
     /intro-scholar/intro-s-w_761.webp 761w,
@@ -100,8 +113,8 @@
     </section>
 
     <section id="next" class="c-civilrights">
-      <div class="c-civilrights__txt">
-        <div class="c-indicator c-indicator--left">
+      <div id="civil-txt" class="c-civilrights__txt">
+        <div id="left" class="c-indicator c-indicator--left">
           <div class="line"></div>
           <div class="line u-active-line"></div>
           <div class="line"></div>
@@ -110,25 +123,23 @@
           <div class="line"></div>
         </div>
         <h2>Civil Rights</h2>
-        <p>Plantin had sworn <span class="u-highlight">citizenship in 1550</span>, securing his right to reside and
-          work. As a printer, this was crucial,
-          as a 1546 decree
-          by Charles V required all printers in the Netherlands to be sworn citizens.
+        <p id="text">
+          Plantin had <span class="u-highlight">sworn citizenship in 1550</span>, securing his right to reside and work.
+          As a printer, this was crucial, as a 1546 decree by Charles V required all printers in the Netherlands to be
+          sworn citizens.
           <br><br>
           Jeanne and Plantin had <span class="u-highlight">five daughters</span>, and he ensured they received solid,
-          practical education. From a young
-          age, the daughters helped in the
-          family business, proofreading printed texts in different languages and spotting errors.
+          practical education. From a young age, the daughters helped in the family business, <span
+            class="u-highlight">proofreading printed texts</span> in different languages and spotting errors.
         </p>
       </div>
-      <div class="c-civilrights__interaction">
+      <div id="civil-img" class="c-civilrights__interaction">
         <picture>
-          <img class="c-civilrights__img" sizes="(max-width: 1017px) 100vw, 1017px" srcset="
-  /family-portret/family-w_180.webp 180w,
-  /family-portret/family-w_531.webp 531w,
-  /family-portret/family-w_760.webp 760w,
-  /family-portret/family-w_1017.webp 1017w
-  " src="/family-portret/family-w_1017.webp" alt="family portret of Plantin">
+          <img class="c-civilrights__img" sizes="(max-width: 1017px) 100vw, 1017px" srcset="/family-portret/family-w_180.webp 180w,
+                       /family-portret/family-w_531.webp 531w,
+                       /family-portret/family-w_760.webp 760w,
+                       /family-portret/family-w_1017.webp 1017w" src="/family-portret/family-w_1017.webp"
+            alt="family portret of Plantin">
         </picture>
         <svg id="boy" width="50" height="50" viewBox="0 0 444 444" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -146,11 +157,29 @@
             d="M222 131L235.302 189.887L286.347 157.653L254.113 208.698L313 222L254.113 235.302L286.347 286.347L235.302 254.113L222 313L208.698 254.113L157.653 286.347L189.887 235.302L131 222L189.887 208.698L157.653 157.653L208.698 189.887L222 131Z"
             fill="#F7ABAB" />
         </svg>
+
+        <div id="popup-boy" class="popup">
+          <p>Christophe Plantin’s only son, Jan, died in early childhood, leaving no male heir.
+            This loss profoundly impacted Plantin and shaped the future of his family’s legacy.
+          </p>
+        </div>
+        <div id="popup-girl" class="popup">
+          <p>Christophe Plantin’s daughter, also named Margaretha, died
+            at a young age. Her early death added to the personal tragedies
+            that marked Plantin’s life, further shaping the family’s
+            future.</p>
+        </div>
       </div>
     </section>
 
     <section class="c-language">
       <div class="c-language__images">
+        <picture>
+          <img class="c-language__click" sizes="(max-width: 382px) 100vw, 382px" srcset="
+          /clicked_img/clicked_img_lkszqw_c_scale,w_200.webp 200w,
+          /clicked_img/clicked_img_lkszqw_c_scale,w_382.webp 382w"
+            src="/clicked_img/clicked_img_lkszqw_c_scale,w_382.webp" alt="Plantin not speaking dutch">
+        </picture>
         <picture>
           <img class="c-language__imgone" sizes="(max-width: 760px) 100vw, 760px" srcset="
   /language_portret/w_190.webp 190w,
@@ -200,7 +229,7 @@
       </div>
 
       <div class="c-language__txt">
-        <div class="c-indicator">
+        <div id="right" class="c-indicator">
           <div class="line"></div>
           <div class="line"></div>
           <div class="line u-active-line"></div>
@@ -209,7 +238,7 @@
           <div class="line"></div>
         </div>
         <h2>Language and Education</h2>
-        <p>
+        <p id="language-textone">
           There were <span class="u-highlight">limited resources, such as
             grammar books or dictionaries</span>, to learn Dutch.
           Recognizing this gap, Plantin published
@@ -222,7 +251,13 @@
           dictionary, Etymologicum Teutonicae linguae (1573).
         </p>
 
-        <div class="c-language__images c-language__images--small">
+        <div class="c-language__images c-language__images--small ">
+          <picture>
+            <img class="c-language__click" sizes="(max-width: 382px) 100vw, 382px" srcset="
+            /clicked_img/clicked_img_lkszqw_c_scale,w_200.webp 200w,
+            /clicked_img/clicked_img_lkszqw_c_scale,w_382.webp 382w"
+              src="/clicked_img/clicked_img_lkszqw_c_scale,w_382.webp" alt="Plantin not speaking dutch">
+          </picture>
           <picture>
             <img class="c-language__imgone" sizes="(max-width: 760px) 100vw, 760px" srcset="
       /language_portret/w_190.webp 190w,
@@ -269,7 +304,7 @@
             <p class="c-accent">Listen to him</p>
           </div>
         </div>
-        <p>
+        <p id="language-texttwo">
           This work included Dutch words with French and Latin translations, focusing on their meanings and origins, and
           marked the <span class="u-highlight">start of modern lexicography</span>. The dictionary was innovative in its
           use of distinct fonts for each
@@ -284,23 +319,23 @@
 
     <section class="c-quote">
       <div class="c-quote__txt">
-        <h3 class="c-quote__spacing">la/b</h3>
+        <h3 id="quote-title-one" class="c-quote__spacing">la/b</h3>
         <picture>
-          <img class="c-quote__img" sizes="(max-width: 730px) 100vw, 730px" srcset="
+          <img id="quote-one" class="c-quote__img" sizes="(max-width: 730px) 100vw, 730px" srcset="
         /quote_img_one/quote_img_one_w_200.webp 200w,
         /quote_img_one/quote_img_one_w_614.webp 614w,
         /quote_img_one/quote_img_one_w_730.webp 730w" src="/quote_img_one/quote_img_one_w_730.webp"
             alt="Quote image one - Christophe Plantin">
         </picture>
-        <h3>re</h3>
+        <h3 id="quote-title-two">re</h3>
         <picture>
           <img id="quote-two" class="c-quote__img" sizes="(max-width: 730px) 100vw, 730px" srcset="
         /quote_img_two/w_200.webp 200w,
         /quote_img_two/w_617.webp 617w,
         /quote_img_two/w_730.webp 730w" src="/quote_img_two/w_730.webp" alt="">
         </picture>
-        <img class="c-quote__star" src="./star.webp" alt="star">
-        <h3>et</h3>
+        <img id="star" class="c-quote__star" src="./star.webp" alt="star">
+        <h3 id="quote-title-three">et</h3>
         <picture>
           <img id="quote-three" class="c-quote__img" sizes="(max-width: 730px) 100vw, 730px" srcset="
         /quote_img_three/quote_img_three_oclhik_c_scale,w_200.webp 200w,
@@ -309,14 +344,14 @@
             src="/quote_img_three/quote_img_three_oclhik_c_scale,w_730.webp"
             alt="Quote image three - Plantin's triptych of The Last Judgment">
         </picture>
-        <h3 class="c-quote__constantia">const<span class="c-header__underline">a</span>ntia</h3>
+        <h3 id="quote-title-four" class="c-quote__constantia">const<span class="c-header__underline">a</span>ntia</h3>
       </div>
     </section>
 
     <section class="c-women">
       <div class="c-women__top">
         <div class="c-woman__txttop">
-          <div class="c-indicator c-indicator--left">
+          <div id="left" class="c-indicator c-indicator--left">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -325,7 +360,7 @@
             <div class="line"></div>
           </div>
           <h2>The Role of the <span class="u-title-highlight">Women</span> in Plantin's Business</h2>
-          <p>
+          <p id="text-women-one">
             The lace workers, largely unskilled and unprotected by guild regulations, had <span class="u-highlight">no
               formal education</span>. Within
             traditional crafts, guilds ensured that labor was performed at an agreed-upon rate, with a maximum of five
@@ -341,7 +376,7 @@
           /lace_workers/lace_w_902.webp 902w,
           /lace_workers/lace_w_930.webp 930w" src="/lace_workers/lace_w_930.webp" alt="Lace workers">
             </picture>
-            <p>
+            <p id="text-women-two">
               However, unlike their male counterparts, <span class="u-highlight">the women working with lace had no such
                 protections</span>. Many were
               outside guild supervision, leading to exploitation by entrepreneurs who sought cheap, unskilled labor. In
@@ -359,14 +394,15 @@
         /lace_workers/lace_w_930.webp 930w" src="/lace_workers/lace_w_930.webp" alt="">
         </picture>
       </div>
+
       <div class="c-women__middle">
         <div class="c-women__interaction">
           <picture>
             <img class="c-women__worker" sizes="(max-width: 930px) 100vw, 930px" srcset="
-          /worker/w_200.webp 200w,
-          /worker/w_484.webp 484w,
-          /worker/w_754.webp 754w,
-          /worker/w_930.webp 930w" src="/worker/w_930.webp" alt="Woman working on lace">
+              /worker/w_200.webp 200w,
+              /worker/w_484.webp 484w,
+              /worker/w_754.webp 754w,
+              /worker/w_930.webp 930w" src="/worker/w_930.webp" alt="Woman working on lace" id="worker-image" />
           </picture>
           <div class="c-women__speaking">
             <svg class="c-language__arrow" width="444" height="901" viewBox="0 0 444 901" fill="none"
@@ -383,18 +419,34 @@
         </div>
 
         <div class="c-women__options">
-          <p class="c-women__option">Collars</p>
-          <p class="c-women__option">Curtains</p>
-          <p class="c-women__option">Lace gloves</p>
-          <p class="c-women__option">Socks</p>
-          <p class="c-women__option">Dresses</p>
-          <p class="c-women__option">Veils</p>
+          <p class="c-women__option" draggable="true"
+            data-option="Collars are often adorned with fine stitchwork and patterns that resemble lace, though it is not the true lace you speak of.">
+            Collars</p>
+          <p class="c-women__option" draggable="true"
+            data-option="Curtains are made of heavy cloth, such as wool or linen, meant to keep out the cold, and they are not fashioned with lace.">
+            Curtains</p>
+          <p class="c-women__option" draggable="true"
+            data-option="Gloves are made from leather or wool to serve for warmth or work, lace is not used in their making.">
+            Lace gloves</p>
+          <p class="c-women__option" draggable="true"
+            data-option="Stockings are woven from wool or silk, made sturdy for wear, and they do not feature lace.">
+            Socks</p>
+          <p class="c-women__option" draggable="true"
+            data-option="Dresses are crafted from fine fabrics like wool, linen, or silk, and may be embroidered, but they are not made with lace.">
+            Dresses</p>
+          <p class="c-women__option" draggable="true"
+            data-option="Veils are woven from fine linen or silk, sometimes embroidered, but they are not adorned with lace.">
+            Veils</p>
+        </div>
+
+        <div id="popupwomen" class="c-women__popup">
+          <p id="popup-text">hey</p>
         </div>
       </div>
 
       <div class="c-women__bottom">
         <div class="c-woman__txt">
-          <div class="c-indicator">
+          <div id="right" class="c-indicator">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -418,7 +470,7 @@
     <section class="c-interest">
       <div class="c-interest__txt">
         <div class="c-interest__txtwidth">
-          <h2>Do you find this interesting?</h2>
+          <h2>Do you find this <span class="u-title-highlight">interesting</span>?</h2>
           <p>Come and learn more about the history of Plantin and his
             involvement of Antwerp lace and the women who made it!</p>
         </div>
@@ -429,14 +481,20 @@
           </div>
         </a>
       </div>
-
     </section>
 
     <section class="c-daughters">
       <div class="c-daughters__book">
         <div class="c-daughters__container">
-          <picture>
-            <img class="c-daughters__father" sizes="(max-width: 1043px) 100vw, 1043px" srcset="
+          <div class="c-daughters__images">
+            <picture>
+              <img class="c-daughters__teddy" sizes="(max-width: 1043px) 100vw, 1043px" srcset="
+              /teddy/teddy,w_190.webp 190w,
+              /teddy/teddy,w_672.webp 672w,
+              /teddy/teddy,w_1043.webp 1043w" src="/teddy/teddy,w_1043.webp" alt="Teddybear">
+            </picture>
+            <picture>
+              <img class="c-daughters__father" sizes="(max-width: 1043px) 100vw, 1043px" srcset="
           /plantin_painting/Plantin_painting_dpdlq0_c_scale,w_200.webp 200w,
           /plantin_painting/Plantin_painting_dpdlq0_c_scale,w_440.webp 440w,
           /plantin_painting/Plantin_painting_dpdlq0_c_scale,w_550.webp 550w,
@@ -444,8 +502,11 @@
           /plantin_painting/Plantin_painting_dpdlq0_c_scale,w_838.webp 838w,
           /plantin_painting/Plantin_painting_dpdlq0_c_scale,w_979.webp 979w,
           /plantin_painting/Plantin_painting_dpdlq0_c_scale,w_1043.webp 1043w"
-              src="/plantin_painting/Plantin_painting_dpdlq0_c_scale,w_1043.webp" alt="Plantin">
-          </picture>
+                src="/plantin_painting/Plantin_painting_dpdlq0_c_scale,w_1043.webp" alt="Plantin">
+            </picture>
+
+          </div>
+
           <div class="c-daughters__intro">
             <h2 class="c-daughters__title">Plantin's Daughters</h2>
             <h4>five daughters at work</h4>
@@ -459,9 +520,100 @@
           </div>
         </div>
       </div>
+
+      <svg class="c-daughters__feetone" width="331" height="385" viewBox="0 0 331 385" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.39">
+          <path class="foot"
+            d="M19.1389 23.6951C26.6219 28.0164 32.5238 37.2022 36.7931 44.6505C39.7444 49.7994 43.4855 51.4653 48.6029 49.8722C54.9274 47.9033 57.0438 36.2825 51.2908 32.0693C46.2291 28.3624 40.0634 27.2252 34.9055 23.514C32.2442 21.5992 30.8196 17.3109 27.1336 16.9966C23.8034 16.7126 18.817 15.5008 16.4677 19.0348C12.4815 25.0314 23.8547 30.3208 28.5319 28.4603C28.9784 28.2827 22.3514 20.2239 21.5493 19.2178C17.7092 14.4018 31.7157 26.3045 36.0156 30.7149C39.0502 33.8275 41.5244 37.4646 44.3907 40.6091C45.9528 42.3229 46.597 42.6683 46.8233 40.2728C47.0643 37.7217 45.7202 35.424 44.419 33.3435C43.7705 32.3066 43.0726 32.6483 42.8888 33.7503C42.4304 36.499 44.3052 39.7061 46.0493 41.6569C48.2252 44.0908 53.3093 43.6748 51.0398 39.972C49.0665 36.7526 44.7825 42.6069 43.8181 44.4641C42.1851 47.6085 47.1839 46.1118 47.4604 43.7087C48.1186 37.9882 36.5782 39.0139 38.8588 44.2893C39.6445 46.1066 42.9437 49.1255 45.1555 48.1647C47.4385 47.1729 46.149 44.0528 45.7256 42.3911C45.6108 41.9409 45.2232 40.0889 44.8177 41.4224C43.9491 44.2785 46.702 46.0106 48.4694 47.7934"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M61.1669 63.7924C60.3487 64.1346 57.1363 61.6256 59.4464 63.7989C64.7859 68.8221 58.1134 67.0401 57.9303 65.2557C57.6537 62.5601 63.794 66.4403 62.1331 67.3923C60.5103 68.3225 58.1845 63.453 60.4094 64.932"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M68.9751 56.4952C68.1146 55.3178 67.8618 56.522 69.5061 56.1909" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M70.4053 47.9165C70.8087 47.7478 71.3473 47.8629 71.7714 47.8388" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M71.1562 41.8433C71.6089 42.4452 72.218 41.8918 72.8267 42.2965" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M68.3398 35.6987L68.8708 35.3944" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M122.139 118.695C129.622 123.016 135.524 132.202 139.793 139.65C142.744 144.799 146.486 146.465 151.603 144.872C157.927 142.903 160.044 131.283 154.291 127.069C149.229 123.362 143.063 122.225 137.905 118.514C135.244 116.599 133.82 112.311 130.134 111.997C126.803 111.713 121.817 110.501 119.468 114.035C115.481 120.031 126.855 125.321 131.532 123.46C131.978 123.283 125.351 115.224 124.549 114.218C120.709 109.402 134.716 121.305 139.016 125.715C142.05 128.827 144.524 132.465 147.391 135.609C148.953 137.323 149.597 137.668 149.823 135.273C150.064 132.722 148.72 130.424 147.419 128.343C146.771 127.307 146.073 127.648 145.889 128.75C145.43 131.499 147.305 134.706 149.049 136.657C151.225 139.091 156.309 138.675 154.04 134.972C152.067 131.753 147.783 137.607 146.818 139.464C145.185 142.608 150.184 141.112 150.46 138.709C151.119 132.988 139.578 134.014 141.859 139.289C142.644 141.107 145.944 144.126 148.155 143.165C150.439 142.173 149.149 139.053 148.726 137.391C148.611 136.941 148.223 135.089 147.818 136.422C146.949 139.278 149.702 141.011 151.469 142.793"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M164.167 158.792C163.349 159.135 160.136 156.626 162.446 158.799C167.786 163.822 161.113 162.04 160.93 160.256C160.654 157.56 166.794 161.44 165.133 162.392C163.51 163.322 161.184 158.453 163.409 159.932"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M171.975 151.495C171.115 150.318 170.862 151.522 172.506 151.191" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M173.405 142.917C173.809 142.748 174.347 142.863 174.771 142.839" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M174.156 136.843C174.609 137.445 175.218 136.892 175.827 137.296" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M171.34 130.699L171.871 130.394" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M279.618 237.046C285.513 243.364 288.476 253.872 290.384 262.243C291.704 268.029 294.795 270.715 300.155 270.685C306.779 270.649 312.196 260.152 307.924 254.443C304.165 249.42 298.6 246.532 294.751 241.476C292.765 238.868 292.654 234.35 289.221 232.974C286.118 231.73 281.703 229.115 278.424 231.809C272.861 236.38 282.194 244.76 287.211 244.346C287.69 244.306 283.704 234.664 283.231 233.467C280.964 227.74 290.885 243.214 293.71 248.687C295.703 252.55 297.008 256.751 298.831 260.596C299.825 262.691 300.34 263.21 301.256 260.985C302.231 258.615 301.617 256.025 300.98 253.655C300.662 252.474 299.895 252.597 299.397 253.597C298.156 256.093 299.013 259.707 300.111 262.082C301.482 265.045 306.466 266.132 305.376 261.928C304.429 258.273 298.622 262.621 297.158 264.116C294.678 266.646 299.896 266.674 300.862 264.457C303.162 259.178 291.825 256.789 292.466 262.501C292.686 264.468 294.96 268.319 297.356 268.046C299.829 267.764 299.507 264.403 299.587 262.69C299.609 262.226 299.779 260.341 299.002 261.498C297.337 263.976 299.464 266.437 300.634 268.658"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M308.106 287.667C307.224 287.755 304.884 284.418 306.459 287.171C310.099 293.534 304.238 289.882 304.584 288.122C305.106 285.463 309.846 290.967 307.979 291.392C306.156 291.808 305.353 286.472 307.049 288.536"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M317.705 282.968C317.226 281.591 316.633 282.669 318.302 282.832" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M321.579 275.181C322.014 275.137 322.496 275.404 322.908 275.505" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M324.07 269.591C324.328 270.299 325.072 269.948 325.536 270.513" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M323.17 262.892L323.767 262.756" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M20.2027 99.2574C25.3448 106.202 35.1407 111.024 43.0252 114.421C48.4756 116.769 50.555 120.297 49.5526 125.562C48.3137 132.069 37.008 135.49 32.1695 130.252C27.9124 125.643 26.0832 119.647 21.811 114.943C19.6067 112.516 15.1845 111.587 14.4542 107.96C13.7943 104.684 12.0248 99.8669 15.2695 97.132C20.7753 92.4914 27.3205 103.191 26.0025 108.049C25.8767 108.513 17.1183 102.843 16.0277 102.16C10.8073 98.891 24.2217 111.457 29.0913 115.229C32.528 117.891 36.4222 119.937 39.8716 122.428C41.7515 123.786 42.1677 124.386 39.8133 124.883C37.3061 125.412 34.8707 124.337 32.656 123.28C31.5523 122.753 31.8126 122.021 32.8867 121.714C35.5657 120.946 38.9647 122.445 41.1007 123.957C43.7657 125.843 43.929 130.941 39.9927 129.106C36.5703 127.511 41.9009 122.591 43.6367 121.422C46.5756 119.443 45.6555 124.579 43.2993 125.126C37.6904 126.429 37.4006 114.847 42.9006 116.514C44.7953 117.089 48.1689 120.024 47.4651 122.331C46.7387 124.712 43.4925 123.784 41.7934 123.552C41.3331 123.489 39.4491 123.314 40.7281 122.76C43.4672 121.573 45.5003 124.112 47.4721 125.665"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M64.8077 136.466C65.0548 135.614 62.1977 132.707 64.619 134.756C70.2153 139.491 67.6881 133.064 65.8944 133.084C63.1849 133.115 67.7364 138.776 68.4939 137.018C69.234 135.3 64.1321 133.541 65.8539 135.584"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M58.4437 145.052C57.1763 144.33 58.3441 143.942 58.2016 145.614" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M50.082 147.446C49.9602 147.866 50.1356 148.388 50.1598 148.812" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M44.1328 148.881C44.7822 149.263 44.3015 149.931 44.7726 150.49" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M37.709 146.78L37.4668 147.342" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M175.154 213.985C178.992 221.727 187.785 228.2 194.947 232.933C199.899 236.205 201.324 240.044 199.409 245.05C197.043 251.237 185.311 252.612 181.472 246.603C178.093 241.316 177.35 235.091 173.973 229.708C172.231 226.931 168.042 225.237 167.962 221.538C167.89 218.197 166.997 213.144 170.673 211.023C176.91 207.426 181.467 219.111 179.314 223.661C179.108 224.096 171.486 216.971 170.533 216.106C165.97 211.968 176.96 226.702 181.089 231.273C184.003 234.499 187.476 237.199 190.432 240.259C192.043 241.927 192.347 242.591 189.942 242.665C187.381 242.744 185.173 241.257 183.179 239.826C182.186 239.113 182.571 238.438 183.682 238.325C186.455 238.042 189.536 240.116 191.372 241.981C193.663 244.306 192.926 249.354 189.374 246.854C186.287 244.681 192.401 240.777 194.315 239.932C197.557 238.502 195.746 243.396 193.33 243.519C187.58 243.813 189.336 232.361 194.456 234.972C196.22 235.871 199.023 239.355 197.924 241.501C196.789 243.717 193.757 242.232 192.126 241.704C191.684 241.561 189.86 241.057 191.217 240.737C194.122 240.051 195.676 242.908 197.343 244.785"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M212.504 258.472C212.897 257.677 210.597 254.312 212.62 256.755C217.294 262.403 215.939 255.63 214.17 255.334C211.497 254.887 214.98 261.262 216.035 259.664C217.066 258.104 212.354 255.474 213.689 257.788"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M204.727 265.801C203.606 264.868 204.824 264.692 204.389 266.312" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M196.073 266.685C195.879 267.077 195.96 267.622 195.909 268.044" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M189.965 267.049C190.537 267.539 189.946 268.112 190.311 268.745" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M184.012 263.848L183.674 264.359" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M257.79 314.934C259.149 323.468 265.616 332.265 271.045 338.915C274.798 343.513 275.015 347.603 271.697 351.812C267.597 357.014 255.988 354.834 254.111 347.954C252.459 341.902 253.603 335.737 251.982 329.593C251.145 326.423 247.65 323.559 248.675 320.004C249.601 316.793 250.253 311.703 254.393 310.773C261.419 309.195 262.291 321.708 258.881 325.41C258.555 325.764 253.399 316.693 252.747 315.584C249.623 310.275 255.729 327.612 258.309 333.205C260.131 337.152 262.642 340.764 264.554 344.565C265.595 346.637 265.687 347.362 263.369 346.716C260.901 346.029 259.236 343.952 257.758 341.993C257.022 341.016 257.591 340.487 258.686 340.709C261.416 341.264 263.741 344.162 264.939 346.489C266.433 349.391 264.227 353.99 261.58 350.546C259.28 347.552 266.279 345.645 268.358 345.409C271.879 345.009 268.693 349.142 266.35 348.54C260.773 347.109 265.858 336.699 269.969 340.715C271.385 342.099 273.024 346.26 271.336 347.982C269.593 349.759 267.141 347.439 265.74 346.449C265.361 346.181 263.77 345.156 265.16 345.255C268.138 345.465 268.771 348.655 269.804 350.943"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M280.203 368.523C280.815 367.881 279.621 363.984 280.824 366.918C283.606 373.701 284.328 366.833 282.727 366.024C280.309 364.801 281.736 371.923 283.219 370.712C284.668 369.53 280.953 365.616 281.538 368.223"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M270.596 373.205C269.804 371.98 271.019 372.175 270.122 373.592" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M262.072 371.473C261.77 371.789 261.685 372.333 261.511 372.721" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M256.132 370.001C256.532 370.639 255.797 371.01 255.958 371.724" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M251.402 365.174L250.928 365.561" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+        </g>
+      </svg>
+
       <div class="c-daughters__daughter">
         <div class="c-daughters__txt">
-          <div class="c-indicator c-indicator--left">
+          <div id="left" class="c-indicator c-indicator--left">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
@@ -484,7 +636,7 @@
           </p>
         </div>
         <picture>
-          <img class="c-daughters__img" sizes="(max-width: 1480px) 100vw, 1480px" srcset="
+          <img class="c-daughters__img left-daughter" sizes="(max-width: 1480px) 100vw, 1480px" srcset="
           /martine/Martine_ndrl6v_c_scale,w_190.webp 190w,
           /martine/Martine_ndrl6v_c_scale,w_460.webp 460w,
           /martine/Martine_ndrl6v_c_scale,w_614.webp 614w,
@@ -498,9 +650,115 @@
             alt="Martine Plantin">
         </picture>
       </div>
+
+      <svg class="c-daughters__feettwo" width="352" height="351" viewBox="0 0 352 351" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.39">
+          <path class="foot"
+            d="M336.178 19.3484C330.068 22.8771 325.249 30.3778 321.763 36.4598C319.353 40.6643 316.298 42.0245 312.119 40.7236C306.955 39.1159 305.227 29.6269 309.924 26.1865C314.058 23.1596 319.092 22.231 323.304 19.2006C325.477 17.637 326.64 14.1354 329.65 13.8787C332.37 13.6468 336.441 12.6573 338.36 15.543C341.615 20.4396 332.328 24.7587 328.508 23.2396C328.144 23.0945 333.555 16.514 334.21 15.6925C337.346 11.7599 325.909 21.4792 322.398 25.0805C319.92 27.6221 317.899 30.5921 315.559 33.1598C314.283 34.5592 313.757 34.8412 313.572 32.8851C313.376 30.8021 314.473 28.9258 315.536 27.2269C316.065 26.3803 316.635 26.6593 316.785 27.5592C317.159 29.8036 315.629 32.4224 314.204 34.0154C312.428 36.0028 308.276 35.6631 310.129 32.6396C311.741 30.0107 315.239 34.7911 316.026 36.3076C317.36 38.8752 313.278 37.653 313.052 35.6908C312.515 31.0197 321.938 31.8572 320.076 36.1649C319.434 37.6489 316.74 40.114 314.934 39.3294C313.07 38.5195 314.123 35.9718 314.469 34.6149C314.562 34.2473 314.879 32.735 315.21 33.8239C315.919 36.156 313.671 37.5704 312.228 39.0262"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M301.86 52.0906C302.528 52.37 305.151 50.3212 303.265 52.0959C298.905 56.1976 304.354 54.7425 304.503 53.2854C304.729 51.0843 299.715 54.2527 301.071 55.0301C302.396 55.7896 304.296 51.8134 302.479 53.0211"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M295.484 46.132C296.187 45.1705 296.393 46.1539 295.051 45.8835" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M294.316 39.127C293.987 38.9892 293.547 39.0832 293.201 39.0635" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M293.703 34.1675C293.333 34.659 292.836 34.2071 292.339 34.5376" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M296.003 29.1504L295.569 28.9019" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M252.073 96.9217C245.963 100.45 241.143 107.951 237.657 114.033C235.247 118.237 232.192 119.598 228.014 118.297C222.849 116.689 221.121 107.2 225.819 103.76C229.952 100.733 234.987 99.8042 239.199 96.7738C241.372 95.2103 242.535 91.7086 245.545 91.452C248.264 91.2201 252.336 90.2305 254.254 93.1163C257.509 98.0128 248.222 102.332 244.403 100.813C244.038 100.668 249.45 94.0872 250.105 93.2657C253.24 89.3332 241.803 99.0525 238.292 102.654C235.814 105.195 233.794 108.165 231.453 110.733C230.178 112.132 229.652 112.414 229.467 110.458C229.27 108.375 230.368 106.499 231.43 104.8C231.96 103.954 232.53 104.233 232.68 105.132C233.054 107.377 231.523 109.996 230.099 111.589C228.322 113.576 224.171 113.236 226.024 110.213C227.635 107.584 231.133 112.364 231.921 113.881C233.254 116.448 229.172 115.226 228.947 113.264C228.409 108.593 237.833 109.43 235.97 113.738C235.329 115.222 232.635 117.687 230.829 116.903C228.965 116.093 230.018 113.545 230.363 112.188C230.457 111.821 230.774 110.308 231.105 111.397C231.814 113.729 229.566 115.144 228.123 116.599"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M217.755 129.664C218.423 129.943 221.046 127.894 219.16 129.669C214.8 133.771 220.248 132.316 220.398 130.859C220.623 128.658 215.61 131.826 216.966 132.603C218.291 133.363 220.19 129.387 218.373 130.594"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M211.379 123.705C212.081 122.744 212.288 123.727 210.945 123.457" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M210.211 116.7C209.882 116.562 209.442 116.656 209.095 116.637" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M209.598 111.741C209.228 112.232 208.731 111.78 208.234 112.111" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M211.897 106.724L211.464 106.475" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M123.481 193.562C118.667 198.721 116.248 207.302 114.69 214.137C113.613 218.862 111.088 221.055 106.712 221.031C101.303 221.001 96.8793 212.43 100.368 207.768C103.437 203.666 107.981 201.308 111.124 197.18C112.746 195.05 112.836 191.361 115.64 190.237C118.173 189.221 121.779 187.086 124.456 189.286C128.999 193.018 121.378 199.861 117.281 199.523C116.89 199.491 120.144 191.617 120.531 190.64C122.382 185.963 114.281 198.599 111.974 203.068C110.347 206.223 109.281 209.653 107.793 212.792C106.981 214.503 106.561 214.927 105.813 213.11C105.016 211.175 105.518 209.06 106.038 207.125C106.297 206.16 106.924 206.261 107.33 207.078C108.344 209.115 107.644 212.067 106.747 214.006C105.628 216.426 101.558 217.313 102.448 213.88C103.221 210.895 107.963 214.446 109.159 215.666C111.184 217.733 106.923 217.756 106.134 215.945C104.256 211.634 113.514 209.684 112.99 214.348C112.81 215.954 110.953 219.098 108.997 218.875C106.977 218.645 107.241 215.901 107.175 214.502C107.157 214.123 107.018 212.585 107.653 213.529C109.012 215.553 107.275 217.562 106.32 219.376"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M100.219 234.897C100.939 234.97 102.85 232.244 101.564 234.492C98.5915 239.688 103.378 236.706 103.095 235.269C102.669 233.097 98.7982 237.592 100.322 237.939C101.811 238.279 102.467 233.921 101.082 235.607"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M92.381 231.06C92.7724 229.936 93.2569 230.816 91.8938 230.949" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M89.2178 224.702C88.8625 224.666 88.4693 224.884 88.1323 224.967" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M87.1836 220.138C86.9736 220.716 86.366 220.429 85.9871 220.89" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M87.9189 214.667L87.4318 214.556" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M335.31 81.0496C331.112 86.7203 323.113 90.6577 316.674 93.4315C312.224 95.349 310.526 98.2299 311.344 102.529C312.356 107.843 321.588 110.636 325.539 106.359C329.015 102.595 330.509 97.6985 333.997 93.8576C335.797 91.8759 339.408 91.1173 340.004 88.156C340.543 85.4805 341.988 81.5473 339.339 79.314C334.843 75.5247 329.498 84.2618 330.575 88.2287C330.677 88.6074 337.829 83.9773 338.72 83.4197C342.982 80.7504 332.029 91.0114 328.052 94.0914C325.246 96.2651 322.066 97.9355 319.25 99.9697C317.715 101.078 317.375 101.569 319.297 101.974C321.344 102.406 323.333 101.529 325.142 100.666C326.043 100.235 325.83 99.6376 324.953 99.3865C322.766 98.76 319.99 99.984 318.246 101.218C316.07 102.758 315.936 106.921 319.151 105.423C321.945 104.12 317.592 100.103 316.175 99.1481C313.775 97.5321 314.527 101.726 316.451 102.173C321.031 103.237 321.267 93.7793 316.776 95.1409C315.229 95.61 312.474 98.007 313.049 99.8904C313.642 101.834 316.293 101.077 317.68 100.888C318.056 100.836 319.595 100.693 318.55 100.241C316.314 99.2716 314.653 101.345 313.043 102.613"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M298.888 111.433C298.686 110.737 301.019 108.364 299.042 110.036C294.472 113.903 296.536 108.655 298.001 108.671C300.213 108.697 296.497 113.319 295.878 111.883C295.274 110.481 299.44 109.045 298.034 110.713"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M304.085 118.443C305.12 117.854 304.166 117.538 304.282 118.902" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M310.912 120.399C311.012 120.742 310.868 121.168 310.849 121.514" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M315.771 121.571C315.24 121.882 315.633 122.428 315.248 122.884" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M321.016 119.854L321.213 120.313" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M208.783 174.732C205.649 181.054 198.469 186.339 192.621 190.204C188.578 192.876 187.414 196.011 188.977 200.099C190.91 205.151 200.489 206.273 203.624 201.367C206.383 197.05 206.99 191.966 209.747 187.571C211.17 185.303 214.591 183.92 214.656 180.9C214.715 178.171 215.444 174.045 212.442 172.314C207.349 169.376 203.628 178.918 205.386 182.633C205.554 182.988 211.778 177.17 212.556 176.464C216.282 173.085 207.308 185.116 203.937 188.848C201.558 191.483 198.722 193.687 196.308 196.186C194.992 197.548 194.744 198.091 196.708 198.151C198.799 198.215 200.602 197.001 202.23 195.833C203.041 195.251 202.727 194.7 201.819 194.607C199.556 194.376 197.039 196.07 195.54 197.592C193.669 199.491 194.272 203.613 197.171 201.572C199.693 199.797 194.7 196.609 193.137 195.919C190.49 194.751 191.968 198.747 193.941 198.848C198.637 199.088 197.203 189.737 193.022 191.869C191.582 192.603 189.293 195.448 190.19 197.201C191.117 199.01 193.593 197.797 194.925 197.366C195.286 197.249 196.775 196.838 195.667 196.576C193.295 196.016 192.026 198.349 190.664 199.882"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M178.285 211.058C177.964 210.409 179.842 207.661 178.191 209.656C174.374 214.268 175.48 208.738 176.925 208.496C179.107 208.131 176.263 213.336 175.401 212.032C174.559 210.758 178.407 208.61 177.317 210.5"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M184.635 217.043C185.55 216.281 184.556 216.137 184.911 217.46" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M191.701 217.765C191.86 218.085 191.794 218.53 191.835 218.874" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M196.689 218.062C196.222 218.462 196.705 218.93 196.407 219.447" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M201.55 215.448L201.825 215.865" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M141.305 257.163C140.196 264.131 134.915 271.315 130.482 276.745C127.417 280.5 127.24 283.839 129.949 287.276C133.298 291.524 142.777 289.744 144.31 284.126C145.658 279.184 144.724 274.15 146.048 269.133C146.731 266.545 149.585 264.206 148.748 261.303C147.992 258.681 147.46 254.525 144.079 253.765C138.342 252.477 137.63 262.694 140.415 265.718C140.681 266.006 144.89 258.599 145.423 257.694C147.974 253.359 142.989 267.516 140.881 272.083C139.394 275.306 137.343 278.255 135.782 281.359C134.932 283.05 134.857 283.643 136.749 283.116C138.765 282.554 140.125 280.858 141.331 279.258C141.932 278.461 141.468 278.029 140.574 278.21C138.344 278.664 136.446 281.03 135.468 282.929C134.247 285.3 136.049 289.055 138.21 286.243C140.089 283.798 134.373 282.241 132.676 282.048C129.801 281.721 132.402 285.096 134.315 284.605C138.87 283.436 134.717 274.935 131.36 278.215C130.204 279.345 128.866 282.743 130.244 284.149C131.667 285.6 133.67 283.705 134.813 282.897C135.123 282.678 136.422 281.842 135.287 281.922C132.855 282.094 132.339 284.699 131.495 286.567"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M123.003 300.922C122.504 300.398 123.479 297.215 122.496 299.612C120.225 305.15 119.635 299.542 120.942 298.881C122.917 297.883 121.752 303.698 120.541 302.71C119.357 301.744 122.391 298.548 121.913 300.677"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M130.849 304.745C131.495 303.745 130.503 303.904 131.236 305.061" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M137.809 303.331C138.055 303.589 138.125 304.033 138.267 304.35" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M142.659 302.129C142.332 302.65 142.932 302.953 142.801 303.536" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M146.521 298.187L146.909 298.503" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M41.4809 302.485C36.6672 307.644 34.2481 316.225 32.6898 323.06C31.6125 327.785 29.088 329.978 24.7116 329.954C19.3029 329.924 14.8793 321.353 18.3677 316.691C21.437 312.589 25.9811 310.231 29.1245 306.103C30.7463 303.973 30.8365 300.284 33.6402 299.16C36.1733 298.144 39.7787 296.009 42.456 298.209C46.9989 301.941 39.3778 308.784 35.2814 308.446C34.8904 308.414 38.1444 300.54 38.531 299.563C40.3817 294.886 32.2809 307.522 29.9744 311.991C28.3465 315.146 27.2814 318.576 25.7927 321.715C24.9813 323.426 24.5605 323.849 23.8126 322.033C23.0162 320.098 23.5181 317.983 24.0382 316.048C24.2975 315.083 24.924 315.184 25.3303 316.001C26.3436 318.038 25.6441 320.99 24.7472 322.929C23.6281 325.349 19.5583 326.236 20.448 322.803C21.2214 319.818 25.963 323.369 27.159 324.589C29.184 326.656 24.9232 326.679 24.1343 324.868C22.2563 320.557 31.5137 318.607 30.9904 323.27C30.8101 324.877 28.9533 328.021 26.9968 327.798C24.9774 327.568 25.2405 324.824 25.175 323.425C25.1573 323.046 25.0185 321.507 25.6531 322.452C27.0124 324.476 25.2755 326.485 24.3202 328.298"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M18.2186 343.82C18.9392 343.892 20.8498 341.167 19.5638 343.415C16.5915 348.611 21.3777 345.629 21.0952 344.191C20.6685 342.02 16.7982 346.515 18.3224 346.862C19.8115 347.202 20.4669 342.844 19.082 344.53"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M10.381 339.983C10.7724 338.859 11.2569 339.739 9.89385 339.872" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M7.21777 333.625C6.86249 333.589 6.46931 333.807 6.13231 333.89" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M5.18359 329.061C4.97357 329.639 4.36598 329.352 3.98705 329.813" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M5.91895 323.59L5.43175 323.479" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+        </g>
+      </svg>
+
       <div class="c-daughters__daughter c-daughters__daughter--right">
         <picture>
-          <img class="c-daughters__img c-daughters__img--right" sizes="(max-width: 1480px) 100vw, 1480px" srcset="
+          <img class="c-daughters__img c-daughters__img--right right-daughter" sizes="(max-width: 1480px) 100vw, 1480px"
+            srcset="
           /margaretha/margaretha_otebuf_c_scale,w_190.webp 190w,
           /margaretha/margaretha_otebuf_c_scale,w_425.webp 425w,
           /margaretha/margaretha_otebuf_c_scale,w_602.webp 602w,
@@ -526,6 +784,195 @@
         </div>
 
       </div>
+
+      <svg class="c-daughters__feetthree" width="715" height="407" viewBox="0 0 715 407" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.39">
+          <path class="foot"
+            d="M19.3738 16.7452C22.9122 22.8498 30.4207 27.657 36.5083 31.1333C40.7166 33.5365 42.0818 36.5891 40.7877 40.7699C39.1883 45.9368 29.702 47.6803 26.2541 42.9881C23.2206 38.8598 22.2838 33.8267 19.2466 29.6198C17.6796 27.4492 14.1761 26.2916 13.9146 23.2822C13.6783 20.5632 12.6822 16.4931 15.5648 14.5701C20.4562 11.3072 24.7902 20.5872 23.2772 24.4089C23.1328 24.7737 16.5436 19.373 15.721 18.7193C11.7834 15.59 21.5211 27.0115 25.128 30.5168C27.6736 32.9906 30.6468 35.0062 33.2183 37.3425C34.6198 38.6159 34.9026 39.1415 32.9469 39.3294C30.8641 39.5296 28.986 38.435 27.2855 37.3752C26.438 36.8471 26.7161 36.2768 27.6157 36.1252C29.8596 35.7473 32.4808 37.274 34.0761 38.6955C36.0663 40.4691 35.7333 44.6211 32.7068 42.7728C30.0754 41.1657 34.8501 37.6599 36.3654 36.8699C38.9308 35.5324 37.7152 39.6162 35.7533 39.8451C31.0831 40.3901 31.9054 30.9653 36.2161 32.8206C37.7011 33.4598 40.1705 36.1498 39.3889 37.9571C38.5821 39.8227 36.0326 38.7738 34.6751 38.4302C34.3074 38.3371 32.7946 38.023 33.883 37.6901C36.2139 36.9772 37.632 39.2227 39.0901 40.6637"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M52.1712 51.0109C52.4495 50.3424 50.3966 47.7226 52.1742 49.606C56.283 53.9595 54.8191 48.5133 53.3618 48.3661C51.1603 48.1438 54.3368 53.1527 55.112 51.7952C55.8694 50.4688 51.8901 48.5761 53.1007 50.3909"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M46.2228 57.396C45.2601 56.6949 46.2432 56.4869 45.975 57.8299" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M39.2197 58.5752C39.0825 58.9048 39.1772 59.3445 39.1581 59.6908" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M34.2617 59.1963C34.7538 59.5651 34.3028 60.0632 34.634 60.5597" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M29.2402 56.9053L28.9924 57.3392" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M97.0818 100.726C100.62 106.83 108.129 111.637 114.216 115.114C118.425 117.517 119.79 120.57 118.496 124.75C116.896 129.917 107.41 131.661 103.962 126.969C100.929 122.84 99.9918 117.807 96.9546 113.6C95.3876 111.43 91.8841 110.272 91.6226 107.263C91.3863 104.544 90.3902 100.474 93.2729 98.5506C98.1642 95.2877 102.498 104.568 100.985 108.389C100.841 108.754 94.2516 103.353 93.429 102.7C89.4914 99.5705 99.2291 110.992 102.836 114.497C105.382 116.971 108.355 118.987 110.926 121.323C112.328 122.596 112.611 123.122 110.655 123.31C108.572 123.51 106.694 122.415 104.994 121.356C104.146 120.828 104.424 120.257 105.324 120.106C107.568 119.728 110.189 121.254 111.784 122.676C113.774 124.45 113.441 128.602 110.415 126.753C107.783 125.146 112.558 121.64 114.073 120.85C116.639 119.513 115.423 123.597 113.461 123.826C108.791 124.371 109.613 114.946 113.924 116.801C115.409 117.44 117.879 120.13 117.097 121.938C116.29 123.803 113.741 122.754 112.383 122.411C112.015 122.318 110.503 122.003 111.591 121.671C113.922 120.958 115.34 123.203 116.798 124.644"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M129.879 134.991C130.158 134.323 128.105 131.703 129.882 133.587C133.991 137.94 132.527 132.494 131.07 132.347C128.868 132.124 132.045 137.133 132.82 135.776C133.577 134.449 129.598 132.557 130.809 134.371"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M123.931 141.376C122.968 140.675 123.951 140.467 123.683 141.81" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M116.928 142.556C116.79 142.885 116.885 143.325 116.866 143.671" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M111.97 143.177C112.462 143.546 112.011 144.044 112.342 144.54" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M106.948 140.886L106.7 141.32" stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M176.439 198.675C181.606 203.481 190.191 205.886 197.028 207.433C201.755 208.503 203.952 211.024 203.935 215.4C203.914 220.809 195.35 225.247 190.682 221.766C186.576 218.703 184.21 214.163 180.077 211.026C177.944 209.408 174.256 209.323 173.127 206.521C172.107 203.99 169.966 200.388 172.161 197.707C175.887 193.158 182.741 200.768 182.41 204.865C182.379 205.256 174.5 202.015 173.522 201.63C168.842 199.787 181.491 207.867 185.964 210.167C189.121 211.789 192.553 212.849 195.695 214.333C197.407 215.141 197.831 215.561 196.015 216.312C194.082 217.112 191.966 216.613 190.03 216.096C189.065 215.838 189.165 215.212 189.981 214.804C192.016 213.788 194.969 214.482 196.91 215.376C199.331 216.491 200.225 220.56 196.791 219.676C193.805 218.907 197.348 214.16 198.567 212.962C200.63 210.933 200.659 215.194 198.85 215.986C194.542 217.871 192.577 208.617 197.241 209.132C198.848 209.31 201.996 211.162 201.776 213.119C201.549 215.138 198.804 214.88 197.406 214.947C197.027 214.966 195.488 215.107 196.432 214.471C198.453 213.108 200.465 214.842 202.28 215.794"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M217.812 221.871C217.883 221.15 215.154 219.244 217.405 220.526C222.605 223.49 219.615 218.709 218.178 218.993C216.008 219.424 220.508 223.287 220.853 221.762C221.191 220.272 216.832 219.624 218.52 221.006"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M213.987 229.715C212.862 229.325 213.741 228.839 213.877 230.202" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M207.634 232.889C207.599 233.244 207.818 233.637 207.901 233.974" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M203.073 234.93C203.652 235.139 203.366 235.747 203.827 236.125" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M197.602 234.204L197.491 234.691" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M81.0759 17.5135C86.7533 21.7032 90.7036 29.6958 93.4878 36.1295C95.4125 40.577 98.2961 42.2703 102.594 41.4449C107.906 40.4247 110.684 31.1884 106.401 27.2443C102.632 23.7743 97.7326 22.2885 93.886 18.8061C91.9014 17.0094 91.137 13.3997 88.1747 12.808C85.4984 12.2735 81.5628 10.8349 79.3339 13.4881C75.5518 17.9899 84.2975 23.3204 88.2627 22.2378C88.6412 22.1345 83.9996 14.9902 83.4405 14.1005C80.7643 9.84203 91.043 20.7792 94.1294 24.7506C96.3076 27.5533 97.9831 30.7305 100.022 33.5439C101.133 35.0771 101.624 35.4162 102.027 33.4931C102.455 31.445 101.574 29.4578 100.708 27.6508C100.277 26.7502 99.6792 26.9638 99.4294 27.8412C98.8065 30.0298 100.035 32.8033 101.272 34.5455C102.815 36.7191 106.979 36.8458 105.475 33.634C104.168 30.8415 100.157 35.2007 99.2052 36.6196C97.5931 39.022 101.786 38.264 102.23 36.3392C103.286 31.7575 93.8282 31.5361 95.1971 36.025C95.6686 37.5714 98.0701 40.3223 99.9526 39.7446C101.896 39.1483 101.134 36.4988 100.942 35.1117C100.89 34.7359 100.745 33.1978 100.294 34.2428C99.3285 36.481 101.404 38.1379 102.676 39.7459"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M111.517 53.8868C110.822 54.0897 108.445 51.7605 110.121 53.7349C113.995 58.2985 108.743 56.2433 108.757 54.7786C108.779 52.5661 113.407 56.2752 111.973 56.8961C110.571 57.5027 109.128 53.339 110.799 54.7423"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M118.52 48.6791C117.93 47.6451 117.614 48.5992 118.979 48.4807" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M120.464 41.8486C120.807 41.7486 121.233 41.8912 121.58 41.9103" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M121.628 36.9883C121.94 37.518 122.485 37.1246 122.942 37.5086" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M119.904 31.7461L120.363 31.5476" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M186.4 123.456C192.727 126.58 198.024 133.751 201.898 139.593C204.577 143.632 207.714 144.791 211.799 143.221C216.847 141.28 217.955 131.699 213.043 128.572C208.722 125.82 203.637 125.221 199.237 122.471C196.967 121.052 195.579 117.634 192.558 117.573C189.83 117.519 185.702 116.796 183.976 119.801C181.046 124.898 190.594 128.604 194.307 126.84C194.661 126.671 188.833 120.457 188.126 119.68C184.741 115.96 196.787 124.914 200.524 128.279C203.163 130.654 205.372 133.487 207.874 135.897C209.238 137.21 209.782 137.457 209.839 135.493C209.9 133.402 208.682 131.601 207.512 129.975C206.928 129.164 206.378 129.48 206.286 130.388C206.059 132.652 207.757 135.165 209.282 136.662C211.184 138.53 215.304 137.921 213.258 135.024C211.48 132.506 208.3 137.504 207.613 139.068C206.449 141.717 210.443 140.232 210.54 138.259C210.773 133.563 201.424 135.012 203.562 139.189C204.299 140.628 207.148 142.913 208.899 142.013C210.707 141.083 209.49 138.609 209.057 137.278C208.939 136.917 208.525 135.429 208.265 136.537C207.709 138.91 210.045 140.175 211.58 141.534"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M222.775 153.896C222.127 154.218 219.376 152.345 221.374 153.993C225.991 157.802 220.46 156.705 220.216 155.26C219.847 153.079 225.057 155.914 223.754 156.778C222.481 157.622 220.327 153.778 222.219 154.865"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M228.75 147.536C227.986 146.622 227.844 147.617 229.167 147.26" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M229.46 140.469C229.78 140.31 230.225 140.375 230.569 140.333" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M229.75 135.48C230.151 135.947 230.618 135.464 231.135 135.761" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M227.128 130.623L227.544 130.347" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M250.057 193.277C257.027 194.376 264.219 199.645 269.657 204.069C273.416 207.128 276.756 207.3 280.188 204.585C284.431 201.23 282.635 191.753 277.015 190.23C272.071 188.889 267.039 189.831 262.019 188.515C259.43 187.837 257.086 184.986 254.185 185.828C251.564 186.588 247.409 187.127 246.655 190.509C245.376 196.248 255.594 196.944 258.613 194.154C258.901 193.888 251.487 189.69 250.581 189.158C246.242 186.615 260.407 191.577 264.977 193.677C268.203 195.159 271.155 197.206 274.262 198.761C275.955 199.609 276.547 199.683 276.017 197.792C275.452 195.777 273.754 194.42 272.152 193.216C271.354 192.616 270.922 193.081 271.105 193.975C271.562 196.204 273.932 198.098 275.833 199.073C278.205 200.29 281.957 198.482 279.142 196.326C276.694 194.451 275.146 200.169 274.956 201.867C274.633 204.742 278.004 202.136 277.51 200.223C276.334 195.671 267.84 199.837 271.125 203.188C272.257 204.343 275.656 205.676 277.06 204.295C278.509 202.87 276.611 200.87 275.801 199.728C275.582 199.418 274.743 198.121 274.825 199.256C275.001 201.687 277.607 202.2 279.477 203.04"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M293.845 211.509C293.322 212.01 290.138 211.04 292.536 212.019C298.078 214.281 292.47 214.88 291.808 213.573C290.806 211.6 296.624 212.756 295.637 213.969C294.673 215.154 291.473 212.125 293.602 212.6"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M297.656 203.657C296.655 203.012 296.815 204.004 297.971 203.269" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M296.23 196.7C296.488 196.453 296.933 196.383 297.249 196.24" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M295.021 191.851C295.542 192.177 295.844 191.576 296.426 191.706" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M291.072 187.995L291.388 187.607" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M353.621 228.042C360.56 226.758 369.095 229.334 375.695 231.696C380.258 233.329 383.465 232.38 385.798 228.678C388.682 224.102 383.835 215.763 378.029 216.196C372.92 216.578 368.488 219.14 363.317 219.57C360.649 219.792 357.491 217.884 355.035 219.643C352.816 221.232 349.077 223.124 349.492 226.564C350.195 232.401 360.063 229.656 361.981 226.021C362.164 225.674 353.776 224.183 352.745 223.983C347.806 223.028 362.816 222.994 367.824 223.454C371.359 223.778 374.824 224.725 378.271 225.158C380.15 225.394 380.733 225.267 379.604 223.66C378.401 221.948 376.348 221.233 374.437 220.631C373.484 220.331 373.232 220.913 373.702 221.695C374.875 223.645 377.739 224.643 379.857 224.93C382.498 225.288 385.435 222.334 382.063 221.237C379.13 220.284 379.574 226.191 379.959 227.856C380.612 230.674 382.923 227.095 381.821 225.456C379.197 221.554 372.573 228.309 376.787 230.377C378.238 231.089 381.888 231.214 382.752 229.445C383.644 227.619 381.189 226.365 380.045 225.557C379.735 225.338 378.512 224.394 378.967 225.437C379.942 227.671 382.57 227.287 384.613 227.457"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M400.98 230.662C400.653 231.308 397.328 231.453 399.915 231.578C405.894 231.867 400.805 234.298 399.746 233.287C398.145 231.76 404.015 230.914 403.489 232.386C402.974 233.824 398.948 232.033 401.114 231.772"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M401.961 221.991C400.802 221.716 401.284 222.597 402.129 221.52" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M398.302 215.903C398.463 215.585 398.858 215.371 399.109 215.131" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M395.548 211.733C396.148 211.867 396.233 211.201 396.826 211.129" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M390.541 209.411L390.709 208.941" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M503.132 192.544C510.154 193.238 517.638 198.083 523.323 202.185C527.252 205.021 530.596 205 533.866 202.091C537.907 198.496 535.567 189.139 529.869 187.943C524.855 186.891 519.886 188.122 514.799 187.098C512.174 186.571 509.67 183.861 506.822 184.868C504.249 185.779 500.132 186.557 499.575 189.977C498.63 195.781 508.871 195.884 511.724 192.925C511.996 192.642 504.352 188.88 503.417 188.402C498.938 186.113 513.366 190.249 518.05 192.081C521.356 193.374 524.421 195.246 527.613 196.619C529.352 197.368 529.948 197.408 529.309 195.55C528.629 193.571 526.855 192.315 525.186 191.205C524.355 190.653 523.951 191.142 524.185 192.024C524.77 194.223 527.245 195.977 529.199 196.84C531.638 197.918 535.279 195.896 532.344 193.906C529.792 192.176 528.577 197.974 528.485 199.68C528.33 202.569 531.544 199.772 530.94 197.891C529.503 193.414 521.264 198.065 524.738 201.22C525.934 202.308 529.405 203.442 530.727 201.982C532.091 200.475 530.081 198.589 529.206 197.495C528.969 197.199 528.057 195.952 528.204 197.081C528.52 199.498 531.151 199.859 533.067 200.59"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M547.901 208.213C547.407 208.743 544.173 207.959 546.623 208.797C552.287 210.735 546.723 211.657 545.986 210.392C544.872 208.48 550.747 209.298 549.832 210.565C548.938 211.804 545.568 208.965 547.721 209.316"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M551.251 200.155C550.214 199.569 550.432 200.55 551.543 199.75" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M549.426 193.291C549.669 193.03 550.108 192.934 550.416 192.773" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M547.938 188.521C548.477 188.816 548.744 188.199 549.333 188.295" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M543.773 184.899L544.066 184.494" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M640.958 268.101C646.791 272.072 651.042 279.909 654.068 286.232C656.161 290.603 659.106 292.186 663.37 291.198C668.639 289.976 671.065 280.641 666.634 276.863C662.736 273.538 657.784 272.24 653.808 268.906C651.757 267.186 650.856 263.608 647.873 263.129C645.179 262.697 641.191 261.409 639.065 264.145C635.456 268.787 644.398 273.781 648.319 272.549C648.694 272.431 643.784 265.468 643.192 264.601C640.355 260.447 651.042 270.986 654.277 274.837C656.56 277.555 658.355 280.666 660.499 283.4C661.668 284.89 662.172 285.21 662.501 283.273C662.851 281.21 661.895 279.258 660.961 277.485C660.496 276.602 659.907 276.838 659.691 277.724C659.151 279.935 660.484 282.66 661.787 284.354C663.412 286.467 667.577 286.435 665.952 283.283C664.54 280.542 660.698 285.051 659.8 286.505C658.281 288.967 662.442 288.05 662.812 286.11C663.694 281.491 654.234 281.629 655.772 286.063C656.302 287.59 658.807 290.248 660.666 289.599C662.585 288.929 661.723 286.311 661.479 284.932C661.413 284.558 661.209 283.027 660.798 284.088C659.918 286.361 662.055 287.938 663.387 289.497"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M672.76 303.292C672.073 303.521 669.608 301.284 671.358 303.193C675.403 307.606 670.077 305.752 670.036 304.288C669.973 302.076 674.739 305.607 673.329 306.282C671.951 306.941 670.352 302.835 672.074 304.174"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M679.559 297.821C678.93 296.81 678.651 297.776 680.01 297.606" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M681.243 290.922C681.582 290.809 682.013 290.935 682.36 290.941" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M682.221 286.021C682.553 286.539 683.082 286.125 683.554 286.491" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M680.299 280.849L680.75 280.633" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M268.362 277.791C275.049 280.043 283.863 278.7 290.731 277.295C295.479 276.324 298.519 277.717 300.305 281.712C302.513 286.65 296.536 294.219 290.849 292.969C285.845 291.869 281.82 288.705 276.762 287.548C274.153 286.951 270.756 288.394 268.574 286.305C266.602 284.418 263.168 282.017 264.065 278.67C265.587 272.991 274.967 277.103 276.352 280.973C276.484 281.343 267.97 281.633 266.92 281.684C261.897 281.931 276.75 284.088 281.773 284.341C285.318 284.52 288.882 284.073 292.356 284.131C294.25 284.163 294.809 284.372 293.463 285.803C292.031 287.328 289.897 287.745 287.92 288.071C286.935 288.233 286.767 287.621 287.343 286.914C288.78 285.149 291.757 284.567 293.894 284.582C296.559 284.601 299.049 287.941 295.555 288.549C292.518 289.078 293.792 283.293 294.409 281.7C295.454 279.002 297.235 282.872 295.912 284.339C292.763 287.83 287.162 280.206 291.625 278.756C293.162 278.256 296.793 278.648 297.398 280.521C298.023 282.456 295.415 283.35 294.169 283.987C293.831 284.16 292.487 284.922 293.085 283.954C294.366 281.88 296.913 282.632 298.96 282.752"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M315.615 281.895C315.383 281.209 312.112 280.595 314.691 280.838C320.65 281.397 315.957 278.271 314.765 279.122C312.964 280.408 318.656 282.075 318.342 280.544C318.036 279.048 313.797 280.251 315.905 280.816"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M315.36 290.618C314.174 290.726 314.775 289.921 315.46 291.108" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M310.877 296.126C310.991 296.464 311.353 296.732 311.567 297.005" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M307.561 299.864C308.174 299.817 308.163 300.489 308.74 300.643" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M302.275 301.455L302.376 301.945" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M436.224 274.837C443.28 274.888 451.233 270.859 457.318 267.379C461.525 264.973 464.848 265.346 467.793 268.584C471.433 272.584 468.119 281.643 462.327 282.231C457.23 282.749 452.418 281.001 447.251 281.482C444.586 281.731 441.81 284.161 439.084 282.859C436.622 281.682 432.61 280.474 432.416 277.015C432.088 271.144 442.283 272.121 444.808 275.364C445.049 275.674 437.051 278.61 436.07 278.986C431.375 280.79 446.159 278.199 451.01 276.871C454.434 275.933 457.679 274.395 460.998 273.365C462.806 272.804 463.403 272.827 462.572 274.608C461.687 276.504 459.791 277.566 458.014 278.493C457.129 278.955 456.779 278.426 457.105 277.574C457.918 275.449 460.564 273.966 462.599 273.313C465.137 272.499 468.546 274.893 465.417 276.563C462.696 278.014 462.1 272.12 462.188 270.414C462.338 267.525 465.239 270.645 464.441 272.452C462.54 276.752 454.837 271.259 458.624 268.487C459.928 267.532 463.499 266.77 464.66 268.361C465.857 270.003 463.66 271.667 462.674 272.662C462.408 272.932 461.369 274.076 461.635 272.969C462.204 270.599 464.858 270.517 466.84 269.992"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M482.395 263.974C481.96 263.395 478.661 263.834 481.186 263.259C487.023 261.929 481.587 260.425 480.721 261.606C479.412 263.39 485.339 263.196 484.563 261.839C483.805 260.513 480.154 262.981 482.333 262.859"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M484.877 272.341C483.784 272.814 484.104 271.862 485.125 272.775" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M482.338 278.974C482.552 279.259 482.979 279.401 483.268 279.593" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M480.356 283.562C480.924 283.325 481.124 283.966 481.72 283.933" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M475.832 286.724L476.08 287.157" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M546.712 268.527C552.446 272.638 561.267 273.936 568.245 274.603C573.07 275.065 575.569 277.287 576.107 281.63C576.772 286.998 568.84 292.486 563.768 289.625C559.306 287.108 556.384 282.904 551.886 280.317C549.566 278.982 545.896 279.366 544.421 276.73C543.088 274.348 540.508 271.047 542.346 268.109C545.464 263.125 553.229 269.804 553.42 273.91C553.438 274.302 545.212 272.086 544.193 271.828C539.317 270.593 552.888 277.004 557.617 278.718C560.954 279.927 564.493 280.543 567.798 281.616C569.598 282.201 570.072 282.564 568.367 283.539C566.55 284.577 564.388 284.351 562.402 284.084C561.413 283.95 561.432 283.316 562.19 282.808C564.08 281.542 567.097 281.857 569.136 282.497C571.679 283.296 573.081 287.218 569.563 286.777C566.503 286.393 569.416 281.235 570.472 279.892C572.262 277.618 572.832 281.841 571.137 282.856C567.103 285.272 563.98 276.342 568.672 276.262C570.289 276.234 573.646 277.672 573.676 279.641C573.707 281.673 570.951 281.764 569.573 282.009C569.199 282.075 567.691 282.41 568.546 281.66C570.378 280.052 572.594 281.516 574.515 282.231"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M590.693 286.289C590.672 285.565 587.723 284.02 590.118 285.007C595.653 287.287 592.08 282.923 590.691 283.388C588.593 284.09 593.547 287.351 593.696 285.795C593.841 284.275 589.436 284.184 591.285 285.341"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M587.894 294.555C586.728 294.311 587.539 293.718 587.846 295.052" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M581.993 298.508C582.004 298.865 582.271 299.227 582.395 299.55" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M577.729 301.111C578.329 301.245 578.122 301.885 578.628 302.201" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M572.209 301.085L572.161 301.582" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M664.712 370.111C670.446 374.222 679.267 375.52 686.245 376.187C691.07 376.649 693.569 378.871 694.107 383.214C694.772 388.582 686.84 394.07 681.768 391.209C677.306 388.691 674.384 384.488 669.886 381.901C667.566 380.566 663.896 380.95 662.421 378.314C661.088 375.932 658.508 372.631 660.346 369.693C663.464 364.709 671.229 371.388 671.42 375.494C671.438 375.886 663.212 373.67 662.193 373.412C657.317 372.177 670.888 378.588 675.617 380.302C678.954 381.511 682.493 382.127 685.798 383.2C687.598 383.785 688.072 384.148 686.367 385.123C684.55 386.161 682.388 385.935 680.402 385.668C679.413 385.534 679.432 384.9 680.19 384.392C682.08 383.126 685.097 383.441 687.136 384.081C689.679 384.88 691.081 388.802 687.563 388.361C684.503 387.977 687.416 382.819 688.472 381.476C690.262 379.202 690.832 383.425 689.137 384.44C685.103 386.856 681.98 377.926 686.672 377.846C688.289 377.818 691.646 379.256 691.676 381.225C691.707 383.257 688.951 383.348 687.573 383.593C687.199 383.659 685.691 383.994 686.546 383.244C688.378 381.636 690.594 383.1 692.515 383.815"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M708.693 387.873C708.672 387.149 705.723 385.604 708.118 386.591C713.653 388.871 710.08 384.507 708.691 384.972C706.593 385.674 711.547 388.935 711.696 387.379C711.841 385.859 707.436 385.768 709.285 386.925"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M705.894 396.139C704.728 395.895 705.539 395.302 705.846 396.636" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M699.993 400.092C700.004 400.449 700.271 400.811 700.395 401.134" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M695.729 402.695C696.329 402.829 696.122 403.469 696.628 403.785" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M690.209 402.669L690.161 403.166" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+        </g>
+      </svg>
+
+
       <div class="c-daughters__daughter">
         <div class="c-daughters__txt">
           <h2>Catharina Plantin</h2>
@@ -537,7 +984,7 @@
           </p>
         </div>
         <picture>
-          <img class="c-daughters__img" sizes="(max-width: 1480px) 100vw, 1480px" srcset="
+          <img class="c-daughters__img left-daughter" sizes="(max-width: 1480px) 100vw, 1480px" srcset="
           /catharina/catharina_z5svmb_c_scale,w_190.webp 190w,
           /catharina/catharina_z5svmb_c_scale,w_367.webp 367w,
           /catharina/catharina_z5svmb_c_scale,w_554.webp 554w,
@@ -551,9 +998,115 @@
             alt="Catharina Plantin">
         </picture>
       </div>
+
+      <svg class="c-daughters__feetfour" width="352" height="351" viewBox="0 0 352 351" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.39">
+          <path class="foot"
+            d="M336.178 19.3484C330.068 22.8771 325.249 30.3778 321.763 36.4598C319.353 40.6643 316.298 42.0245 312.119 40.7236C306.955 39.1159 305.227 29.6269 309.924 26.1865C314.058 23.1596 319.092 22.231 323.304 19.2006C325.477 17.637 326.64 14.1354 329.65 13.8787C332.37 13.6468 336.441 12.6573 338.36 15.543C341.615 20.4396 332.328 24.7587 328.508 23.2396C328.144 23.0945 333.555 16.514 334.21 15.6925C337.346 11.7599 325.909 21.4792 322.398 25.0805C319.92 27.6221 317.899 30.5921 315.559 33.1598C314.283 34.5592 313.757 34.8412 313.572 32.8851C313.376 30.8021 314.473 28.9258 315.536 27.2269C316.065 26.3803 316.635 26.6593 316.785 27.5592C317.159 29.8036 315.629 32.4224 314.204 34.0154C312.428 36.0028 308.276 35.6631 310.129 32.6396C311.741 30.0107 315.239 34.7911 316.026 36.3076C317.36 38.8752 313.278 37.653 313.052 35.6908C312.515 31.0197 321.938 31.8572 320.076 36.1649C319.434 37.6489 316.74 40.114 314.934 39.3294C313.07 38.5195 314.123 35.9718 314.469 34.6149C314.562 34.2473 314.879 32.735 315.21 33.8239C315.919 36.156 313.671 37.5704 312.228 39.0262"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M301.86 52.0906C302.528 52.37 305.151 50.3212 303.265 52.0959C298.905 56.1976 304.354 54.7425 304.503 53.2854C304.729 51.0843 299.715 54.2527 301.071 55.0301C302.396 55.7896 304.296 51.8134 302.479 53.0211"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M295.484 46.132C296.187 45.1705 296.393 46.1539 295.051 45.8835" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M294.316 39.127C293.987 38.9892 293.547 39.0832 293.201 39.0635" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M293.703 34.1675C293.333 34.659 292.836 34.2071 292.339 34.5376" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M296.003 29.1504L295.569 28.9019" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M252.073 96.9217C245.963 100.45 241.143 107.951 237.657 114.033C235.247 118.237 232.192 119.598 228.014 118.297C222.849 116.689 221.121 107.2 225.819 103.76C229.952 100.733 234.987 99.8042 239.199 96.7738C241.372 95.2103 242.535 91.7086 245.545 91.452C248.264 91.2201 252.336 90.2305 254.254 93.1163C257.509 98.0128 248.222 102.332 244.403 100.813C244.038 100.668 249.45 94.0872 250.105 93.2657C253.24 89.3332 241.803 99.0525 238.292 102.654C235.814 105.195 233.794 108.165 231.453 110.733C230.178 112.132 229.652 112.414 229.467 110.458C229.27 108.375 230.368 106.499 231.43 104.8C231.96 103.954 232.53 104.233 232.68 105.132C233.054 107.377 231.523 109.996 230.099 111.589C228.322 113.576 224.171 113.236 226.024 110.213C227.635 107.584 231.133 112.364 231.921 113.881C233.254 116.448 229.172 115.226 228.947 113.264C228.409 108.593 237.833 109.43 235.97 113.738C235.329 115.222 232.635 117.687 230.829 116.903C228.965 116.093 230.018 113.545 230.363 112.188C230.457 111.821 230.774 110.308 231.105 111.397C231.814 113.729 229.566 115.144 228.123 116.599"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M217.755 129.664C218.423 129.943 221.046 127.894 219.16 129.669C214.8 133.771 220.248 132.316 220.398 130.859C220.623 128.658 215.61 131.826 216.966 132.603C218.291 133.363 220.19 129.387 218.373 130.594"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M211.379 123.705C212.081 122.744 212.288 123.727 210.945 123.457" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M210.211 116.7C209.882 116.562 209.442 116.656 209.095 116.637" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M209.598 111.741C209.228 112.232 208.731 111.78 208.234 112.111" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M211.897 106.724L211.464 106.475" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M123.481 193.562C118.667 198.721 116.248 207.302 114.69 214.137C113.613 218.862 111.088 221.055 106.712 221.031C101.303 221.001 96.8793 212.43 100.368 207.768C103.437 203.666 107.981 201.308 111.124 197.18C112.746 195.05 112.836 191.361 115.64 190.237C118.173 189.221 121.779 187.086 124.456 189.286C128.999 193.018 121.378 199.861 117.281 199.523C116.89 199.491 120.144 191.617 120.531 190.64C122.382 185.963 114.281 198.599 111.974 203.068C110.347 206.223 109.281 209.653 107.793 212.792C106.981 214.503 106.561 214.927 105.813 213.11C105.016 211.175 105.518 209.06 106.038 207.125C106.297 206.16 106.924 206.261 107.33 207.078C108.344 209.115 107.644 212.067 106.747 214.006C105.628 216.426 101.558 217.313 102.448 213.88C103.221 210.895 107.963 214.446 109.159 215.666C111.184 217.733 106.923 217.756 106.134 215.945C104.256 211.634 113.514 209.684 112.99 214.348C112.81 215.954 110.953 219.098 108.997 218.875C106.977 218.645 107.241 215.901 107.175 214.502C107.157 214.123 107.018 212.585 107.653 213.529C109.012 215.553 107.275 217.562 106.32 219.376"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M100.219 234.897C100.939 234.97 102.85 232.244 101.564 234.492C98.5915 239.688 103.378 236.706 103.095 235.269C102.669 233.097 98.7982 237.592 100.322 237.939C101.811 238.279 102.467 233.921 101.082 235.607"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M92.381 231.06C92.7724 229.936 93.2569 230.816 91.8938 230.949" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M89.2178 224.702C88.8625 224.666 88.4693 224.884 88.1323 224.967" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M87.1836 220.138C86.9736 220.716 86.366 220.429 85.9871 220.89" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M87.9189 214.667L87.4318 214.556" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M335.31 81.0496C331.112 86.7203 323.113 90.6577 316.674 93.4315C312.224 95.349 310.526 98.2299 311.344 102.529C312.356 107.843 321.588 110.636 325.539 106.359C329.015 102.595 330.509 97.6985 333.997 93.8576C335.797 91.8759 339.408 91.1173 340.004 88.156C340.543 85.4805 341.988 81.5473 339.339 79.314C334.843 75.5247 329.498 84.2618 330.575 88.2287C330.677 88.6074 337.829 83.9773 338.72 83.4197C342.982 80.7504 332.029 91.0114 328.052 94.0914C325.246 96.2651 322.066 97.9355 319.25 99.9697C317.715 101.078 317.375 101.569 319.297 101.974C321.344 102.406 323.333 101.529 325.142 100.666C326.043 100.235 325.83 99.6376 324.953 99.3865C322.766 98.76 319.99 99.984 318.246 101.218C316.07 102.758 315.936 106.921 319.151 105.423C321.945 104.12 317.592 100.103 316.175 99.1481C313.775 97.5321 314.527 101.726 316.451 102.173C321.031 103.237 321.267 93.7793 316.776 95.1409C315.229 95.61 312.474 98.007 313.049 99.8904C313.642 101.834 316.293 101.077 317.68 100.888C318.056 100.836 319.595 100.693 318.55 100.241C316.314 99.2716 314.653 101.345 313.043 102.613"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M298.888 111.433C298.686 110.737 301.019 108.364 299.042 110.036C294.472 113.903 296.536 108.655 298.001 108.671C300.213 108.697 296.497 113.319 295.878 111.883C295.274 110.481 299.44 109.045 298.034 110.713"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M304.085 118.443C305.12 117.854 304.166 117.538 304.282 118.902" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M310.912 120.399C311.012 120.742 310.868 121.168 310.849 121.514" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M315.771 121.571C315.24 121.882 315.633 122.428 315.248 122.884" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M321.016 119.854L321.213 120.313" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M208.783 174.732C205.649 181.054 198.469 186.339 192.621 190.204C188.578 192.876 187.414 196.011 188.977 200.099C190.91 205.151 200.489 206.273 203.624 201.367C206.383 197.05 206.99 191.966 209.747 187.571C211.17 185.303 214.591 183.92 214.656 180.9C214.715 178.171 215.444 174.045 212.442 172.314C207.349 169.376 203.628 178.918 205.386 182.633C205.554 182.988 211.778 177.17 212.556 176.464C216.282 173.085 207.308 185.116 203.937 188.848C201.558 191.483 198.722 193.687 196.308 196.186C194.992 197.548 194.744 198.091 196.708 198.151C198.799 198.215 200.602 197.001 202.23 195.833C203.041 195.251 202.727 194.7 201.819 194.607C199.556 194.376 197.039 196.07 195.54 197.592C193.669 199.491 194.272 203.613 197.171 201.572C199.693 199.797 194.7 196.609 193.137 195.919C190.49 194.751 191.968 198.747 193.941 198.848C198.637 199.088 197.203 189.737 193.022 191.869C191.582 192.603 189.293 195.448 190.19 197.201C191.117 199.01 193.593 197.797 194.925 197.366C195.286 197.249 196.775 196.838 195.667 196.576C193.295 196.016 192.026 198.349 190.664 199.882"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M178.285 211.058C177.964 210.409 179.842 207.661 178.191 209.656C174.374 214.268 175.48 208.738 176.925 208.496C179.107 208.131 176.263 213.336 175.401 212.032C174.559 210.758 178.407 208.61 177.317 210.5"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M184.635 217.043C185.55 216.281 184.556 216.137 184.911 217.46" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M191.701 217.765C191.86 218.085 191.794 218.53 191.835 218.874" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M196.689 218.062C196.222 218.462 196.705 218.93 196.407 219.447" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M201.55 215.448L201.825 215.865" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M141.305 257.163C140.196 264.131 134.915 271.315 130.482 276.745C127.417 280.5 127.24 283.839 129.949 287.276C133.298 291.524 142.777 289.744 144.31 284.126C145.658 279.184 144.724 274.15 146.048 269.133C146.731 266.545 149.585 264.206 148.748 261.303C147.992 258.681 147.46 254.525 144.079 253.765C138.342 252.477 137.63 262.694 140.415 265.718C140.681 266.006 144.89 258.599 145.423 257.694C147.974 253.359 142.989 267.516 140.881 272.083C139.394 275.306 137.343 278.255 135.782 281.359C134.932 283.05 134.857 283.643 136.749 283.116C138.765 282.554 140.125 280.858 141.331 279.258C141.932 278.461 141.468 278.029 140.574 278.21C138.344 278.664 136.446 281.03 135.468 282.929C134.247 285.3 136.049 289.055 138.21 286.243C140.089 283.798 134.373 282.241 132.676 282.048C129.801 281.721 132.402 285.096 134.315 284.605C138.87 283.436 134.717 274.935 131.36 278.215C130.204 279.345 128.866 282.743 130.244 284.149C131.667 285.6 133.67 283.705 134.813 282.897C135.123 282.678 136.422 281.842 135.287 281.922C132.855 282.094 132.339 284.699 131.495 286.567"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M123.003 300.922C122.504 300.398 123.479 297.215 122.496 299.612C120.225 305.15 119.635 299.542 120.942 298.881C122.917 297.883 121.752 303.698 120.541 302.71C119.357 301.744 122.391 298.548 121.913 300.677"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M130.849 304.745C131.495 303.745 130.503 303.904 131.236 305.061" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M137.809 303.331C138.055 303.589 138.125 304.033 138.267 304.35" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M142.659 302.129C142.332 302.65 142.932 302.953 142.801 303.536" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M146.521 298.187L146.909 298.503" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M41.4809 302.485C36.6672 307.644 34.2481 316.225 32.6898 323.06C31.6125 327.785 29.088 329.978 24.7116 329.954C19.3029 329.924 14.8793 321.353 18.3677 316.691C21.437 312.589 25.9811 310.231 29.1245 306.103C30.7463 303.973 30.8365 300.284 33.6402 299.16C36.1733 298.144 39.7787 296.009 42.456 298.209C46.9989 301.941 39.3778 308.784 35.2814 308.446C34.8904 308.414 38.1444 300.54 38.531 299.563C40.3817 294.886 32.2809 307.522 29.9744 311.991C28.3465 315.146 27.2814 318.576 25.7927 321.715C24.9813 323.426 24.5605 323.849 23.8126 322.033C23.0162 320.098 23.5181 317.983 24.0382 316.048C24.2975 315.083 24.924 315.184 25.3303 316.001C26.3436 318.038 25.6441 320.99 24.7472 322.929C23.6281 325.349 19.5583 326.236 20.448 322.803C21.2214 319.818 25.963 323.369 27.159 324.589C29.184 326.656 24.9232 326.679 24.1343 324.868C22.2563 320.557 31.5137 318.607 30.9904 323.27C30.8101 324.877 28.9533 328.021 26.9968 327.798C24.9774 327.568 25.2405 324.824 25.175 323.425C25.1573 323.046 25.0185 321.507 25.6531 322.452C27.0124 324.476 25.2755 326.485 24.3202 328.298"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot"
+            d="M18.2186 343.82C18.9392 343.892 20.8498 341.167 19.5638 343.415C16.5915 348.611 21.3777 345.629 21.0952 344.191C20.6685 342.02 16.7982 346.515 18.3224 346.862C19.8115 347.202 20.4669 342.844 19.082 344.53"
+            stroke="white" stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M10.381 339.983C10.7724 338.859 11.2569 339.739 9.89385 339.872" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M7.21777 333.625C6.86249 333.589 6.46931 333.807 6.13231 333.89" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M5.18359 329.061C4.97357 329.639 4.36598 329.352 3.98705 329.813" stroke="white"
+            stroke-width="6" stroke-linecap="round" />
+          <path class="foot" d="M5.91895 323.59L5.43175 323.479" stroke="white" stroke-width="6"
+            stroke-linecap="round" />
+        </g>
+      </svg>
+
       <div class="c-daughters__daughter c-daughters__daughter--right">
         <picture>
-          <img class="c-daughters__img c-daughters__img--right" sizes="(max-width: 1480px) 100vw, 1480px" srcset="
+          <img class="c-daughters__img c-daughters__img--right right-daughter" sizes="(max-width: 1480px) 100vw, 1480px"
+            srcset="
           /magdalena/magdalena_aaaewi_c_scale,w_397.webp 397w,
           /magdalena/magdalena_aaaewi_c_scale,w_612.webp 612w,
           /magdalena/magdalena_aaaewi_c_scale,w_769.webp 769w,
@@ -579,6 +1132,97 @@
         </div>
 
       </div>
+
+      <svg class="c-daughters__feetfive" width="331" height="385" viewBox="0 0 331 385" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.39">
+          <path class="foot"
+            d="M19.1389 23.6951C26.6219 28.0164 32.5238 37.2022 36.7931 44.6505C39.7444 49.7994 43.4855 51.4653 48.6029 49.8722C54.9274 47.9033 57.0438 36.2825 51.2908 32.0693C46.2291 28.3624 40.0634 27.2252 34.9055 23.514C32.2442 21.5992 30.8196 17.3109 27.1336 16.9966C23.8034 16.7126 18.817 15.5008 16.4677 19.0348C12.4815 25.0314 23.8547 30.3208 28.5319 28.4603C28.9784 28.2827 22.3514 20.2239 21.5493 19.2178C17.7092 14.4018 31.7157 26.3045 36.0156 30.7149C39.0502 33.8275 41.5244 37.4646 44.3907 40.6091C45.9528 42.3229 46.597 42.6683 46.8233 40.2728C47.0643 37.7217 45.7202 35.424 44.419 33.3435C43.7705 32.3066 43.0726 32.6483 42.8888 33.7503C42.4304 36.499 44.3052 39.7061 46.0493 41.6569C48.2252 44.0908 53.3093 43.6748 51.0398 39.972C49.0665 36.7526 44.7825 42.6069 43.8181 44.4641C42.1851 47.6085 47.1839 46.1118 47.4604 43.7087C48.1186 37.9882 36.5782 39.0139 38.8588 44.2893C39.6445 46.1066 42.9437 49.1255 45.1555 48.1647C47.4385 47.1729 46.149 44.0528 45.7256 42.3911C45.6108 41.9409 45.2232 40.0889 44.8177 41.4224C43.9491 44.2785 46.702 46.0106 48.4694 47.7934"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M61.1669 63.7924C60.3487 64.1346 57.1363 61.6256 59.4464 63.7989C64.7859 68.8221 58.1134 67.0401 57.9303 65.2557C57.6537 62.5601 63.794 66.4403 62.1331 67.3923C60.5103 68.3225 58.1845 63.453 60.4094 64.932"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M68.9751 56.4952C68.1146 55.3178 67.8618 56.522 69.5061 56.1909" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M70.4053 47.9165C70.8087 47.7478 71.3473 47.8629 71.7714 47.8388" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M71.1562 41.8433C71.6089 42.4452 72.218 41.8918 72.8267 42.2965" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M68.3398 35.6987L68.8708 35.3944" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M122.139 118.695C129.622 123.016 135.524 132.202 139.793 139.65C142.744 144.799 146.486 146.465 151.603 144.872C157.927 142.903 160.044 131.283 154.291 127.069C149.229 123.362 143.063 122.225 137.905 118.514C135.244 116.599 133.82 112.311 130.134 111.997C126.803 111.713 121.817 110.501 119.468 114.035C115.481 120.031 126.855 125.321 131.532 123.46C131.978 123.283 125.351 115.224 124.549 114.218C120.709 109.402 134.716 121.305 139.016 125.715C142.05 128.827 144.524 132.465 147.391 135.609C148.953 137.323 149.597 137.668 149.823 135.273C150.064 132.722 148.72 130.424 147.419 128.343C146.771 127.307 146.073 127.648 145.889 128.75C145.43 131.499 147.305 134.706 149.049 136.657C151.225 139.091 156.309 138.675 154.04 134.972C152.067 131.753 147.783 137.607 146.818 139.464C145.185 142.608 150.184 141.112 150.46 138.709C151.119 132.988 139.578 134.014 141.859 139.289C142.644 141.107 145.944 144.126 148.155 143.165C150.439 142.173 149.149 139.053 148.726 137.391C148.611 136.941 148.223 135.089 147.818 136.422C146.949 139.278 149.702 141.011 151.469 142.793"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M164.167 158.792C163.349 159.135 160.136 156.626 162.446 158.799C167.786 163.822 161.113 162.04 160.93 160.256C160.654 157.56 166.794 161.44 165.133 162.392C163.51 163.322 161.184 158.453 163.409 159.932"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M171.975 151.495C171.115 150.318 170.862 151.522 172.506 151.191" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M173.405 142.917C173.809 142.748 174.347 142.863 174.771 142.839" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M174.156 136.843C174.609 137.445 175.218 136.892 175.827 137.296" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M171.34 130.699L171.871 130.394" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M279.618 237.046C285.513 243.364 288.476 253.872 290.384 262.243C291.704 268.029 294.795 270.715 300.155 270.685C306.779 270.649 312.196 260.152 307.924 254.443C304.165 249.42 298.6 246.532 294.751 241.476C292.765 238.868 292.654 234.35 289.221 232.974C286.118 231.73 281.703 229.115 278.424 231.809C272.861 236.38 282.194 244.76 287.211 244.346C287.69 244.306 283.704 234.664 283.231 233.467C280.964 227.74 290.885 243.214 293.71 248.687C295.703 252.55 297.008 256.751 298.831 260.596C299.825 262.691 300.34 263.21 301.256 260.985C302.231 258.615 301.617 256.025 300.98 253.655C300.662 252.474 299.895 252.597 299.397 253.597C298.156 256.093 299.013 259.707 300.111 262.082C301.482 265.045 306.466 266.132 305.376 261.928C304.429 258.273 298.622 262.621 297.158 264.116C294.678 266.646 299.896 266.674 300.862 264.457C303.162 259.178 291.825 256.789 292.466 262.501C292.686 264.468 294.96 268.319 297.356 268.046C299.829 267.764 299.507 264.403 299.587 262.69C299.609 262.226 299.779 260.341 299.002 261.498C297.337 263.976 299.464 266.437 300.634 268.658"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M308.106 287.667C307.224 287.755 304.884 284.418 306.459 287.171C310.099 293.534 304.238 289.882 304.584 288.122C305.106 285.463 309.846 290.967 307.979 291.392C306.156 291.808 305.353 286.472 307.049 288.536"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M317.705 282.968C317.226 281.591 316.633 282.669 318.302 282.832" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M321.579 275.181C322.014 275.137 322.496 275.404 322.908 275.505" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M324.07 269.591C324.328 270.299 325.072 269.948 325.536 270.513" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M323.17 262.892L323.767 262.756" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M20.2027 99.2574C25.3448 106.202 35.1407 111.024 43.0252 114.421C48.4756 116.769 50.555 120.297 49.5526 125.562C48.3137 132.069 37.008 135.49 32.1695 130.252C27.9124 125.643 26.0832 119.647 21.811 114.943C19.6067 112.516 15.1845 111.587 14.4542 107.96C13.7943 104.684 12.0248 99.8669 15.2695 97.132C20.7753 92.4914 27.3205 103.191 26.0025 108.049C25.8767 108.513 17.1183 102.843 16.0277 102.16C10.8073 98.891 24.2217 111.457 29.0913 115.229C32.528 117.891 36.4222 119.937 39.8716 122.428C41.7515 123.786 42.1677 124.386 39.8133 124.883C37.3061 125.412 34.8707 124.337 32.656 123.28C31.5523 122.753 31.8126 122.021 32.8867 121.714C35.5657 120.946 38.9647 122.445 41.1007 123.957C43.7657 125.843 43.929 130.941 39.9927 129.106C36.5703 127.511 41.9009 122.591 43.6367 121.422C46.5756 119.443 45.6555 124.579 43.2993 125.126C37.6904 126.429 37.4006 114.847 42.9006 116.514C44.7953 117.089 48.1689 120.024 47.4651 122.331C46.7387 124.712 43.4925 123.784 41.7934 123.552C41.3331 123.489 39.4491 123.314 40.7281 122.76C43.4672 121.573 45.5003 124.112 47.4721 125.665"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M64.8077 136.466C65.0548 135.614 62.1977 132.707 64.619 134.756C70.2153 139.491 67.6881 133.064 65.8944 133.084C63.1849 133.115 67.7364 138.776 68.4939 137.018C69.234 135.3 64.1321 133.541 65.8539 135.584"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M58.4437 145.052C57.1763 144.33 58.3441 143.942 58.2016 145.614" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M50.082 147.446C49.9602 147.866 50.1356 148.388 50.1598 148.812" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M44.1328 148.881C44.7822 149.263 44.3015 149.931 44.7726 150.49" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M37.709 146.78L37.4668 147.342" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M175.154 213.985C178.992 221.727 187.785 228.2 194.947 232.933C199.899 236.205 201.324 240.044 199.409 245.05C197.043 251.237 185.311 252.612 181.472 246.603C178.093 241.316 177.35 235.091 173.973 229.708C172.231 226.931 168.042 225.237 167.962 221.538C167.89 218.197 166.997 213.144 170.673 211.023C176.91 207.426 181.467 219.111 179.314 223.661C179.108 224.096 171.486 216.971 170.533 216.106C165.97 211.968 176.96 226.702 181.089 231.273C184.003 234.499 187.476 237.199 190.432 240.259C192.043 241.927 192.347 242.591 189.942 242.665C187.381 242.744 185.173 241.257 183.179 239.826C182.186 239.113 182.571 238.438 183.682 238.325C186.455 238.042 189.536 240.116 191.372 241.981C193.663 244.306 192.926 249.354 189.374 246.854C186.287 244.681 192.401 240.777 194.315 239.932C197.557 238.502 195.746 243.396 193.33 243.519C187.58 243.813 189.336 232.361 194.456 234.972C196.22 235.871 199.023 239.355 197.924 241.501C196.789 243.717 193.757 242.232 192.126 241.704C191.684 241.561 189.86 241.057 191.217 240.737C194.122 240.051 195.676 242.908 197.343 244.785"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M212.504 258.472C212.897 257.677 210.597 254.312 212.62 256.755C217.294 262.403 215.939 255.63 214.17 255.334C211.497 254.887 214.98 261.262 216.035 259.664C217.066 258.104 212.354 255.474 213.689 257.788"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M204.727 265.801C203.606 264.868 204.824 264.692 204.389 266.312" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M196.073 266.685C195.879 267.077 195.96 267.622 195.909 268.044" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M189.965 267.049C190.537 267.539 189.946 268.112 190.311 268.745" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M184.012 263.848L183.674 264.359" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+          <path class="foot"
+            d="M257.79 314.934C259.149 323.468 265.616 332.265 271.045 338.915C274.798 343.513 275.015 347.603 271.697 351.812C267.597 357.014 255.988 354.834 254.111 347.954C252.459 341.902 253.603 335.737 251.982 329.593C251.145 326.423 247.65 323.559 248.675 320.004C249.601 316.793 250.253 311.703 254.393 310.773C261.419 309.195 262.291 321.708 258.881 325.41C258.555 325.764 253.399 316.693 252.747 315.584C249.623 310.275 255.729 327.612 258.309 333.205C260.131 337.152 262.642 340.764 264.554 344.565C265.595 346.637 265.687 347.362 263.369 346.716C260.901 346.029 259.236 343.952 257.758 341.993C257.022 341.016 257.591 340.487 258.686 340.709C261.416 341.264 263.741 344.162 264.939 346.489C266.433 349.391 264.227 353.99 261.58 350.546C259.28 347.552 266.279 345.645 268.358 345.409C271.879 345.009 268.693 349.142 266.35 348.54C260.773 347.109 265.858 336.699 269.969 340.715C271.385 342.099 273.024 346.26 271.336 347.982C269.593 349.759 267.141 347.439 265.74 346.449C265.361 346.181 263.77 345.156 265.16 345.255C268.138 345.465 268.771 348.655 269.804 350.943"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot"
+            d="M280.203 368.523C280.815 367.881 279.621 363.984 280.824 366.918C283.606 373.701 284.328 366.833 282.727 366.024C280.309 364.801 281.736 371.923 283.219 370.712C284.668 369.53 280.953 365.616 281.538 368.223"
+            stroke="white" stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M270.596 373.205C269.804 371.98 271.019 372.175 270.122 373.592" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M262.072 371.473C261.77 371.789 261.685 372.333 261.511 372.721" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M256.132 370.001C256.532 370.639 255.797 371.01 255.958 371.724" stroke="white"
+            stroke-width="9" stroke-linecap="round" />
+          <path class="foot" d="M251.402 365.174L250.928 365.561" stroke="white" stroke-width="9"
+            stroke-linecap="round" />
+        </g>
+      </svg>
+
       <div class="c-daughters__daughter">
         <div class="c-daughters__txt">
           <h2>Henriette Plantin</h2>
@@ -594,7 +1238,7 @@
           </p>
         </div>
         <picture>
-          <img class="c-daughters__img" sizes="(max-width: 1480px) 100vw, 1480px" srcset="
+          <img class="c-daughters__img left-daughter" sizes="(max-width: 1480px) 100vw, 1480px" srcset="
           /henriette/henriette_x7tont_c_scale,w_300.webp 300w,
           /henriette/henriette_x7tont_c_scale,w_605.webp 605w,
           /henriette/henriette_x7tont_c_scale,w_832.webp 832w,
@@ -657,7 +1301,7 @@
 
       <div class="c-header__img c-header__img--newsletter">
         <picture>
-          <img sizes="(max-width: 1000px) 100vw, 1000px" srcset="
+          <img id="newsletter-img" sizes="(max-width: 1000px) 100vw, 1000px" srcset="
     /drawing-plantin/plantin_420.avif 420w,
     /drawing-plantin/plantin_578.avif 578w,
     /drawing-plantin/plantin_979.avif 979w
@@ -733,6 +1377,9 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="./src/css/style.css">
   <script type="module" src="src/js/main.js"></script>
 </body>
 
