@@ -786,3 +786,36 @@ buttons.forEach((button) => {
         noninteractionElement.classList.toggle('c-language__imgone--nonactive');
     });
 });
+
+
+//civil rights
+const boySvg = document.getElementById('boy');
+const girlSvg = document.getElementById('girl');
+const boyPopup = document.getElementById('popup-boy');
+const girlPopup = document.getElementById('popup-girl');
+
+function showPopup(popup) {
+    popup.classList.add('visible');
+}
+
+function hidePopups() {
+    boyPopup.classList.remove('visible');
+    girlPopup.classList.remove('visible');
+}
+
+boySvg.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hidePopups();
+    showPopup(boyPopup);
+});
+
+girlSvg.addEventListener('click', (e) => {
+    e.stopPropagation();
+    hidePopups();
+    showPopup(girlPopup);
+});
+
+document.addEventListener('click', () => {
+    hidePopups();
+});
+

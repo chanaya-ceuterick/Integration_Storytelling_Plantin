@@ -739,6 +739,7 @@ img {
   z-index: 2;
   bottom: 20vh;
   left: 8vw;
+  cursor: pointer;
 
   @media only screen and (max-width: 1200px) {
     bottom: 10vh;
@@ -763,11 +764,38 @@ img {
   }
 }
 
+#popup-boy {
+  position: absolute;
+  bottom: 10%;
+  left: 8vw;
+
+  @media only screen and (max-width: 1024px) {
+    bottom: -10%;
+  }
+
+  @media only screen and (max-width: 954px) {
+    bottom: 20%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    bottom: 0;
+  }
+
+  @media only screen and (max-width: 593px) {
+    bottom: -30%;
+  }
+
+  @media only screen and (max-width: 424px) {
+    bottom: 0;
+    left: 0;
+  }
+}
+
 #girl {
   position: absolute;
-  z-index: 2;
   bottom: 25vh;
   right: 2vw;
+  cursor: pointer;
 
   @media only screen and (max-width: 1200px) {
     bottom: 15vh;
@@ -790,6 +818,75 @@ img {
   @media only screen and (max-width: 425px) {
     bottom: 8vh;
   }
+}
+
+#popup-girl {
+  position: absolute;
+  bottom: 10%;
+  right: 2vw;
+
+  @media only screen and (max-width: 1024px) {
+    bottom: -10%;
+  }
+
+  @media only screen and (max-width: 954px) {
+    bottom: 25%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    bottom: 0;
+  }
+
+  @media only screen and (max-width: 593px) {
+    bottom: -30%;
+  }
+
+  @media only screen and (max-width: 424px) {
+    bottom: 0;
+    right: 0;
+  }
+}
+
+.popup {
+  background-color: var(--c-white);
+  border: 1px solid var(--c-black);
+  border-radius: var(--borders-md);
+  padding: var(--d-20);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-110%);
+  z-index: 3;
+  display: none;
+  width: 35%;
+
+  @media only screen and (max-width: 1024px) {
+    width: 60%;
+  }
+
+  @media only screen and (max-width: 954px) {
+    width: 50%;
+  }
+
+  @media only screen and (max-width: 593px) {
+    width: 65%;
+  }
+
+  @media only screen and (max-width: 424px) {
+    width: 85%;
+  }
+}
+
+.popup p {
+  color: var(--c-black);
+  font-size: var(--txt-sm);
+  width: 100%;
+
+  @media only screen and (max-width: 424px) {
+    font-size: .625rem;
+  }
+}
+
+.popup.visible {
+  display: block;
 }
 
 /* LANGUAGE AND EDUCATION
@@ -1007,7 +1104,6 @@ img {
 .c-language__imgone--nonactive {
   display: none;
 }
-
 
 /* QUOTE
 ---------------------------*/
