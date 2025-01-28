@@ -1599,6 +1599,33 @@ img {
   }
 }
 
+.c-daughters__images {
+  position: relative;
+}
+
+.c-daughters__teddy {
+  position: absolute;
+  bottom: -10%;
+  left: 35%;
+  z-index: 3;
+  width: 40%;
+  height: auto;
+
+  @media only screen and (max-width: 935px) {
+    left: 45%;
+    bottom: 5%;
+  }
+
+  @media only screen and (max-width: 766px) {
+    left: 45%;
+    bottom: -5%;
+  }
+
+  @media only screen and (max-width: 593px) {
+    bottom: -10%;
+  }
+}
+
 .c-daughters__father {
   border-radius: 100%;
   width: 25vw;
