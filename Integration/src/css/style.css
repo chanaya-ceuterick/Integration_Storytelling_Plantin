@@ -936,6 +936,7 @@ img {
   height: auto;
   transform: rotate(10deg);
   z-index: 1;
+  display: block;
 
   @media only screen and (max-width: 1023px) {
     width: 30vw;
@@ -976,118 +977,35 @@ img {
   }
 }
 
-.c-language__svgclick {
-  position: absolute;
-  rotate: 10deg;
-  z-index: 2;
-  top: 10.8vw;
-  left: 12vw;
-  opacity: 0.8;
+.c-language__click {
   display: none;
-
-  @media only screen and (max-width: 1024px) {
-    top: 10.5vw;
-    left: 11.5vw;
-    width: 15%;
-    height: auto;
-  }
-
-  @media only screen and (max-width: 954px) {
-    top: 18vw;
-    left: 20vw;
-    width: 15%;
-    height: auto;
-  }
-
-  @media only screen and (max-width: 768px) {
-    top: 32.5vw;
-    left: 35.5vw;
-    width: 20%;
-  }
-
-  @media only screen and (max-width: 593px) {
-    top: 34vw;
-    left: 37.5vw;
-  }
-
-  @media only screen and (max-width: 425px) {
-    top: 38vw;
-    left: 41vw;
-  }
-
-  @media only screen and (max-width: 375px) {
-    top: 32.5vw;
-    left: 37vw;
-    width: 30%;
-  }
-}
-
-.c-language__svgclick--active {
-  display: block;
-}
-
-.c-language__txtclick {
-  position: absolute;
-  bottom: 11vw;
-  left: -3.2vw;
-  rotate: 10deg;
-  text-shadow: 2px 2px 2px var(--c-black);
-  display: none;
-
-  @media only screen and (min-width: 1024px) {
-    top: 28vw;
-    left: -8vw;
-    rotate: 10deg;
-    text-align: center;
-    z-index: 2;
-    width: 50%;
-  }
-
-  @media only screen and (min-width: 1400px) {
-    position: absolute;
-    bottom: 11vw;
-    left: -3.2vw;
-    rotate: 10deg;
-    width: 100%;
-    height: auto;
-    text-shadow: 2px 2px 2px var(--c-black);
-    display: none;
-  }
+  width: 25vw;
+  height: auto;
+  transform: rotate(10deg);
+  z-index: 1;
 
   @media only screen and (max-width: 1023px) {
-    top: 30vw;
-    left: 3vw;
-    rotate: 10deg;
-    text-align: center;
-    z-index: 2;
-    width: 50%;
-  }
-
-  @media only screen and (max-width: 954px) {
-    left: 2vw;
+    width: 30vw;
+    margin: var(--d-50) 0 var(--d-50) var(--d-50);
   }
 
   @media only screen and (max-width: 768px) {
-    bottom: 5vw;
-    left: 7vw;
+    width: 60vw;
+  }
+
+  @media only screen and (max-width: 423px) {
     width: 100%;
-  }
-
-  @media only screen and (max-width: 425px) {
-    bottom: -2vw;
-    left: -1vw;
-  }
-
-  @media only screen and (max-width: 375px) {
-    bottom: 0;
-    left: 1vw;
-    rotate: 0deg;
-
+    transform: rotate(0);
+    margin: 0;
   }
 }
 
-.c-language__txtclick--active {
+.c-language__click--active {
   display: block;
+}
+
+.c-language__imgone--nonactive {
+  display: none;
 }
 
 

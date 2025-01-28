@@ -776,16 +776,13 @@ mm.add("(max-width: 768px)", () => {
 
 
 //Language
-
-
-const buttons = document.querySelectorAll('.c-language__btn'); 
+const buttons = document.querySelectorAll('.c-language__btn');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        const svgElement = button.closest('.c-language__images').querySelector('.c-language__svgclick');
-        const txtElement = button.closest('.c-language__images').querySelector('.c-language__txtclick');
-
-        svgElement.classList.toggle('c-language__svgclick--active');
-        txtElement.classList.toggle('c-language__txtclick--active');
+        const interactionElement = button.closest('.c-language__images').querySelector('.c-language__click');
+        const noninteractionElement = button.closest('.c-language__images').querySelector('.c-language__imgone');
+        interactionElement.classList.toggle('c-language__click--active');
+        noninteractionElement.classList.toggle('c-language__imgone--nonactive');
     });
 });
