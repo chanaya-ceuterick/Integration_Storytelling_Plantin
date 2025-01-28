@@ -1,10 +1,16 @@
 gsap.registerPlugin(ScrollTrigger);
 
-//Nav
+const options = document.querySelectorAll('.c-women__option');
+const workerImage = document.getElementById('worker-image');
+const speaking = document.querySelector('.c-women__speaking');
+const popup = document.getElementById('popupwomen');
+const popupText = document.getElementById('popup-text');
 const languageBtn = document.querySelector('.c-nav__btn');
 const languageDropdown = document.querySelector('.c-nav__dropdown');
 const languageItems = document.querySelectorAll('.c-nav__dropdown li');
 
+
+//Nav ------------------------------
 languageBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     languageDropdown.classList.toggle('open');
@@ -22,7 +28,7 @@ languageItems.forEach(item => {
     });
 });
 
-//Header
+//Header ------------------------------
 gsap.fromTo('.c-header__title h1', {
     scale: 1.1,
     opacity: 0,
@@ -79,7 +85,62 @@ gsap.to('.c-btnsec__svg', {
     ease: 'power1.inOut',
 });
 
-//Footer
+
+//Language ------------------------------
+const buttons = document.querySelectorAll('.c-language__btn');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const interactionElement = button.closest('.c-language__images').querySelector('.c-language__click');
+        const noninteractionElement = button.closest('.c-language__images').querySelector('.c-language__imgone');
+        interactionElement.classList.toggle('c-language__click--active');
+        noninteractionElement.classList.toggle('c-language__imgone--nonactive');
+    });
+});
+
+
+//civil rights ------------------------------
+const boySvg = document.getElementById('boy');
+const girlSvg = document.getElementById('girl');
+const boyPopup = document.getElementById('popup-boy');
+const girlPopup = document.getElementById('popup-girl');
+
+function showPopup(popup) {
+    popup.classList.add('visible');
+}
+
+function hidePopups() {
+    boyPopup.classList.remove('visible');
+    girlPopup.classList.remove('visible');
+}
+
+boySvg.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (boyPopup.classList.contains('visible')) {
+        hidePopups();
+    } else {
+        hidePopups();
+        showPopup(boyPopup);
+    }
+});
+
+girlSvg.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (girlPopup.classList.contains('visible')) {
+        hidePopups();
+    } else {
+        hidePopups();
+        showPopup(girlPopup);
+    }
+});
+
+document.addEventListener('click', () => {
+    hidePopups();
+});
+
+
+
+//Footer ------------------------------
 gsap.to('.c-footer__star', {
     rotation: 60,
     repeat: -1,
@@ -88,7 +149,11 @@ gsap.to('.c-footer__star', {
     ease: 'power1.inOut',
 });
 
-// responsive
+
+
+
+
+// RESPONSIVE ANIMATIONS AND INTERACTIONS ------------------------------
 let mm = gsap.matchMedia();
 mm.add("(min-width: 955px)", () => {
     // quote
@@ -348,6 +413,42 @@ mm.add("(min-width: 769px)", () => {
                 delay: index * 0.5,
             }
         );
+    });
+
+    //Women interaction
+    options.forEach(option => {
+        option.addEventListener('dragstart', (e) => {
+            console.log(`Started dragging: ${option.getAttribute('data-option')}`);
+            e.dataTransfer.setData('option', option.getAttribute('data-option'));
+
+            options.forEach(opt => opt.classList.remove('c-women__option--active'));
+            option.classList.add('c-women__option--active');
+        });
+    });
+
+
+    workerImage.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        // is needed to work 
+        console.log('Image is being dragged over');
+    });
+
+    workerImage.addEventListener('drop', (e) => {
+        console.log('Image is dropped');
+        e.preventDefault();
+        const option = e.dataTransfer.getData('option');
+        popupText.textContent = option;
+
+        popup.classList.add('c-women__popup--visible');
+        speaking.classList.add('u-hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!popup.contains(e.target) && !workerImage.contains(e.target)) {
+            popup.classList.remove('c-women__popup--visible');
+            speaking.classList.remove('u-hidden');
+            options.forEach(opt => opt.classList.remove('c-women__option--active'));
+        }
     });
 
 
@@ -723,6 +824,35 @@ mm.add("(max-width: 768px)", () => {
         ease: 'power1.inOut',
     });
 
+    //women interaction
+    options.forEach(option => {
+        option.setAttribute('draggable', 'false');
+
+        option.addEventListener('click', (e) => {
+            options.forEach(opt => opt.classList.remove('c-women__option--active'));
+            option.classList.add('c-women__option--active');
+
+            const optionText = option.getAttribute('data-option');
+            console.log(optionText)
+            popupText.textContent = optionText;
+
+            console.log('Adding class "c-women__popup--visible" to popup');
+            console.log(popup);  // Controleer of het popup element aanwezig is
+            console.log(option.classList);  // Controleer de classList van de geselecteerde optie
+
+            setTimeout(() => {
+                popup.classList.add('c-women__popup--visible');
+                speaking.classList.add('u-hidden');
+            }, 50); // Kleine vertraging toevoegen om rendering tijd te geven
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!popup.contains(e.target) && !workerImage.contains(e.target)) {
+            popup.classList.remove('c-women__popup--visible');
+        }
+    });
+
     //Daughters
     const viewportHeight = window.innerHeight;
     gsap.utils.toArray('.left-daughter').forEach((daughter) => {
@@ -775,47 +905,5 @@ mm.add("(max-width: 768px)", () => {
 });
 
 
-//Language
-const buttons = document.querySelectorAll('.c-language__btn');
 
-buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-        const interactionElement = button.closest('.c-language__images').querySelector('.c-language__click');
-        const noninteractionElement = button.closest('.c-language__images').querySelector('.c-language__imgone');
-        interactionElement.classList.toggle('c-language__click--active');
-        noninteractionElement.classList.toggle('c-language__imgone--nonactive');
-    });
-});
-
-
-//civil rights
-const boySvg = document.getElementById('boy');
-const girlSvg = document.getElementById('girl');
-const boyPopup = document.getElementById('popup-boy');
-const girlPopup = document.getElementById('popup-girl');
-
-function showPopup(popup) {
-    popup.classList.add('visible');
-}
-
-function hidePopups() {
-    boyPopup.classList.remove('visible');
-    girlPopup.classList.remove('visible');
-}
-
-boySvg.addEventListener('click', (e) => {
-    e.stopPropagation();
-    hidePopups();
-    showPopup(boyPopup);
-});
-
-girlSvg.addEventListener('click', (e) => {
-    e.stopPropagation();
-    hidePopups();
-    showPopup(girlPopup);
-});
-
-document.addEventListener('click', () => {
-    hidePopups();
-});
 
