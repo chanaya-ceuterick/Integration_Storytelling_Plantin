@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
 //Nav
 const languageBtn = document.querySelector('.c-nav__btn');
 const languageDropdown = document.querySelector('.c-nav__dropdown');
@@ -24,7 +23,6 @@ languageItems.forEach(item => {
 });
 
 //Header
-
 gsap.fromTo('.c-header__title h1', {
     scale: 1.1,
     opacity: 0,
@@ -82,7 +80,6 @@ gsap.to('.c-btnsec__svg', {
 });
 
 //Footer
-
 gsap.to('.c-footer__star', {
     rotation: 60,
     repeat: -1,
@@ -92,7 +89,6 @@ gsap.to('.c-footer__star', {
 });
 
 // responsive
-
 let mm = gsap.matchMedia();
 mm.add("(min-width: 955px)", () => {
     // quote
@@ -728,9 +724,7 @@ mm.add("(max-width: 768px)", () => {
     });
 
     //Daughters
-
     const viewportHeight = window.innerHeight;
-
     gsap.utils.toArray('.left-daughter').forEach((daughter) => {
         ScrollTrigger.create({
             trigger: daughter,
@@ -778,6 +772,20 @@ mm.add("(max-width: 768px)", () => {
             ),
         });
     });
+});
 
 
+//Language
+
+
+const buttons = document.querySelectorAll('.c-language__btn'); 
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        const svgElement = button.closest('.c-language__images').querySelector('.c-language__svgclick');
+        const txtElement = button.closest('.c-language__images').querySelector('.c-language__txtclick');
+
+        svgElement.classList.toggle('c-language__svgclick--active');
+        txtElement.classList.toggle('c-language__txtclick--active');
+    });
 });
