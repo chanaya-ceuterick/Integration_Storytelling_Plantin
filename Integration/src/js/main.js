@@ -307,7 +307,7 @@ mm.add("(min-width: 769px)", () => {
     })
 
     // indicator
-    gsap.utils.toArray('#right .line').forEach((line) => {
+    gsap.utils.toArray('.right .line').forEach((line) => {
         gsap.fromTo(
             line,
             { opacity: 0, x: 100 },
@@ -327,7 +327,7 @@ mm.add("(min-width: 769px)", () => {
         );
     });
 
-    gsap.utils.toArray('#left .line').forEach((line) => {
+    gsap.utils.toArray('.left .line').forEach((line) => {
         gsap.fromTo(
             line,
             { opacity: 0, x: -200 },
