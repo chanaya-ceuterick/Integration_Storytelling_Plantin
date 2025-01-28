@@ -1,334 +1,339 @@
-@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Beau+Rivage&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Beau+Rivage&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-    --txt-sm: 1rem;
-    --txt-md: 1.25rem;
-    --title-sm: 1.5rem;
-    --title-md: 2.5rem;
-    --title-lg: 6rem;
-    --d-20: 1.25rem;
-    --d-30: 1.875rem;
-    --d-50: 3.125rem;
-    --d-90: 5.625rem;
-    --d-160: 10rem;
-    --c-black: #010000;
-    --c-white: #FCFCFC;
-    --c-red: #CB4F4F;
-    --c-gradient: linear-gradient(rgba(1, 0, 0, 1) 0%, rgba(203, 79, 79, 1) 100%);
-    --borders-sm: .625rem;
-    --borders-md: .9375rem;
+  --txt-sm: 1rem;
+  --txt-md: 1.25rem;
+  --title-sm: 1.5rem;
+  --title-md: 2.5rem;
+  --title-lg: 6rem;
+  --d-20: 1.25rem;
+  --d-30: 1.875rem;
+  --d-50: 3.125rem;
+  --d-90: 5.625rem;
+  --d-160: 10rem;
+  --c-black: #010000;
+  --c-white: #fcfcfc;
+  --c-red: #cb4f4f;
+  --c-gradient: linear-gradient(rgba(1, 0, 0, 1) 0%, rgba(203, 79, 79, 1) 100%);
+  --borders-sm: 0.625rem;
+  --borders-md: 0.9375rem;
 }
 
 html {
-    height: 100%;
-    overflow-x: hidden;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-    font-family: "Inter", sans-serif;
-    font-style: normal;
-    line-height: 1.3;
-    font-size: var(--txt-md);
-    cursor: default;
-    background-color: var(--c-black);
-    color: var(--c-white);
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  line-height: 1.3;
+  font-size: var(--txt-md);
+  cursor: default;
+  background-color: var(--c-black);
+  color: var(--c-white);
 }
 
 @media only screen and (max-width: 767px) {
-    body {
-        font-size: var(--txt-sm);
-    }
+  body {
+    font-size: var(--txt-sm);
+  }
 }
 
 nav {
-    width: 90vw;
-    margin: auto;
+  width: 90vw;
+  margin: auto;
 }
 
 @media only screen and (max-width: 767px) {
-    nav {
-        width: 95vw;
-    }
+  nav {
+    width: 95vw;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
-    nav {
-        width: 90vw;
-    }
+  nav {
+    width: 90vw;
+  }
 }
 
-h1, h2, h3 {
-    font-family: "Aboreto", serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--c-white);
+h1,
+h2,
+h3 {
+  font-family: "Aboreto", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--c-white);
 }
 
 h1 {
-    font-size: var(--title-lg);
-    margin-bottom: 0;
+  font-size: var(--title-lg);
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 1200px) {
-    h1 {
-        font-size: var(--title-lg);
-    }
+  h1 {
+    font-size: var(--title-lg);
+  }
 }
 
 @media only screen and (max-width: 1199px) {
-    h1 {
-        font-size: var(--title-lg);
-    }
+  h1 {
+    font-size: var(--title-lg);
+  }
 }
 
 @media only screen and (max-width: 1023px) {
-    h1 {
-        font-size: 5rem;
-    }
+  h1 {
+    font-size: 5rem;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    h1 {
-        font-size: var(--title-md);
-    }
+  h1 {
+    font-size: var(--title-md);
+  }
 }
 
 h2 {
-    padding-bottom: var(--d-20);
-    font-size: var(--title-md);
+  padding-bottom: var(--d-20);
+  font-size: var(--title-md);
 }
 
 @media only screen and (max-width: 767px) {
-    h2 {
-        padding-bottom: var(--d-20);
-        font-size: var(--title-sm);
-    }
+  h2 {
+    padding-bottom: var(--d-20);
+    font-size: var(--title-sm);
+  }
 }
 
 h3 {
-    font-size: 9.375rem;
-    letter-spacing: var(--d-20);
-    margin: 0;
-    position: relative;
+  font-size: 9.375rem;
+  letter-spacing: var(--d-20);
+  margin: 0;
+  position: relative;
 }
 
 @media only screen and (max-width: 954px) {
-    h3 {
-        font-size: 7.5rem;
-        letter-spacing: var(--d-20);
-    }
+  h3 {
+    font-size: 7.5rem;
+    letter-spacing: var(--d-20);
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    h3 {
-        font-size: 9.375rem;
-        letter-spacing: var(--d-20);
-    }
+  h3 {
+    font-size: 9.375rem;
+    letter-spacing: var(--d-20);
+  }
 }
 
 @media only screen and (max-width: 593px) {
-    h3 {
-        font-size: 6.25rem;
-        letter-spacing: 0;
-    }
+  h3 {
+    font-size: 6.25rem;
+    letter-spacing: 0;
+  }
 }
 
 @media only screen and (max-width: 374px) {
-    h3 {
-        font-size: 90px;
-        letter-spacing: 0;
-    }
+  h3 {
+    font-size: 90px;
+    letter-spacing: 0;
+  }
 }
 
 h4 {
-    color: var(--c-red);
-    font-size: var(--title-sm);
-    text-transform: uppercase;
-    margin-top: var(--d-20);
+  color: var(--c-red);
+  font-size: var(--title-sm);
+  text-transform: uppercase;
+  margin-top: var(--d-20);
 }
 
 @media only screen and (max-width: 767px) {
-    h4 {
-        font-size: var(--txt-md);
-        margin-top: 5px;
-    }
+  h4 {
+    font-size: var(--txt-md);
+    margin-top: 5px;
+  }
 }
 
-section, footer {
-    margin-bottom: var(--d-160) !important;
-    width: 85vw;
-    margin: auto;
+section,
+footer {
+  margin-bottom: var(--d-160) !important;
+  width: 85vw;
+  margin: auto;
 }
 
 @media only screen and (max-width: 1200px) {
-    section, footer {
-        width: 90vw;
-    }
+  section,
+  footer {
+    width: 90vw;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    section, footer {
-        width: 80vw;
-        margin-bottom: var(--d-50) !important;
-    }
+  section,
+  footer {
+    width: 80vw;
+    margin-bottom: var(--d-50) !important;
+  }
 }
 
 .line {
-    width: 2rem;
-    height: 2px;
-    margin-bottom: .5rem;
-    background-color: var(--c-red);
-    border-radius: var(--borders-md);
+  width: 2rem;
+  height: 2px;
+  margin-bottom: 0.5rem;
+  background-color: var(--c-red);
+  border-radius: var(--borders-md);
 }
 
 a {
-    text-decoration: none;
-    color: var(--c-white);
+  text-decoration: none;
+  color: var(--c-white);
 }
 
 img {
-    border-radius: var(--borders-md);
+  border-radius: var(--borders-md);
 }
 
 @media only screen and (max-width: 767px) {
-    img {
-        border-radius: var(--borders-sm);
-    }
+  img {
+    border-radius: var(--borders-sm);
+  }
 }
 
 /* GLOBAL COMPONENTS ---------------------------*/
 .c-indicator {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .c-indicator--left {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .c-btn {
-    background: var(--c-red);
-    color: var(--c-white);
-    padding: var(--txt-sm) 1.5625rem;
-    border: none;
-    border-radius: var(--borders-md);
-    text-transform: uppercase;
-    font-size: var(--txt-md);
-    margin-top: var(--d-30);
-    width: fit-content;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.4s ease;
-    overflow: hidden;
+  background: var(--c-red);
+  color: var(--c-white);
+  padding: var(--txt-sm) 1.5625rem;
+  border: none;
+  border-radius: var(--borders-md);
+  text-transform: uppercase;
+  font-size: var(--txt-md);
+  margin-top: var(--d-30);
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.4s ease;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 767px) {
-    .c-btn {
-        font-size: var(--txt-sm);
-    }
+  .c-btn {
+    font-size: var(--txt-sm);
+  }
 }
 
 @media only screen and (max-width: 425px) {
-    .c-btn {
-        margin: 0;
-        padding: 1rem;
-    }
+  .c-btn {
+    margin: 0;
+    padding: 1rem;
+  }
 }
 
 .c-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--c-gradient);
-    z-index: -1;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.4s ease;
-    border-radius: var(--borders-md);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--c-gradient);
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
+  border-radius: var(--borders-md);
 }
 
 .c-btn:hover::before {
-    transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 .c-btn:hover {
-    color: var(--c-white);
+  color: var(--c-white);
 }
 
 .c-btnsec {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 9rem;
-    height: 9rem;
-    border-radius: 100%;
-    cursor: pointer;
-    background: var(--c-red);
-    overflow: hidden;
-    z-index: 0;
-    transition: color 0.4s ease;
-    text-transform: uppercase;
-    font-size: var(--txt-md);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 100%;
+  cursor: pointer;
+  background: var(--c-red);
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.4s ease;
+  text-transform: uppercase;
+  font-size: var(--txt-md);
 }
 
 @media only screen and (max-width: 425px) {
-    .c-btnsec {
-        width: 8rem;
-        height: 8rem;
-    }
+  .c-btnsec {
+    width: 8rem;
+    height: 8rem;
+  }
 }
 
 .c-btnsec p {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .c-btnsec::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--c-gradient);
-    z-index: -1;
-    transform: scaleY(0);
-    transform-origin: top;
-    transition: transform 0.4s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--c-gradient);
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.4s ease;
 }
 
 .c-btnsec:hover::before {
-    transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 .c-btnsec:hover {
-    color: var(--c-white);
+  color: var(--c-white);
 }
 
 .c-btnsec__svg {
-    stroke-linecap: round;
-    width: 3rem;
-    height: auto;
-    transform: rotate(-30deg);
-    position: absolute;
-    bottom: -5rem;
-    right: -80px;
+  stroke-linecap: round;
+  width: 3rem;
+  height: auto;
+  transform: rotate(-30deg);
+  position: absolute;
+  bottom: -5rem;
+  right: -80px;
 }
 
 .c-accent {
-    font-family: "Beau Rivage", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: var(--title-sm);
-    color: var(--c-red);
+  font-family: "Beau Rivage", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--title-sm);
+  color: var(--c-red);
 }
 
 /* Navigation  
@@ -340,7 +345,7 @@ img {
 }
 
 .c-top::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -355,19 +360,19 @@ img {
 
 @media only screen and (min-width: 768px) {
   .c-top::before {
-      height: 100%;
+    height: 100%;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .c-top::before {
-      height: 85%;
+    height: 85%;
   }
 }
 
 @media only screen and (max-width: 423px) {
   .c-top::before {
-      height: 100%;
+    height: 100%;
   }
 }
 
@@ -382,21 +387,21 @@ img {
   width: 7rem;
   height: auto;
   border-radius: var(--borders-md);
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .5);
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (min-width: 1200px) {
   .c-nav__logo {
-      top: 15%;
-      left: 5%;
+    top: 15%;
+    left: 5%;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .c-nav__logo {
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: var(--borders-sm);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: var(--borders-sm);
   }
 }
 
@@ -410,13 +415,13 @@ img {
 
 @media only screen and (max-width: 767px) {
   .c-nav__btn {
-      font-size: var(--txt-sm);
+    font-size: var(--txt-sm);
   }
 }
 
 @media only screen and (max-width: 425px) {
   .c-nav__btn {
-      margin: 0;
+    margin: 0;
   }
 }
 
@@ -466,27 +471,27 @@ img {
 
 @media only screen and (max-width: 1023px) {
   .c-header__subtitle {
-      flex-direction: column;
-      margin-top: 5vh;
-      width: 55%;
+    flex-direction: column;
+    margin-top: 5vh;
+    width: 55%;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .c-header__subtitle {
-      align-items: flex-start;
-      margin-top: 3vh;
-      width: 80%;
+    align-items: flex-start;
+    margin-top: 3vh;
+    width: 80%;
   }
 }
 
 @media only screen and (max-width: 424px) {
   .c-header__subtitle {
-      margin-top: 40vh;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
+    margin-top: 40vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 }
 
@@ -497,15 +502,15 @@ img {
 
 @media only screen and (max-width: 1023px) {
   .c-header__subtitle p {
-      width: 80%;
+    width: 80%;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .c-header__subtitle p {
-      width: 100%;
-      margin: 0;
-      padding: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -518,21 +523,21 @@ img {
 
 @media only screen and (max-width: 1023px) {
   .c-header__line {
-      width: 35vw;
-      margin-right: 0;
+    width: 35vw;
+    margin-right: 0;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .c-header__line {
-      width: 70%;
+    width: 70%;
   }
 }
 
 @media only screen and (max-width: 424px) {
   .c-header__line {
-      width: 4rem;
-      margin-right: var(--d-20);
+    width: 4rem;
+    margin-right: var(--d-20);
   }
 }
 
@@ -548,41 +553,41 @@ img {
 
 @media only screen and (min-width: 1200px) {
   .c-header__img {
-      margin-left: 45vw;
-      margin-top: 5vh;
-      width: 50vw;
-      border-radius: 18.75rem 18.75rem 0 0;
+    margin-left: 45vw;
+    margin-top: 5vh;
+    width: 50vw;
+    border-radius: 18.75rem 18.75rem 0 0;
   }
 }
 
 @media only screen and (max-width: 1199px) {
   .c-header__img {
-      margin-left: 35vw;
-      margin-top: 15vh;
-      width: 60vw;
+    margin-left: 35vw;
+    margin-top: 15vh;
+    width: 60vw;
   }
 }
 
 @media only screen and (max-width: 1023px) {
   .c-header__img {
-      width: 50vw;
-      height: 100%;
-      margin-left: 40vw;
-      margin-top: 15vh;
+    width: 50vw;
+    height: 100%;
+    margin-left: 40vw;
+    margin-top: 15vh;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .c-header__img {
-      margin-top: 10vh;
+    margin-top: 10vh;
   }
 }
 
 @media only screen and (max-width: 424px) {
   .c-header__img {
-      width: 80vw;
-      margin-left: 10vw;
-      margin-top: 20vh;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 20vh;
   }
 }
 
@@ -594,20 +599,20 @@ img {
 
 @media only screen and (max-width: 1199px) {
   .c-header__img--newsletter {
-      margin: 0 0 0 var(--d-90);
-      width: 35vw;
+    margin: 0 0 0 var(--d-90);
+    width: 35vw;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .c-header__img--newsletter {
-      margin: 0 0 var(--d-30) 0;
+    margin: 0 0 var(--d-30) 0;
   }
 }
 
 .c-header__img picture {
   display: block;
-  margin-bottom: -.4rem;
+  margin-bottom: -0.4rem;
 }
 
 .c-header__img picture img {
@@ -617,29 +622,28 @@ img {
 
 @media only screen and (max-width: 1199px) {
   .c-header__img picture img {
-      width: 55vw;
+    width: 55vw;
   }
 }
 
 @media only screen and (max-width: 1023px) {
   .c-header__img picture img {
-      width: 30rem;
+    width: 30rem;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .c-header__img picture img {
-      width: 25rem;
-      margin-bottom: 0.1rem;
+    width: 25rem;
+    margin-bottom: 0.1rem;
   }
 }
 
 @media only screen and (max-width: 424px) {
   .c-header__img picture img {
-      width: 20rem;
+    width: 20rem;
   }
 }
-
 
 /* INTRO
 -------------------------------- */
@@ -655,15 +659,15 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-intro {
-      flex-direction: row column;
-      justify-content: center;
-      flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
 @media only screen and (max-width: 593px) {
   .c-intro {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -675,15 +679,15 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-intro__pic {
-      transform: rotate(0deg);
-      margin: 0;
+    transform: rotate(0deg);
+    margin: 0;
   }
 }
 
 @media only screen and (max-width: 593px) {
   .c-intro__pic {
-      margin: 0;
-      transform: rotate(-10deg);
+    margin: 0;
+    transform: rotate(-10deg);
   }
 }
 
@@ -695,15 +699,15 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-intro__pic--rotate {
-      margin: 0 0 0 var(--d-20);
-      transform: rotate(0deg);
+    margin: 0 0 0 var(--d-20);
+    transform: rotate(0deg);
   }
 }
 
 @media only screen and (max-width: 593px) {
   .c-intro__pic--rotate {
-      margin-top: var(--d-30);
-      transform: rotate(10deg);
+    margin-top: var(--d-30);
+    transform: rotate(10deg);
   }
 }
 
@@ -716,21 +720,21 @@ img {
 
 @media only screen and (max-width: 1223px) {
   .c-intro__img {
-      width: 17rem;
-      height: 100%;
+    width: 17rem;
+    height: 100%;
   }
 }
 
 @media only screen and (max-width: 954px) {
   .c-intro__img {
-      height: 20rem;
+    height: 20rem;
   }
 }
 
 @media only screen and (max-width: 593px) {
   .c-intro__img {
-      width: 100%;
-      height: 15rem;
+    width: 100%;
+    height: 15rem;
   }
 }
 
@@ -740,18 +744,18 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-intro__txt {
-      padding-left: 10px;
-      padding-right: 20px;
-      margin: var(--d-30) 0 0 0;
-      width: 85vw;
-      order: 1;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin: var(--d-30) 0 0 0;
+    width: 85vw;
+    order: 1;
   }
 }
 
 @media only screen and (max-width: 593px) {
   .c-intro__txt {
-      margin: 0;
-      order: 0;
+    margin: 0;
+    order: 0;
   }
 }
 
@@ -771,7 +775,7 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-civilrights {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -783,13 +787,13 @@ img {
 
 @media only screen and (max-width: 1024px) {
   .c-civilrights picture {
-      margin-left: var(--d-30);
+    margin-left: var(--d-30);
   }
 }
 
 @media only screen and (max-width: 954px) {
   .c-civilrights picture {
-      margin-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -800,14 +804,14 @@ img {
 
 @media only screen and (max-width: 1200px) {
   .c-civilrights__img {
-      width: 40vw;
+    width: 40vw;
   }
 }
 
 @media only screen and (max-width: 954px) {
   .c-civilrights__img {
-      margin-top: var(--d-20);
-      width: 80vw;
+    margin-top: var(--d-20);
+    width: 80vw;
   }
 }
 
@@ -817,7 +821,7 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-civilrights__txt {
-      width: 100%;
+    width: 100%;
   }
 }
 
@@ -835,33 +839,33 @@ img {
 
 @media only screen and (max-width: 1200px) {
   #boy {
-      bottom: 10vh;
-      left: 7vw;
+    bottom: 10vh;
+    left: 7vw;
   }
 }
 
 @media only screen and (max-width: 954px) {
   #boy {
-      bottom: 30vh;
-      left: 8vw;
+    bottom: 30vh;
+    left: 8vw;
   }
 }
 
 @media only screen and (max-width: 768px) {
   #boy {
-      bottom: 18vh;
+    bottom: 18vh;
   }
 }
 
 @media only screen and (max-width: 593px) {
   #boy {
-      bottom: 12vh;
+    bottom: 12vh;
   }
 }
 
 @media only screen and (max-width: 425px) {
   #boy {
-      bottom: 6vh;
+    bottom: 6vh;
   }
 }
 
@@ -873,32 +877,32 @@ img {
 
 @media only screen and (max-width: 1024px) {
   #popup-boy {
-      bottom: -10%;
+    bottom: -10%;
   }
 }
 
 @media only screen and (max-width: 954px) {
   #popup-boy {
-      bottom: 20%;
+    bottom: 20%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   #popup-boy {
-      bottom: 0;
+    bottom: 0;
   }
 }
 
 @media only screen and (max-width: 593px) {
   #popup-boy {
-      bottom: -30%;
+    bottom: -30%;
   }
 }
 
 @media only screen and (max-width: 424px) {
   #popup-boy {
-      bottom: 0;
-      left: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 
@@ -911,33 +915,33 @@ img {
 
 @media only screen and (max-width: 1200px) {
   #girl {
-      bottom: 15vh;
-      right: 4vw;
+    bottom: 15vh;
+    right: 4vw;
   }
 }
 
 @media only screen and (max-width: 954px) {
   #girl {
-      bottom: 35vh;
-      right: 9vw;
+    bottom: 35vh;
+    right: 9vw;
   }
 }
 
 @media only screen and (max-width: 768px) {
   #girl {
-      bottom: 20vh;
+    bottom: 20vh;
   }
 }
 
 @media only screen and (max-width: 593px) {
   #girl {
-      bottom: 15vh;
+    bottom: 15vh;
   }
 }
 
 @media only screen and (max-width: 425px) {
   #girl {
-      bottom: 8vh;
+    bottom: 8vh;
   }
 }
 
@@ -949,32 +953,32 @@ img {
 
 @media only screen and (max-width: 1024px) {
   #popup-girl {
-      bottom: -10%;
+    bottom: -10%;
   }
 }
 
 @media only screen and (max-width: 954px) {
   #popup-girl {
-      bottom: 25%;
+    bottom: 25%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   #popup-girl {
-      bottom: 0;
+    bottom: 0;
   }
 }
 
 @media only screen and (max-width: 593px) {
   #popup-girl {
-      bottom: -30%;
+    bottom: -30%;
   }
 }
 
 @media only screen and (max-width: 424px) {
   #popup-girl {
-      bottom: 0;
-      right: 0;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -992,25 +996,25 @@ img {
 
 @media only screen and (max-width: 1024px) {
   .popup {
-      width: 60%;
+    width: 60%;
   }
 }
 
 @media only screen and (max-width: 954px) {
   .popup {
-      width: 50%;
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 593px) {
   .popup {
-      width: 65%;
+    width: 65%;
   }
 }
 
 @media only screen and (max-width: 424px) {
   .popup {
-      width: 85%;
+    width: 85%;
   }
 }
 
@@ -1022,7 +1026,7 @@ img {
 
 @media only screen and (max-width: 424px) {
   .popup p {
-      font-size: .625rem;
+    font-size: 0.625rem;
   }
 }
 
@@ -1038,7 +1042,7 @@ img {
 
 @media only screen and (max-width: 768px) {
   .c-language {
-      flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -1050,28 +1054,28 @@ img {
 
 @media only screen and (max-width: 1023px) {
   .c-language__btn {
-      top: -20vh;
+    top: -20vh;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .c-language__btn {
-      top: 10vh;
-      left: 55vw;
+    top: 10vh;
+    left: 55vw;
   }
 }
 
 @media only screen and (max-width: 423px) {
   .c-language__btn {
-      top: -4vh;
-      left: 62vw;
+    top: -4vh;
+    left: 62vw;
   }
 }
 
 .c-language__icon {
   position: relative;
   display: inline-block;
-  padding: .9375rem;
+  padding: 0.9375rem;
   background: var(--c-red);
   overflow: hidden;
   z-index: 0;
@@ -1081,7 +1085,7 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-language__icon {
-      padding: .625rem;
+    padding: 0.625rem;
   }
 }
 
@@ -1092,8 +1096,8 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-language__icon svg {
-      width: var(--d-30);
-      height: var(--d-30);
+    width: var(--d-30);
+    height: var(--d-30);
   }
 }
 
@@ -1130,23 +1134,23 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-language__arrow {
-      width: 1.5625rem;
-      transform: scaleY(-1) rotate(15deg);
-      top: 7vh;
+    width: 1.5625rem;
+    transform: scaleY(-1) rotate(15deg);
+    top: 7vh;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .c-language__arrow {
-      width: 20px;
-      top: 12vh;
-      transform: scaleY(-1) rotate(-10deg);
+    width: 20px;
+    top: 12vh;
+    transform: scaleY(-1) rotate(-10deg);
   }
 }
 
 @media only screen and (max-width: 423px) {
   .c-language__arrow {
-      display: none;
+    display: none;
   }
 }
 
@@ -1157,14 +1161,14 @@ img {
 
 @media only screen and (max-width: 1023px) {
   .c-language__images {
-      padding-right: 10rem;
-      margin-top: 160px;
+    padding-right: 10rem;
+    margin-top: 160px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .c-language__images {
-      display: none;
+    display: none;
   }
 }
 
@@ -1176,18 +1180,15 @@ img {
 
 @media only screen and (max-width: 768px) {
   .c-language__images--small {
-      padding: 0;
-      display: block;
-      margin-top: 0;
+    padding: 0;
+    display: block;
+    margin-top: 0;
   }
-}
-
-.c-language__images p {
 }
 
 @media only screen and (max-width: 423px) {
   .c-language__images p {
-      display: none;
+    display: none;
   }
 }
 
@@ -1201,22 +1202,22 @@ img {
 
 @media only screen and (max-width: 1023px) {
   .c-language__imgone {
-      width: 30vw;
-      margin: var(--d-50) 0 var(--d-50) var(--d-50);
+    width: 30vw;
+    margin: var(--d-50) 0 var(--d-50) var(--d-50);
   }
 }
 
 @media only screen and (max-width: 768px) {
   .c-language__imgone {
-      width: 60vw;
+    width: 60vw;
   }
 }
 
 @media only screen and (max-width: 423px) {
   .c-language__imgone {
-      width: 100%;
-      transform: rotate(0);
-      margin: 0;
+    width: 100%;
+    transform: rotate(0);
+    margin: 0;
   }
 }
 
@@ -1232,18 +1233,18 @@ img {
 
 @media only screen and (max-width: 1023px) {
   .c-language__imgtwo {
-      width: 25vw;
-      margin: var(--d-50) 0 var(--d-50) var(--d-50);
+    width: 25vw;
+    margin: var(--d-50) 0 var(--d-50) var(--d-50);
   }
 }
 
 @media only screen and (max-width: 768px) {
   .c-language__imgtwo {
-      transform: rotate(10deg);
-      width: 50vw;
-      opacity: 0.2;
-      top: -80vh;
-      left: -15vw;
+    transform: rotate(10deg);
+    width: 50vw;
+    opacity: 0.2;
+    top: -80vh;
+    left: -15vw;
   }
 }
 
@@ -1257,22 +1258,22 @@ img {
 
 @media only screen and (max-width: 1023px) {
   .c-language__click {
-      width: 30vw;
-      margin: var(--d-50) 0 var(--d-50) var(--d-50);
+    width: 30vw;
+    margin: var(--d-50) 0 var(--d-50) var(--d-50);
   }
 }
 
 @media only screen and (max-width: 768px) {
   .c-language__click {
-      width: 60vw;
+    width: 60vw;
   }
 }
 
 @media only screen and (max-width: 423px) {
   .c-language__click {
-      width: 100%;
-      transform: rotate(0);
-      margin: 0;
+    width: 100%;
+    transform: rotate(0);
+    margin: 0;
   }
 }
 
@@ -1297,18 +1298,18 @@ img {
 
 @media only screen and (max-width: 1399px) {
   .c-quote__spacing {
-      letter-spacing: var(--d-20);
+    letter-spacing: var(--d-20);
   }
 }
 
 @media only screen and (max-width: 954px) {
   .c-quote__spacing {
-      letter-spacing: 2.1875rem;
+    letter-spacing: 2.1875rem;
   }
 }
 
 .c-quote::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1324,7 +1325,7 @@ img {
 
 @media only screen and (min-width: 768px) {
   .c-quote::before {
-      height: 100%;
+    height: 100%;
   }
 }
 
@@ -1341,10 +1342,10 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-quote__txt {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      align-items: center;
-      width: fit-content;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
   }
 }
 
@@ -1355,7 +1356,7 @@ img {
 
 @media only screen and (max-width: 954px) {
   .c-quote__star {
-      width: fit-content;
+    width: fit-content;
   }
 }
 
@@ -1369,73 +1370,73 @@ img {
 
 @media only screen and (max-width: 1399px) {
   .c-quote__img {
-      width: 25vw;
-      height: 10vw;
+    width: 25vw;
+    height: 10vw;
   }
 }
 
 @media only screen and (max-width: 1023px) {
   .c-quote__img {
-      width: 20vw;
-      height: 10vw;
+    width: 20vw;
+    height: 10vw;
   }
 }
 
 @media only screen and (max-width: 954px) {
   .c-quote__img {
-      width: 20vw;
-      height: 10vw;
+    width: 20vw;
+    height: 10vw;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .c-quote__img {
-      width: 50vw;
-      height: 15vw;
+    width: 50vw;
+    height: 15vw;
   }
 }
 
 @media only screen and (max-width: 374px) {
   .c-quote__img {
-      width: 8.125rem;
-      height: 12vh;
-      border-radius: var(--d-30);
+    width: 8.125rem;
+    height: 12vh;
+    border-radius: var(--d-30);
   }
 }
 
 .c-quote__constantia {
   font-size: 9.8rem;
-  padding-bottom: .625rem;
+  padding-bottom: 0.625rem;
   text-align: center;
 }
 
 @media only screen and (max-width: 1399px) {
   .c-quote__constantia {
-      font-size: 8rem;
+    font-size: 8rem;
   }
 }
 
 @media only screen and (max-width: 1023px) {
   .c-quote__constantia {
-      font-size: 6.5rem;
+    font-size: 6.5rem;
   }
 }
 
 @media only screen and (max-width: 954px) {
   .c-quote__constantia {
-      font-size: 6.125rem;
+    font-size: 6.125rem;
   }
 }
 
 @media only screen and (max-width: 593px) {
   .c-quote__constantia {
-      font-size: 4.375rem;
+    font-size: 4.375rem;
   }
 }
 
 @media only screen and (max-width: 374px) {
   .c-quote__constantia {
-      font-size: 5.625rem;
+    font-size: 5.625rem;
   }
 }
 
@@ -1707,7 +1708,7 @@ img {
   width: fit-content;
   z-index: 10;
   width: 40%;
-  rotate: -5deg;
+  transform: rotate(-5deg);
 }
 
 @media only screen and (max-width: 768px) {
@@ -1812,7 +1813,6 @@ img {
   }
 }
 
-
 /* DAUGHTERS
 ---------------------------*/
 .c-daughters {
@@ -1859,7 +1859,7 @@ img {
   margin: auto;
   display: flex;
   flex-direction: row;
-  align-items: top;
+  align-items: flex-start;
   padding-bottom: 10vw;
 }
 
@@ -2089,13 +2089,16 @@ img {
   transform: rotate(10deg);
   margin-left: 5vw;
   margin-right: -5vw;
-  opacity: .6;
-
-  @media only screen and (max-width: 767px) {
+  opacity: 0.6;
+}
+@media only screen and (max-width: 767px) {
+  .c-daughters__img {
     width: 50vw;
   }
+}
 
-  @media only screen and (max-width: 593px) {
+@media only screen and (max-width: 593px) {
+  .c-daughters__img {
     position: absolute;
     right: 0;
     width: 80vw;
@@ -2105,17 +2108,20 @@ img {
 }
 
 .c-daughters__img--right {
-  transform: rotate(-13deg);
-  margin-left: -5vw;
+  transform: rotate(-30deg);
+  margin-left: 5vw;
   margin-right: 5vw;
-
-  @media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 767px) {
+  .c-daughters__img--right {
     top: -50vw;
     left: 0;
     z-index: -1;
   }
+}
 
-  @media only screen and (max-width: 593px) {
+@media only screen and (max-width: 593px) {
+  .c-daughters__img--right {
     top: -50vw;
     left: 0;
     z-index: -1;
@@ -2184,7 +2190,6 @@ img {
   }
 }
 
-
 /* NEWSLETTER 
 ---------------------------*/
 .c-newsletter {
@@ -2201,7 +2206,7 @@ img {
 }
 
 .c-newsletter__form {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding-top: var(--d-20);
   width: 100%;
 }
@@ -2228,7 +2233,6 @@ img {
   left: -4%;
   z-index: -1;
 }
-
 
 /* FOOTER 
 ---------------------------*/
@@ -2297,7 +2301,7 @@ img {
 }
 
 .c-footer__bottom {
-  opacity: .1;
+  opacity: 0.1;
   margin-top: 1vw;
 }
 
