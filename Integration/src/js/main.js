@@ -139,7 +139,6 @@ document.addEventListener('click', () => {
 });
 
 
-
 //Footer ------------------------------
 gsap.to('.c-footer__star', {
     rotation: 60,
@@ -537,6 +536,28 @@ mm.add("(min-width: 769px)", () => {
     });
 
 
+    const feet = document.querySelectorAll(".foot");
+
+    feet.forEach((foot, index) => {
+        gsap.fromTo(
+            foot,
+            { opacity: 0 },
+            {
+                opacity: 1,
+                duration: 0.5,
+                repeat: 1,
+                yoyo: true,
+                scrollTrigger: {
+                    trigger: foot,
+                    start: "top 80%",
+                    end: "top 30%",
+                    scrub: true,
+                },
+            }
+        );
+    });
+
+
     //Family business
     gsap.fromTo('.c-business', {
         opacity: 0,
@@ -903,6 +924,9 @@ mm.add("(max-width: 768px)", () => {
         });
     });
 });
+
+
+
 
 
 

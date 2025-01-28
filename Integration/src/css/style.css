@@ -1544,6 +1544,7 @@ img {
 ---------------------------*/
 .c-daughters {
   width: 100%;
+  position: relative;
 }
 
 .c-daughters__book {
@@ -1552,6 +1553,7 @@ img {
   background-position: bottom;
   width: 100%;
   height: 100%;
+
 
   @media only screen and (max-width: 1023px) {
     height: 110vh;
@@ -1664,6 +1666,46 @@ img {
 .c-daughters__title {
   margin: 0;
   padding: 0;
+}
+
+.c-daughters__feetone {
+  position: absolute;
+  width: 20vw;
+  height: auto;
+  top: 75vh;
+  right: 20%;
+}
+
+.c-daughters__feettwo {
+  position: absolute;
+  width: 25vw;
+  height: auto;
+  top: 160vh;
+  right: 40%;
+}
+
+.c-daughters__feetthree {
+  position: absolute;
+  width: 50vw;
+  height: auto;
+  top: 250vh;
+  right: 35%;
+}
+
+.c-daughters__feetfour {
+  position: absolute;
+  width: 25vw;
+  height: auto;
+  top: 320vh;
+  right: 35%;
+}
+
+.c-daughters__feetfive {
+  position: absolute;
+  width: 20vw;
+  height: auto;
+  top: 410vh;
+  right: 35%;
 }
 
 
