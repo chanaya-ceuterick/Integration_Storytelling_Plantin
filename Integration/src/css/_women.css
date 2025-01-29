@@ -1,224 +1,224 @@
 .c-women {
-    background-image: url(../../public/lace_bg.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: 0;
-    width: 100%;
-    position: relative;
-  }
+  background-image: url(../../public/lace_bg.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+.c-women__top {
+  display: flex;
+  flex-direction: row;
+  align-items: self-end;
+  width: 85vw;
+  margin: auto;
+}
+.c-women__img {
+  width: 35vw;
+  height: auto;
+  margin-left: var(--d-90);
+}
+.c-women__split {
+  display: flex;
+  flex-direction: column;
+}
+.c-women__img--small {
+  display: none;
+}
+.c-women__middle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+.c-women__worker {
+  width: 40vw;
+  height: auto;
+}
+.c-women__interaction {
+  margin-left: -5vw;
+  margin-right: var(--d-160);
+  position: relative;
+}
+.c-women__speaking {
+  position: absolute;
+  top: 4vw;
+  left: 25vw;
+  display: block;
+}
+.c-women__speaking p {
+  transform: rotate(-10deg);
+}
+.c-women__options {
+  display: inline-block;
+  margin-left: 25vw;
+}
+.c-women__option {
+  padding: var(--d-30) var(--d-50);
+  text-align: center;
+  border: 2px solid var(--c-red);
+  border-radius: var(--borders-md);
+  cursor: pointer;
+}
+.c-women__option:nth-of-type(even) {
+  margin-left: var(--d-90);
+}
+.c-women__option:nth-of-type(odd) {
+  margin-right: var(--d-90);
+}
+.c-women__option--active {
+  background-color: rgba(203, 79, 79, 0.3);
+}
+.c-women__popup {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: var(--borders-md);
+  color: var(--c-red);
+  padding: 10px var(--d-20);
+  width: fit-content;
+  z-index: 10;
+  width: 40%;
+  transform: rotate(-5deg);
+}
+.c-women__popup--visible {
+  display: block !important;
+}
+.c-women__bottom {
+  width: 85vw;
+  margin: auto;
+}
+.c-woman__paragraph {
+  margin-left: 15vw;
+}
+
+@media only screen and (max-width: 1200px) {
   .c-women__top {
-    display: flex;
-    flex-direction: row;
-    align-items: self-end;
-    width: 85vw;
-    margin: auto;
+    width: 90vw;
   }
   .c-women__img {
-    width: 35vw;
-    height: auto;
-    margin-left: var(--d-90);
+    display: none;
   }
   .c-women__split {
-    display: flex;
+    flex-direction: row-reverse;
+  }
+  .c-women__img--small {
+    display: inline-block;
+    width: 30vw;
+    margin-left: 20%;
+    margin-top: var(--d-30);
+    margin-bottom: var(--d-30);
+    transform: rotate(10deg);
+  }
+  .c-women__option {
+    padding: var(--d-20) var(--d-50);
+  }
+  .c-women__bottom {
+    width: 90vw;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .c-women__option {
+    padding: 0.625rem var(--d-20);
+  }
+}
+@media only screen and (max-width: 954px) {
+  .c-women__top {
+    flex-direction: column;
+  }
+}
+/* @media only screen and (min-width: 769px) {
+  .c-women__options {
+    margin-left: 15vw;
+  }
+} */
+@media only screen and (max-width: 768px) {
+  .c-women__worker {
+    width: 45vw;
+  }
+  .c-women__speaking {
+    width: 100%;
+    top: 0;
+  }
+  .c-women__popup {
+    width: 30%;
+    left: 25%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .c-women__top {
+    width: 80vw;
+    margin-bottom: var(--d-50) !important;
+  }
+  .c-women__bottom {
+    width: 80vw;
+  }
+}
+@media only screen and (max-width: 593px) {
+  .c-women__split {
     flex-direction: column;
   }
   .c-women__img--small {
-    display: none;
-  }
-  .c-women__middle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
+    transform: rotate(0);
+    width: 100%;
+    margin: 0;
   }
   .c-women__worker {
-    width: 40vw;
-    height: auto;
+    width: 70vw;
   }
   .c-women__interaction {
-    margin-left: -5vw;
-    margin-right: var(--d-160);
-    position: relative;
+    margin-left: -10vw;
   }
   .c-women__speaking {
-    position: absolute;
     top: 4vw;
-    left: 25vw;
-    display: block;
-  }
-  .c-women__speaking p {
-    transform: rotate(-10deg);
+    left: 35vw;
   }
   .c-women__options {
-    display: block;
-    margin-right: 45vw;
-  }
-  .c-women__option {
-    padding: var(--d-30) var(--d-50);
-    text-align: center;
-    border: 2px solid var(--c-red);
-    border-radius: var(--borders-md);
-    cursor: pointer;
-  }
-  .c-women__option:nth-of-type(even) {
-    margin-left: var(--d-90);
-  }
-  .c-women__option:nth-of-type(odd) {
-    margin-right: var(--d-90);
-  }
-  .c-women__option--active {
-    background-color: rgba(203, 79, 79, 0.3);
-  }
-  .c-women__popup {
-    display: none;
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: var(--borders-md);
-    color: var(--c-red);
-    padding: 10px var(--d-20);
-    width: fit-content;
-    z-index: 10;
-    width: 40%;
-    transform: rotate(-5deg);
-  }
-  .c-women__popup--visible {
-    display: block !important;
-  }
-  .c-women__bottom {
-    width: 85vw;
-    margin: auto;
+    margin-left: -35vw;
   }
   .c-woman__paragraph {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .c-women__middle {
+    flex-direction: column;
+  }
+  .c-women__options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+  .c-women__option:nth-of-type(even) {
+    margin-left: 0;
+    margin-right: var(--d-20);
+  }
+  .c-women__option:nth-of-type(odd) {
+    margin-right: var(--d-20);
+  }
+  .c-women__popup {
+    left: 40%;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 423px) {
+  .c-women__worker {
+    width: 100vw;
+  }
+  .c-women__interaction {
     margin-left: 15vw;
   }
-  
-  @media only screen and (max-width: 1200px) {
-    .c-women__top {
-      width: 90vw;
-    }
-    .c-women__img {
-      display: none;
-    }
-    .c-women__split {
-      flex-direction: row-reverse;
-    }
-    .c-women__img--small {
-      display: inline-block;
-      width: 30vw;
-      margin-left: 20%;
-      margin-top: var(--d-30);
-      margin-bottom: var(--d-30);
-      transform: rotate(10deg);
-    }
-    .c-women__option {
-      padding: var(--d-20) var(--d-50);
-    }
-    .c-women__bottom {
-      width: 90vw;
-    }
+  .c-women__speaking {
+    left: 55vw;
   }
-  @media only screen and (max-width: 1023px) {
-    .c-women__option {
-      padding: 0.625rem var(--d-20);
-    }
+}
+@media only screen and (max-width: 400px) {
+  .c-women {
+    background-image: none;
   }
-  @media only screen and (max-width: 954px) {
-    .c-women__top {
-      flex-direction: column;
-    }
-  }
-  @media only screen and (min-width: 769px) {
-    .c-women__options {
-      margin-left: 15vw;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    .c-women__worker {
-      width: 45vw;
-    }
-    .c-women__speaking {
-      width: 100%;
-      top: 0;
-    }
-    .c-women__popup {
-      width: 30%;
-      left: 25%;
-    }
-  }
-  @media only screen and (max-width: 767px) {
-    .c-women__top {
-      width: 80vw;
-      margin-bottom: var(--d-50) !important;
-    }
-    .c-women__bottom {
-      width: 80vw;
-    }
-  }
-  @media only screen and (max-width: 593px) {
-    .c-women__split {
-      flex-direction: column;
-    }
-    .c-women__img--small {
-      transform: rotate(0);
-      width: 100%;
-      margin: 0;
-    }
-    .c-women__worker {
-      width: 70vw;
-    }
-    .c-women__interaction {
-      margin-left: -10vw;
-    }
-    .c-women__speaking {
-      top: 4vw;
-      left: 35vw;
-    }
-    .c-women__options {
-      margin-left: -35vw;
-    }
-    .c-woman__paragraph {
-      margin-left: 0;
-    }
-  }
-  @media only screen and (max-width: 425px) {
-    .c-women__middle {
-      flex-direction: column;
-    }
-    .c-women__options {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-left: 0;
-    }
-    .c-women__option:nth-of-type(even) {
-      margin-left: 0;
-      margin-right: var(--d-20);
-    }
-    .c-women__option:nth-of-type(odd) {
-      margin-right: var(--d-20);
-    }
-    .c-women__popup {
-      left: 40%;
-      width: 40%;
-    }
-  }
-  @media only screen and (max-width: 423px) {
-    .c-women__worker {
-      width: 100vw;
-    }
-    .c-women__interaction {
-      margin-left: 15vw;
-    }
-    .c-women__speaking {
-      left: 55vw;
-    }
-  }
-  @media only screen and (max-width: 400px) {
-    .c-women {
-      background-image: none;
-    }
-  }
+}
