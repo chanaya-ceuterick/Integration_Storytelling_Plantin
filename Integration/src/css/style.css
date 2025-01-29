@@ -242,6 +242,11 @@ img {
   .c-btn {
     margin: 0;
     padding: 1rem;
+    margin-top: var(--d-20);
+  }
+
+  .c-btn--margin {
+    margin-top: 0;
   }
 }
 
@@ -763,8 +768,7 @@ img {
   position: relative;
 }
 
-/* CIVIL RIGHTS
----------------------------*/
+/* CIVIL RIGHTS ---------------------------*/
 
 .c-civilrights {
   display: flex;
@@ -1285,8 +1289,7 @@ img {
   display: none;
 }
 
-/* QUOTE
----------------------------*/
+/* QUOTE ---------------------------*/
 .c-quote {
   width: 100%;
   position: relative;
@@ -1440,8 +1443,6 @@ img {
   }
 }
 
-/* WOMEN'S ROLE
----------------------------*/
 /* WOMEN'S ROLE
 ---------------------------*/
 .c-women {
