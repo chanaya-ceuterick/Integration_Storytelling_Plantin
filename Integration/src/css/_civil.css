@@ -1,0 +1,187 @@
+.c-civilrights {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .c-civilrights picture {
+    width: fit-content;
+    height: auto;
+    margin-left: var(--d-50);
+  }
+  
+  .c-civilrights__img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .c-civilrights__txt {
+    width: 40vw;
+  }
+  
+  .c-civilrights__interaction {
+    position: relative;
+  }
+  
+  #boy {
+    position: absolute;
+    z-index: 2;
+    bottom: 20vh;
+    left: 8vw;
+    cursor: pointer;
+  }
+  
+  #popup-boy {
+    position: absolute;
+    bottom: 10%;
+    left: 8vw;
+  }
+  
+  #girl {
+    position: absolute;
+    bottom: 25vh;
+    right: 2vw;
+    cursor: pointer;
+  }
+  
+  #popup-girl {
+    position: absolute;
+    bottom: 10%;
+    right: 2vw;
+  }
+  
+  .popup {
+    background-color: var(--c-white);
+    border: 1px solid var(--c-black);
+    border-radius: var(--borders-md);
+    padding: var(--d-20);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-110%);
+    z-index: 3;
+    display: none;
+    width: 35%;
+  }
+  
+  .popup p {
+    color: var(--c-black);
+    font-size: var(--txt-sm);
+    width: 100%;
+  }
+  
+  .popup.visible {
+    display: block;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .c-civilrights__img {
+      width: 40vw;
+    }
+    #boy {
+      bottom: 10vh;
+      left: 7vw;
+    }
+    #girl {
+      bottom: 15vh;
+      right: 4vw;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .c-civilrights picture {
+      margin-left: var(--d-30);
+    }
+    #popup-boy {
+      bottom: -10%;
+    }
+    #popup-girl {
+      bottom: -10%;
+    }
+    .popup {
+      width: 60%;
+    }
+  }
+  @media only screen and (max-width: 954px) {
+    .c-civilrights {
+      flex-direction: column;
+    }
+    .c-civilrights picture {
+      margin-left: 0;
+    }
+    .c-civilrights__img {
+      margin-top: var(--d-20);
+      width: 80vw;
+    }
+    .c-civilrights__txt {
+      width: 100%;
+    }
+    #boy {
+      bottom: 30vh;
+      left: 8vw;
+    }
+    #popup-boy {
+      bottom: 20%;
+    }
+    #girl {
+      bottom: 35vh;
+      right: 9vw;
+    }
+    #popup-girl {
+      bottom: 25%;
+    }
+    .popup {
+      width: 50%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    #boy {
+      bottom: 18vh;
+    }
+    #popup-boy {
+      bottom: 0;
+    }
+    #girl {
+      bottom: 20vh;
+    }
+    #popup-girl {
+      bottom: 0;
+    }
+  }
+  @media only screen and (max-width: 593px) {
+    #boy {
+      bottom: 12vh;
+    }
+    #popup-boy {
+      bottom: -30%;
+    }
+    #girl {
+      bottom: 15vh;
+    }
+    #popup-girl {
+      bottom: -30%;
+    }
+    .popup {
+      width: 65%;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    #boy {
+      bottom: 6vh;
+    }
+    #popup-boy {
+      bottom: 0;
+      left: 0;
+    }
+    #girl {
+      bottom: 8vh;
+    }
+    #popup-girl {
+      bottom: 0;
+      right: 0;
+    }
+    .popup {
+      width: 85%;
+    }
+    .popup p {
+      font-size: 0.625rem;
+    }
+  }
