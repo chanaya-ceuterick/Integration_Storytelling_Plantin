@@ -32,7 +32,7 @@
     left: -4%;
     z-index: -1;
   }
-  
+
   @media only screen and (max-width: 767px) {
     .c-newsletter {
       flex-direction: column-reverse;
