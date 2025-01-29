@@ -580,58 +580,16 @@ img {
   margin-bottom: var(--d-160);
 }
 
-@media only screen and (max-width: 954px) {
-  .c-intro {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
-
-@media only screen and (max-width: 593px) {
-  .c-intro {
-    flex-direction: column;
-  }
-}
-
 .c-intro__pic {
   transform: rotate(-10deg);
   margin-left: -6vw;
   margin-right: var(--d-20);
 }
 
-@media only screen and (max-width: 954px) {
-  .c-intro__pic {
-    transform: rotate(0deg);
-    margin: 0;
-  }
-}
-
-@media only screen and (max-width: 593px) {
-  .c-intro__pic {
-    margin: 0;
-    transform: rotate(-10deg);
-  }
-}
-
 .c-intro__pic--rotate {
   transform: rotate(10deg);
   margin-left: var(--d-30);
   margin-right: -6vw;
-}
-
-@media only screen and (max-width: 954px) {
-  .c-intro__pic--rotate {
-    margin: 0 0 0 var(--d-20);
-    transform: rotate(0deg);
-  }
-}
-
-@media only screen and (max-width: 593px) {
-  .c-intro__pic--rotate {
-    margin-top: var(--d-30);
-    transform: rotate(10deg);
-  }
 }
 
 .c-intro__img {
@@ -641,31 +599,37 @@ img {
   object-position: top;
 }
 
+.c-intro__txt {
+  margin-left: var(--d-50);
+}
+
+.c-intro__link {
+  position: relative;
+}
+
 @media only screen and (max-width: 1223px) {
   .c-intro__img {
     width: 17rem;
     height: 100%;
   }
 }
-
 @media only screen and (max-width: 954px) {
+  .c-intro {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .c-intro__pic {
+    transform: rotate(0deg);
+    margin: 0;
+  }
+  .c-intro__pic--rotate {
+    margin: 0 0 0 var(--d-20);
+    transform: rotate(0deg);
+  }
   .c-intro__img {
     height: 20rem;
   }
-}
-
-@media only screen and (max-width: 593px) {
-  .c-intro__img {
-    width: 100%;
-    height: 15rem;
-  }
-}
-
-.c-intro__txt {
-  margin-left: var(--d-50);
-}
-
-@media only screen and (max-width: 954px) {
   .c-intro__txt {
     padding-left: 10px;
     padding-right: 20px;
@@ -674,16 +638,26 @@ img {
     order: 1;
   }
 }
-
 @media only screen and (max-width: 593px) {
+  .c-intro {
+    flex-direction: column;
+  }
+  .c-intro__pic {
+    margin: 0;
+    transform: rotate(-10deg);
+  }
+  .c-intro__pic--rotate {
+    margin-top: var(--d-30);
+    transform: rotate(10deg);
+  }
+  .c-intro__img {
+    width: 100%;
+    height: 15rem;
+  }
   .c-intro__txt {
     margin: 0;
     order: 0;
   }
-}
-
-.c-intro__link {
-  position: relative;
 }
 
 /* CIVIL RIGHTS ---------------------------*/
