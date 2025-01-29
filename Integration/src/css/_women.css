@@ -129,11 +129,6 @@
     flex-direction: column;
   }
 }
-/* @media only screen and (min-width: 769px) {
-  .c-women__options {
-    margin-left: 15vw;
-  }
-} */
 @media only screen and (max-width: 768px) {
   .c-women__worker {
     width: 45vw;
@@ -145,6 +140,9 @@
   .c-women__popup {
     width: 30%;
     left: 25%;
+  }
+  .c-women__options {
+    margin-left: 2vw;
   }
 }
 @media only screen and (max-width: 767px) {
