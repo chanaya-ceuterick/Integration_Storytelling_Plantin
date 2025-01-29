@@ -205,24 +205,6 @@ img {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 767px) {
-  .c-btn {
-    font-size: var(--txt-sm);
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .c-btn {
-    margin: 0;
-    padding: 1rem;
-    margin-top: var(--d-20);
-  }
-
-  .c-btn--margin {
-    margin-top: 0;
-  }
-}
-
 .c-btn::before {
   content: "";
   position: absolute;
@@ -261,13 +243,6 @@ img {
   transition: color 0.4s ease;
   text-transform: uppercase;
   font-size: var(--txt-md);
-}
-
-@media only screen and (max-width: 425px) {
-  .c-btnsec {
-    width: 8rem;
-    height: 8rem;
-  }
 }
 
 .c-btnsec p {
@@ -312,6 +287,28 @@ img {
   font-style: normal;
   font-size: var(--title-sm);
   color: var(--c-red);
+}
+
+@media only screen and (max-width: 767px) {
+  .c-btn {
+    font-size: var(--txt-sm);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .c-btn {
+    margin: 0;
+    padding: 1rem;
+    margin-top: var(--d-20);
+  }
+
+  .c-btn--margin {
+    margin-top: 0;
+  }
+  .c-btnsec {
+    width: 8rem;
+    height: 8rem;
+  }
 }
 
 /* Navigation  
