@@ -333,24 +333,6 @@ img {
   z-index: -1;
 }
 
-@media only screen and (min-width: 768px) {
-  .c-top::before {
-    height: 100%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .c-top::before {
-    height: 85%;
-  }
-}
-
-@media only screen and (max-width: 423px) {
-  .c-top::before {
-    height: 100%;
-  }
-}
-
 .c-nav {
   display: flex;
   justify-content: space-between;
@@ -365,39 +347,12 @@ img {
   box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
-@media only screen and (min-width: 1200px) {
-  .c-nav__logo {
-    top: 15%;
-    left: 5%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .c-nav__logo {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: var(--borders-sm);
-  }
-}
-
 .c-nav__btn {
   background: none;
   border: none;
   color: var(--c-white);
   font-size: var(--txt-md);
   margin-right: 2vw;
-}
-
-@media only screen and (max-width: 767px) {
-  .c-nav__btn {
-    font-size: var(--txt-sm);
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .c-nav__btn {
-    margin: 0;
-  }
 }
 
 .c-nav__dropdown {
@@ -424,6 +379,42 @@ img {
 .c-nav__dropdown li:hover {
   background-color: var(--c-red);
 }
+
+@media only screen and (min-width: 768px) {
+  .c-top::before {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .c-nav__logo {
+    top: 15%;
+    left: 5%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .c-top::before {
+    height: 85%;
+  }
+  .c-nav__logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: var(--borders-sm);
+  }
+  .c-nav__btn {
+    font-size: var(--txt-sm);
+  }
+}
+@media only screen and (max-width: 425px) {
+  .c-nav__btn {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 423px) {
+  .c-top::before {
+    height: 100%;
+  }
+}
+
 /* Header
 ----------------------- */
 
