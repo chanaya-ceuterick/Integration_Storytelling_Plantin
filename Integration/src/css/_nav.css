@@ -1,0 +1,101 @@
+.c-top {
+    margin-top: -1rem;
+    z-index: 0;
+    margin-bottom: var(--d-160);
+  }
+  
+  .c-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../public/Background_image_header.webp);
+    background-position: top center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  
+  .c-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--d-20);
+  }
+  
+  .c-nav__logo {
+    width: 7rem;
+    height: auto;
+    border-radius: var(--borders-md);
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.5);
+  }
+  
+  .c-nav__btn {
+    background: none;
+    border: none;
+    color: var(--c-white);
+    font-size: var(--txt-md);
+    margin-right: 2vw;
+  }
+  
+  .c-nav__dropdown {
+    display: none;
+    position: absolute;
+    background-color: var(--c-black);
+    border-radius: var(--borders-sm);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* Add space below the button */
+    padding: 0;
+    list-style: none;
+    z-index: 1000;
+  }
+  
+  .c-nav__dropdown.open {
+    display: block;
+  }
+  
+  .c-nav__dropdown li {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .c-nav__dropdown li:hover {
+    background-color: var(--c-red);
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .c-top::before {
+      height: 85%;
+    }
+    .c-nav__logo {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: var(--borders-sm);
+    }
+    .c-nav__btn {
+      font-size: var(--txt-sm);
+    }
+  }
+  @media only screen and (max-width: 425px) {
+    .c-nav__btn {
+      margin: 0;
+    }
+  }
+  @media only screen and (max-width: 423px) {
+    .c-top::before {
+      height: 100%;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .c-top::before {
+      height: 100%;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .c-nav__logo {
+      top: 15%;
+      left: 5%;
+    }
+  }
